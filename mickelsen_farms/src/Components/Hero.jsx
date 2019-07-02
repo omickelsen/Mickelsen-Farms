@@ -17,9 +17,9 @@ class Hero extends Component {
               </h1>
 
             <p className="tagline">
-              This is a powerful theme with some great features that you can use in your future projects.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam distinctio mollitia quidem? Obcaecati dolores, atque sit adipisci itaque, repudiandae totam odit facilis odio voluptas eos, error cum quasi fugiat.
             </p>
-            <a className="btn btn-full" href="#about">Get Started Now</a>
+            <a className="btn btn-full" href="#about">Explore</a>
           </div>
         </div>
       </section>
