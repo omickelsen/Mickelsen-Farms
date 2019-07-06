@@ -64,8 +64,11 @@ const Register = () => {
                 <div className="form-group">
                   <input type="password" className="form-control form-control-lg" placeholder="Confirm Password" name="password2" value={password2} onChange={e=> onChange(e)} required/>
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-2" />
+                <input type="submit" className="btn btn-primary" value="Register" />
               </form>
+              <p className='my-1'>
+                Already have an account? <a href='#login'>Sign In</a>
+              </p>
             </div>
           </div>
       </div>
