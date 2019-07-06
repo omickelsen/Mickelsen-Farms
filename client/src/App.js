@@ -9,8 +9,12 @@ import Team from './Components/Team';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import ScrollTop from './Components/ScrollTop';
+import Register from './Components/auth/Register';
+import Login from './Components/auth/Login';
 import './Styles/Bootstrap.min.css';
 import './Styles/App.css';
+
+
 
 class App extends Component {
   render() {
@@ -24,8 +28,11 @@ class App extends Component {
         <Calendar />
         <Team />
         <Contact />
+        <Login />
+        <Register />
         <Footer />
         <ScrollTop />
+       
       </div>
     );
   }
