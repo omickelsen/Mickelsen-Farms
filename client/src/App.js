@@ -4,13 +4,11 @@ import Header from './Components/Header';
 import About from './Components/About';
 import Parallax from './Components/Parallax';
 import Services from './Components/Services';
-import Calendar from './Components/Calendar';
 import Team from './Components/Team';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import ScrollTop from './Components/ScrollTop';
-import Register from './Components/auth/Register';
-import Login from './Components/auth/Login';
+import MainCalendar from './Components/MainCalendar';
 import './Styles/Bootstrap.min.css';
 import './Styles/App.css';
 
@@ -25,11 +23,9 @@ class App extends Component {
         <About />
         <Parallax />
         <Services />
-        <Calendar />
+        <MainCalendar />
         <Team />
         <Contact />
-        <Login />
-        <Register />
         <Footer />
         <ScrollTop />
        
