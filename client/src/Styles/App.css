@@ -4,35 +4,6 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
-
-/* CSS for Calendar */
-.App {
-  text-align: center;
-}
-
-h1, h2 {
-  padding: 10px;
-}
-
-#calendarDiv {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10px;
-  height: 600px;
-}
-
-#eventButton {
-  margin-bottom: 10px;
-}
-
-.rbc-event-content {
-  white-space: normal !important;
-}
-
-
-
-
-/* Css for Calendar */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
