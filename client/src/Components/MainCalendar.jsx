@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import NCalendar from '../Components/Calendar';
-import EventModal from '../Components/EventModal';
-import NewEventModal from '../Components/NewEventModal';
+import NCalendar from '../components/Calendar';
+import EventModal from '../components/EventModal';
+import NewEventModal from '../components/NewEventModal';
 import moment from 'moment';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
