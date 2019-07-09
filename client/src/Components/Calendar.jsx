@@ -1,45 +1,42 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-import BigCalendar from 'react-big-calendar';
-
-BigCalendar.momentLocalizer(moment);
-
-export default class Calendar extends BigCalendar {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-    this.propGetter = this.propGetter.bind(this);
-  }
-
-  propGetter(evt, start, end, isSelected) {
-    var style = {};
-    if(evt.color) {
-      style.fontSize="12px";
-      style.backgroundColor = evt.color;
-    }
-    return {style: style};
-  }
-
+import React, { Component } from 'react';
+class Calendar extends Component {
   render() {
     return (
-      <BigCalendar 
-        events={this.props.events}
-        onSelectEvent={this.props.onSelectEvent}
-        eventPropGetter={this.propGetter}
-      />
+      <section className="calendar" id="calendar">
+        <div className="container text-center">
+          <h2>
+            Calendar
+          </h2>
+          <p>
+            Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
+          </p>
+        </div>
+        <div className="calendar-grid">
+          <div className="row">
+            <div className="col-lg-3 col-sm-6 col-xs-12">
+              <div className="card card-block">
+                {/* <a href="#"><img alt="" src="https://cdn.appzaib.com/public/bell/img/porf-1.jpg" />
+                  <div className="calendar-over">
+                    <div>
+                      <h3 className="card-title">
+                        The Dude Rockin'
+                      </h3>
+                      <p className="card-text">
+                        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                      </p>
+                    </div>
+                  </div></a> */}
+
+                  
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 }
 
-Calendar.defaultProps = {
-  events: [],
-  onSelectEvent:  null
-};
-
-Calendar.propTypes = {
-    events: PropTypes.array,
-    onSelectEvent: PropTypes.func
-};
+export default Calendar;
