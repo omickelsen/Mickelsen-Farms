@@ -21,7 +21,7 @@ class Hero extends Component {
               </h1>
 
             <p className="tagline">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam distinctio mollitia quidem? Obcaecati dolores, atque sit adipisci itaque, repudiandae totam odit facilis odio voluptas eos, error cum quasi fugiat.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam distinctio mollitia quidem? Obcaecati dolores, atque sit adipisci itaque, repudiandae totam odit facilis odio voluptas eos, error cum quasi fugiatsss.
             </p>
             <a className="btn btn-full" href="#about">Explore</a>
           </div>
