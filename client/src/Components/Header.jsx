@@ -39,7 +39,7 @@ class Header extends Component {
             </ul>
           </nav>
           <nav className="nav social-nav pull-right d-none d-lg-inline">
-            <a href="#"><i className="fa fa-twitter"></i></a> <a href="#"><i className="fa fa-facebook"></i></a> <a href="#"><i className="fa fa-linkedin"></i></a> <a href="#"><i className="fa fa-envelope"></i></a>
+            <a href="#"><i className="fa fa-twitter"></i></a> <a href="#"><i className="fa fa-facebook"></i></a> <a href="#"><i className="fa fa-envelope"></i></a>
           </nav>
         </div>
       </header>
