@@ -99,6 +99,7 @@ export default class EventModal extends Component {
           {recurringElement}
           {recurrenceStart}
           {recurrenceEnd}
+          <button onClick={() => this.props.deleteEvent(this.props.evt.id)}>Delete Event </button>
         </Modal.Body>
       </Modal>
     );
@@ -114,6 +115,7 @@ EventModal.defaultProps = {
 EventModal.propTypes = {
   isOpen: PropTypes.bool,
   toggleModal: PropTypes.func,
+  deleteEvent: PropTypes.func,
   evt: PropTypes.object
 };
 

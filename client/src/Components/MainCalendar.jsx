@@ -132,11 +132,9 @@ export default class Calendar extends Component {
   }
 
   deleteEvent = (id) => {
-    for(var evt of this.state.events) {
-      if(evt["id"] === id) {
-      
-      }
-    }
+    
+    const events = this.state.events.filter(event => event.id !== id)
+    this.setState({events: events})
   }
 
   close = () => {
@@ -153,7 +151,16 @@ export default class Calendar extends Component {
           <NCalendar events={this.state.events} onSelectEvent={(evt) => {this.toggleModal(evt)}}/>
         </div>
         <Button id="eventButton" bsStyle = "primary" onClick={this.toggleNewModal}>Add an Event</Button>
-        <EventModal isOpen={this.state.modalOpen} toggle={this.toggleModal} evt={this.state.selectedEvent} close={this.close} />
+        <EventModal 
+        isOpen={this.state.modalOpen}
+        
+        toggle={this.toggleModal} 
+        
+        evt={this.state.selectedEvent} 
+        
+        deleteEvent={this.deleteEvent} 
+        
+        close={this.close} />
         <NewEventModal isOpen={this.state.newModalOpen} toggle={this.toggleNewModal} addEvent={this.addEvent} close={this.close}/>
       </div>
       </section>
