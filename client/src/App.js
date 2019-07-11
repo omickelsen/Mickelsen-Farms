@@ -1,35 +1,19 @@
-import React, { Component } from 'react';
-import Hero from './components/Hero';
-import Header from './components/Header';
-import About from './components/About';
-import Parallax from './components/Parallax';
-import Services from './components/Services';
-import Team from './components/Team';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import ScrollTop from './components/ScrollTop';
-import MainCalendar from './components/MainCalendar';
-import './Styles/Bootstrap.min.css';
-import './Styles/App.css';
-
-
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Hero />
-        <Header />
-        <About />
-        <Parallax />
-        <Services />
-        <MainCalendar />
-        <Team />
-        <Contact />
-        <Footer />
-        <ScrollTop />
-       
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/register' component={Register}/>
+          <Route exact path='/login' component={Login}/>
+        </Switch>
+      </Router>   
     );
   }
 }

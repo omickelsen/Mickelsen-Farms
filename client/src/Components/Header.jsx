@@ -8,7 +8,7 @@ class Header extends Component {
       <header id="header">
         <div className="container">
           <div id="logo" className="pull-left">
-            <a href="index.html"><img src={logo} alt="" title="" /></a>
+            <a href="/"><img src={logo} alt="" title="" /></a>
             {/* Uncomment below if you prefer to use a text image */}
             {/* <h1><a href="#hero">Bell</a></h1> */}
           </div>
@@ -18,6 +18,7 @@ class Header extends Component {
               <li><a href="#services">Services</a></li>
               <li><a href="#calendar">Calendar</a></li>
               <li><a href="#team">Team</a></li>
+              <li><a href="/login">Admin Login</a></li>
               {/* <li className="menu-has-children"><a href="">Drop Down</a>
                 <ul>
                   <li><a href="#">Drop Down 1</a></li>

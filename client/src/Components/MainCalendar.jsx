@@ -7,7 +7,7 @@ import moment from 'moment';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import '../Styles/App.css';
+import '../styles/App.css';
 
 
 export default class Calendar extends Component {

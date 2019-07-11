@@ -67,7 +67,7 @@ const Register = () => {
                 <input type="submit" className="btn btn-primary" value="Register" />
               </form>
               <p className='my-1'>
-                Already have an account? <a href='#login'>Sign In</a>
+                Already have an account? <a href='/login'>Sign In</a><br/>Back to the <a href='/'>Home</a> Page
               </p>
             </div>
           </div>
