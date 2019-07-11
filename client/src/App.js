@@ -11,7 +11,7 @@ import ScrollTop from './components/ScrollTop';
 import MainCalendar from './components/MainCalendar';
 import './Styles/Bootstrap.min.css';
 import './Styles/App.css';
-
+import GoogleMaps from './components/GoogleMaps';
 
 
 class App extends Component {
@@ -28,7 +28,7 @@ class App extends Component {
         <Contact />
         <Footer />
         <ScrollTop />
-       
+
       </div>
     );
   }

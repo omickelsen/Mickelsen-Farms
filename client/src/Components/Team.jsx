@@ -6,7 +6,7 @@ class CTA extends Component {
       <section className="team" id="team">
         <div className="container">
           <h2 className="text-center">
-            Meet our team
+            Meet our Team
           </h2>
           <div className="row">
             <div className="col-sm-3 col-xs-6">

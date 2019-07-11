@@ -155,7 +155,8 @@ a:hover {
   content: '';
   z-index: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.65);
+  background-image: url('../images/Background.jpg');
+  /* background: rgba(0, 0, 0, 0.65); */
   width: 100%;
   height: 100%;
   left: 0;
@@ -188,7 +189,7 @@ a:hover {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 26px;
   margin: 45px 0 75px 0;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 /* ==================================================
@@ -201,6 +202,18 @@ a:hover {
 
 #header #logo {
   margin: 14px 25px 0 0;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 0;
+  padding: 2px 0;
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 #header #logo h1 {
@@ -797,7 +810,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Contact Section
   ================================================== */
 #contact {
-  background: #f7f7f7;
+  background: rgb(214, 217, 218);
   padding: 80px 0;
 }
 
@@ -810,12 +823,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 32px;
   color: #199EB8;
   float: left;
+  
+  
 }
 
 #contact .info p {
   padding: 0 0 10px 50px;
   line-height: 24px;
+  
 }
+
+.maps{
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+
+}
+
 
 #contact .form #sendmessage {
   color: #199EB8;
@@ -825,6 +849,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15px;
   font-weight: 600;
   margin-bottom: 15px;
+ 
 }
 
 #contact .form #errormessage {
@@ -835,6 +860,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15px;
   font-weight: 600;
   margin-bottom: 15px;
+  
 }
 
 #contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
@@ -853,6 +879,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+   /* margin-left: 165px; */
+
 }
 
 #contact .form button[type="submit"] {
