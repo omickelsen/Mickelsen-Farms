@@ -33,7 +33,7 @@ const Login = () => {
                 <input type="submit" className="btn btn-primary" value="Login" />
               </form>
               <p className='my-1'>
-                Don't have an account? <a href='#register'>Create Account</a>
+                Don't have an account? <a href='/register'>Create Account</a><br/>Back to the <a href='/'>Home</a> Page
               </p>
             </div>
           </div>
