@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMaps from './GoogleMaps';
 
 class Contact extends Component {
   render() {
@@ -11,7 +12,7 @@ class Contact extends Component {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-3 col-md-4">
+            <div className="col-lg-4 col-md-4">
               <div className="info">
                 <div>
                   <i className="fa fa-map-marker"></i>
@@ -27,7 +28,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 col-md-8">
+            <div className="col-lg-4 col-md-6">
               <div className="form">
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
@@ -52,6 +53,12 @@ class Contact extends Component {
                 </form>
               </div>
             </div>
+            <div className="col-lg-4 col-md-2">
+              <div className="maps">
+                <GoogleMaps />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

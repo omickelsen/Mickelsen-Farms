@@ -11,21 +11,22 @@ import ScrollTop from '../components/ScrollTop';
 import MainCalendar from '../components/MainCalendar';
 import '../styles/Bootstrap.min.css';
 import '../styles/App.css';
+import GoogleMaps from '../components/GoogleMaps';
 
 const Home = () => {
-    return(
-    <div>
-        <Hero/>
-        <Header />
-        <About />
-        <Parallax />
-        <Services />
-        <MainCalendar />
-        <Team />
-        <Contact />
-        <Footer />
-        <ScrollTop /> 
-    </div> 
+    return (
+        <div>
+            <Hero />
+            <Header />
+            <About />
+            <Parallax />
+            <Services />
+            <MainCalendar />
+            <Team />
+            <Contact />
+            <Footer />
+            <ScrollTop />
+        </div>
     )
 }
 
