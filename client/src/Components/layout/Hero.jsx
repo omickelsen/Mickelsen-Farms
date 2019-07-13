@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from "../images/Mickelsen_Logo.jpg";
+import logo from "../../images/Mickelsen_Logo.jpg";
 import { Link } from 'react-router-dom';
 
 class Hero extends Component {

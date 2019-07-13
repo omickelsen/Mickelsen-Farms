@@ -292,13 +292,13 @@ a:hover {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
-.nav-menu, .nav-menu * {
+.auth-nav-menu, .nav-menu, .nav-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-menu ul {
+.auth-nav-menu, .nav-menu ul {
   position: absolute;
   display: none;
   top: 100%;
@@ -306,26 +306,26 @@ a:hover {
   z-index: 99;
 }
 
-.nav-menu li {
+.auth-nav-menu, .nav-menu li {
   position: relative;
   white-space: nowrap;
 }
 
-.nav-menu > li {
+.auth-nav-menu, .nav-menu > li {
   float: left;
 }
 
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
+.auth-nav-menu, .nav-menu li:hover > ul,
+.auth-nav-menu, .nav-menu li.sfHover > ul {
   display: block;
 }
 
-.nav-menu ul ul {
+.auth-nav-menu, .nav-menu ul ul {
   top: 0;
   left: 100%;
 }
 
-.nav-menu ul li {
+.auth-nav-menu, .nav-menu ul li {
   min-width: 180px;
 }
 
@@ -359,7 +359,7 @@ a:hover {
 }
 
 /* Nav Meu Styling */
-.nav-menu a {
+.auth-nav-menu, .nav-menu a {
   padding: 22px 15px 18px 15px;
   text-decoration: none;
   display: inline-block;
@@ -370,33 +370,33 @@ a:hover {
   outline: none;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+.auth-nav-menu, .nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.nav-menu ul {
+.auth-nav-menu, .nav-menu ul {
   margin: 4px 0 0 15px;
   -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
 }
 
-.nav-menu ul li {
+.auth-nav-menu, .nav-menu ul li {
   background: #fff;
   border-top: 1px solid #f4f4f4;
 }
 
-.nav-menu ul li:first-child {
+.auth-nav-menu, .nav-menu ul li:first-child {
   border-top: 0;
 }
 
-.nav-menu ul li:hover {
+.auth-nav-menu, .nav-menu ul li:hover {
   background: #199EB8;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
-.nav-menu ul li a {
+.auth-nav-menu, .nav-menu ul li a {
   color: #333;
   -webkit-transition: none;
   -o-transition: none;
@@ -404,11 +404,11 @@ a:hover {
   padding: 10px 15px;
 }
 
-.nav-menu ul li a:hover {
+.auth-nav-menu, .nav-menu ul li a:hover {
   color: #fff;
 }
 
-.nav-menu ul ul {
+.auth-nav-menu, .nav-menu ul ul {
   margin: 0;
 }
 
