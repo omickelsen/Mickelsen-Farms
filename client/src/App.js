@@ -5,6 +5,13 @@ import Register from './components/auth/Register';
 import Home from './components/layout/Home';
 import Alert from './components/layout/Alert';
 import Header from './components/layout/Header';
+import Dashboard from './components/dashboard/Dashboard';
+import About from './components/layout/About';
+import Services from './components/layout/Services';
+import Team from './components/layout/Team';
+import Contact from './components/layout/Contact';
+import Calendar from './components/layout/Calendar';
+import MainCalendar from './components/layout/MainCalendar';
 //Redux stuff
 import { Provider } from 'react-redux';
 import store from './store';
@@ -23,12 +30,18 @@ const App = () => {
     return (
       <Provider store={store}>
       <Router>
-        <Alert />
         <Header />
+        <Alert />
           <Route exact path='/' component={Home}/>
         <Switch>
           <Route exact path='/register' component={Register}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/dashboard' component={Dashboard}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/services' component={Services}/>
+          <Route exact path='/team' component={Team}/>
+          <Route exact path='/calendar' component={MainCalendar}/>
+          <Route exact path='/contact' component={Contact}/>
         </Switch>
       </Router>   
       </Provider>
