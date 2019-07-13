@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 
 
-class Parallax extends Component {
+class MainPageCarousel extends Component {
   render() {
     return (
       <div>
@@ -48,4 +48,4 @@ class Parallax extends Component {
   }
 }
 
-export default Parallax;
+export default MainPageCarousel;
