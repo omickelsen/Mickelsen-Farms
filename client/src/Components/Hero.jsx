@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from "../images/Mickelsen_Logo.jpg";
+import { Link } from 'react-router-dom';
+
 class Hero extends Component {
   render() {
     return (
@@ -7,7 +9,7 @@ class Hero extends Component {
         <div className="container text-center">
           <div className="row">
             <div className="col-md-12">
-              <a className="hero-brand" href="index.html" title="Home"><img className="horseLogo" alt="Mickelsen Logo" src={logo} /></a>
+              <Link to="/" className="hero-brand" title="Home"><img className="horseLogo" alt="Mickelsen Logo" src={logo} /></Link>
             </div>
           </div>
 

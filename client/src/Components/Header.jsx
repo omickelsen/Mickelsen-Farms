@@ -1,4 +1,4 @@
-    
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import logo from "../images/Mickelsen_Logo.jpg";
 
@@ -8,39 +8,39 @@ class Header extends Component {
       <header id="header">
         <div className="container">
           <div id="logo" className="pull-left">
-            <a href="/"><img src={logo} alt="" title="" /></a>
+            <Link to="/"><img src={logo} alt="" title="" /></Link>
             {/* Uncomment below if you prefer to use a text image */}
-            {/* <h1><a href="#hero">Bell</a></h1> */}
+            {/* <h1><Link to="#hero">Bell</a></h1> */}
           </div>
           <nav id="nav-menu-container">
             <ul className="nav-menu">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#calendar">Calendar</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="/login">Admin Login</a></li>
-              {/* <li className="menu-has-children"><a href="">Drop Down</a>
+              <li><Link to="#about">About Us</Link></li>
+              <li><Link to="#services">Services</Link></li>
+              <li><Link to="#calendar">Calendar</Link></li>
+              <li><Link to="#team">Team</Link></li>
+              <li><Link to="/login">Admin Login</Link></li>
+              {/* <li className="menu-has-children"><Link to="">Drop Down</a>
                 <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li className="menu-has-children"><a href="#">Drop Down 2</a>
+                  <li><Link to="#">Drop Down 1</a></li>
+                  <li className="menu-has-children"><Link to="#">Drop Down 2</a>
                     <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
-                      <li><a href="#">Deep Drop Down 2</a></li>
-                      <li><a href="#">Deep Drop Down 3</a></li>
-                      <li><a href="#">Deep Drop Down 4</a></li>
-                      <li><a href="#">Deep Drop Down 5</a></li>
+                      <li><Link to="#">Deep Drop Down 1</a></li>
+                      <li><Link to="#">Deep Drop Down 2</a></li>
+                      <li><Link to="#">Deep Drop Down 3</a></li>
+                      <li><Link to="#">Deep Drop Down 4</a></li>
+                      <li><Link to="#">Deep Drop Down 5</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-                  <li><a href="#">Drop Down 5</a></li>
+                  <li><Link to="#">Drop Down 3</a></li>
+                  <li><Link to="#">Drop Down 4</a></li>
+                  <li><Link to="#">Drop Down 5</a></li>
                 </ul>
               </li> */}
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="#contact">Contact Us</Link></li>
             </ul>
           </nav>
           <nav className="nav social-nav pull-right d-none d-lg-inline">
-            <a href="#"><i className="fa fa-twitter"></i></a> <a href="#"><i className="fa fa-facebook"></i></a> <a href="#"><i className="fa fa-envelope"></i></a>
+            <Link to="#"><i className="fa fa-twitter"></i></Link> <Link to="#"><i className="fa fa-facebook"></i></Link> <Link to="#"><i className="fa fa-envelope"></i></Link>
           </nav>
         </div>
       </header>
