@@ -23,8 +23,8 @@ const App = () => {
     return (
       <Provider store={store}>
       <Router>
-        <Alert />
         <Header />
+        <Alert />
           <Route exact path='/' component={Home}/>
         <Switch>
           <Route exact path='/register' component={Register}/>
