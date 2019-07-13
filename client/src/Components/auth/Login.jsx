@@ -1,7 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../actions/auth';
 
-const Login = () => {
+
+const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -13,7 +17,12 @@ const Login = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-        console.log('Success');
+    login(email, password);
+  };
+
+// Redirect if logged in
+  if(isAuthenticated) {
+    return <Redirect to='/dashboard' />
   }
 
   return(
@@ -33,7 +42,7 @@ const Login = () => {
                 <input type="submit" className="btn btn-primary" value="Login" />
               </form>
               <p className='my-1'>
-                Don't have an account? <a href='/register'>Create Account</a><br/>Back to the <a href='/'>Home</a> Page
+                Don't have an account? <Link to='/register'>Create Account</Link><br/>Back to the <Link to='/'>Home</Link> Page
               </p>
             </div>
           </div>
@@ -42,4 +51,16 @@ const Login = () => {
   )
 }
 
-export default Login
+Login.prototype = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(
+  mapStateToProps, 
+  { login }
+)(Login);
