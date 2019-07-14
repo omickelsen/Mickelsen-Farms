@@ -10,8 +10,8 @@ import About from './components/layout/About';
 import Services from './components/layout/Services';
 import Team from './components/layout/Team';
 import Contact from './components/layout/Contact';
-import Calendar from './components/layout/Calendar';
 import MainCalendar from './components/layout/MainCalendar';
+import PrivateRoute from './components/routing/PrivateRoute';
 //Redux stuff
 import { Provider } from 'react-redux';
 import store from './store';
@@ -36,12 +36,12 @@ const App = () => {
         <Switch>
           <Route exact path='/register' component={Register}/>
           <Route exact path='/login' component={Login}/>
-          <Route exact path='/dashboard' component={Dashboard}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/services' component={Services}/>
           <Route exact path='/team' component={Team}/>
           <Route exact path='/calendar' component={MainCalendar}/>
           <Route exact path='/contact' component={Contact}/>
+          <PrivateRoute exact path='/dashboard' component={Dashboard}/>
         </Switch>
       </Router>   
       </Provider>
