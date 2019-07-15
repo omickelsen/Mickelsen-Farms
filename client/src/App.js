@@ -12,6 +12,8 @@ import Team from './components/layout/Team';
 import Contact from './components/layout/Contact';
 import MainCalendar from './components/layout/MainCalendar';
 import PrivateRoute from './components/routing/PrivateRoute';
+import CreateProfile from './components/profile-forms/CreateProfile';
+
 //Redux stuff
 import { Provider } from 'react-redux';
 import store from './store';
@@ -42,6 +44,7 @@ const App = () => {
           <Route exact path='/calendar' component={MainCalendar}/>
           <Route exact path='/contact' component={Contact}/>
           <PrivateRoute exact path='/dashboard' component={Dashboard}/>
+          <PrivateRoute exact path='/create-profile' component={CreateProfile}/>
         </Switch>
       </Router>   
       </Provider>

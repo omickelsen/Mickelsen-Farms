@@ -17,12 +17,18 @@ const Header = ({ auth: { isAuthenticated, loading}, logout }) => {
           <li><Link to="/calendar">Calendar</Link></li>
           <li><Link to="/team">Team</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
-            <li>
-              <a onClick={logout} href="#!">
-                <i className='fas fa-sign-out-alt'></i> 
-                <span className='hide-sm'>Logout</span>
-              </a>
-            </li>
+          <li>
+            <Link to="#!" onClick={logout} >
+              <i className='fas fa-sign-out-alt'/>{' '} 
+              <span className='hide-sm'>Logout</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/dashboard">
+              <i className='fas fa-user'/>{' '} 
+              <span className='hide-sm'>Dashboard</span>
+            </Link>
+          </li>
         </ul>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
         <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link to="#"><i className="fa fa-envelope"></i></Link>
