@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {HashLink as Link} from 'react-router-hash-link';
+
 
 class Footer extends Component {
   render() {

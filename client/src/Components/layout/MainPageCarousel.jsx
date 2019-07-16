@@ -10,7 +10,7 @@ class MainPageCarousel extends Component {
           <Carousel.Item>
             <img
               className=" w-100"
-              src={require( "../images/Mickelsen_Logo.jpg" )}
+              src={require( "../../images/Mickelsen_Logo.jpg" )}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -21,7 +21,7 @@ class MainPageCarousel extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={require( "../images/horse.jpeg" )}
+              src={require( "../../images/horse.jpeg" )}
               alt="Third slide"
             />
 
@@ -33,7 +33,7 @@ class MainPageCarousel extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={require( "../images/farm.jpeg" )}
+              src={require( "../../images/farm.jpeg" )}
               alt="Third slide"
             />
 

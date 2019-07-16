@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import NCalendar from '../components/Calendar';
-import EventModal from '../components/EventModal';
-import NewEventModal from '../components/NewEventModal';
+import NCalendar from './Calendar';
+import EventModal from './EventModal';
+import NewEventModal from './NewEventModal';
 import moment from 'moment';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import '../Styles/App.css';
+import '../../styles/App.css';
 
 
 export default class Calendar extends Component {
