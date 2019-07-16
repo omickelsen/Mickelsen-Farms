@@ -21,7 +21,8 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken'
 import './styles/App.css'
 
-if(localStorage.token) {
+
+if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
@@ -29,26 +30,26 @@ const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
-    return (
-      <Provider store={store}>
+  return (
+    <Provider store={store}>
       <Router>
         <Header />
         <Alert />
         <Switch>
-        <Route exact path='/' component={Home}/>
-          <Route exact path='/register' component={Register}/>
-          <Route exact path='/login' component={Login}/>
-          <Route exact path='/about' component={About}/>
-          <Route exact path='/services' component={Services}/>
-          <Route exact path='/team' component={Team}/>
-          <Route exact path='/calendar' component={MainCalendar}/>
-          <Route exact path='/contact' component={Contact}/>
-          <PrivateRoute exact path='/dashboard' component={Dashboard}/>
-          <PrivateRoute exact path='/create-profile' component={CreateProfile}/>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/services' component={Services} />
+          <Route exact path='/team' component={Team} />
+          <Route exact path='/calendar' component={MainCalendar} />
+          <Route exact path='/contact' component={Contact} />
+          <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         </Switch>
-      </Router>   
-      </Provider>
-    );
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;

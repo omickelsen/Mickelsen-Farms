@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMaps from './GoogleMaps';
 
 class Contact extends Component {
   render() {
@@ -50,6 +51,11 @@ class Contact extends Component {
                   </div>
                   <div className="text-center"><button type="submit">Send Message</button></div>
                 </form>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-2">
+              <div className="maps">
+                <GoogleMaps />
               </div>
             </div>
           </div>
