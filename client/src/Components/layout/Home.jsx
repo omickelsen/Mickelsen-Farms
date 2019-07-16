@@ -1,13 +1,13 @@
 import React from 'react';
 import Hero from './Hero';
 import About from './About';
-import Parallax from './Parallax';
 import Services from './Services';
 import Team from './Team';
 import Contact from './Contact';
 import Footer from './Footer';
 import ScrollTop from './ScrollTop';
 import MainCalendar from './MainCalendar';
+import MainPageCarousel from './MainPageCarousel';
 import '../../styles/Bootstrap.min.css'
 import '../../styles/App.css';
 import PropTypes from 'prop-types';
@@ -23,7 +23,7 @@ const Home = ({isAuthenticated}) => {
     <div>
         <Hero/>
         <About />
-        <Parallax />
+        <MainPageCarousel />
         <Services />
         <MainCalendar />
         <Team />

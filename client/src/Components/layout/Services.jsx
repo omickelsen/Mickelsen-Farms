@@ -1,5 +1,6 @@
-    
+
 import React, { Component } from 'react';
+// import ServiceCards from './ServiceCards'
 
 class Services extends Component {
   render() {
@@ -7,7 +8,7 @@ class Services extends Component {
       <section className="services" id="services">
         <div className="container">
           <h2 className="text-center">
-              Services
+            Services
             </h2>
           <div className="row">
             <div className="service-col col-lg-4 col-xs-12">
@@ -21,7 +22,7 @@ class Services extends Component {
                   <h3>
                     Horse Boarding
                   </h3>
-                  <p>
+                  <p className='service-description'>
                     Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
                   </p>
                 </div>
@@ -38,7 +39,7 @@ class Services extends Component {
                   <h3>
                     Horse Riding Lessons
                   </h3>
-                  <p>
+                  <p className='service-description'>
                     Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
                   </p>
                 </div>
@@ -55,7 +56,7 @@ class Services extends Component {
                   <h3>
                     Consultations
                   </h3>
-                  <p>
+                  <p className='service-description'>
                     Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
                   </p>
                 </div>
@@ -74,7 +75,7 @@ class Services extends Component {
                   <h3>
                     Animal services
                   </h3>
-                  <p>
+                  <p className='service-description'>
                     Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
                   </p>
                 </div>
@@ -82,8 +83,8 @@ class Services extends Component {
             </div>
             <div className="service-col col-lg-4 col-xs-12">
               <div className="card card-block text-center">
-               
-                
+
+
               </div>
             </div>
           </div>
