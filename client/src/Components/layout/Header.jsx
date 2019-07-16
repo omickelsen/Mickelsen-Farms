@@ -1,23 +1,23 @@
-import { Link } from 'react-router-dom';
+
 import React, { Fragment } from 'react';
 import logo from "../../images/Mickelsen_Logo.jpg";
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {logout} from '../../actions/auth'
-import {HashLink} from 'react-router-hash-link'
+import {HashLink as Link} from 'react-router-hash-link'
 
 const Header = ({ auth: { isAuthenticated, loading}, logout }) => {
   const authLinks = (
     <div className="container">
       <div id="logo" className="pull-left">
-        <Link to="/"><img src={logo} alt="" title="" /></Link>
+        <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
       </div>
         <ul className="nav-menu">
-          <li><HashLink smooth to="/#about">About Us</HashLink></li>
-          <li><HashLink smooth to="/#services">Services</HashLink></li>
-          <li><HashLink smooth to="/#calendar">Calendar</HashLink></li>
-          <li><HashLink smooth to="/#team">Team</HashLink></li>
-          <li><HashLink smooth to="/#contact">Contact Us</HashLink></li>
+          <li><Link smooth to="/#about">About Us</Link></li>
+          <li><Link smooth to="/#services">Services</Link></li>
+          <li><Link smooth to="/#calendar">Calendar</Link></li>
+          <li><Link smooth to="/#team">Team</Link></li>
+          <li><Link smooth to="/#contact">Contact Us</Link></li>
           <li>
             <Link to="#!" onClick={logout} >
               <i className='fas fa-sign-out-alt'/>{' '} 
@@ -40,18 +40,18 @@ const Header = ({ auth: { isAuthenticated, loading}, logout }) => {
   const guestLinks = (
     <div className="container">
       <div id="logo" className="pull-left">
-        <Link to="/"><img src={logo} alt="" title="" /></Link>
+        <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
       </div>
         <ul className="nav-menu">
-          <li><HashLink smooth to="/#about">About Us</HashLink></li>
-          <li><HashLink smooth to="/#services">Services</HashLink></li>
-          <li><HashLink smooth to="/#calendar">Calendar</HashLink></li>
-          <li><HashLink smooth to="/#team">Team</HashLink></li>
-          <li><HashLink smooth to="/#contact">Contact Us</HashLink></li>
+          <li><Link smooth to="/#about">About Us</Link></li>
+          <li><Link smooth to="/#services">Services</Link></li>
+          <li><Link smooth to="/#calendar">Calendar</Link></li>
+          <li><Link smooth to="/#team">Team</Link></li>
+          <li><Link smooth to="/#contact">Contact Us</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
-        <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link to="#"><i className="fa fa-envelope"></i></Link>
+        <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link smooth to="/#contact"><i className="fa fa-envelope"></i></Link>
       </nav>
     </div>
   );
