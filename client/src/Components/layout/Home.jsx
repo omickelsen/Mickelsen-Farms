@@ -12,12 +12,11 @@ import '../../styles/Bootstrap.min.css'
 import '../../styles/App.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 
-const Home = ({isAuthenticated}) => {
-    if(isAuthenticated) {
-        return <Redirect to='/dashboard' />;
-    }
+
+const Home = () => {
+    
+    
 
     return(
     <div>
