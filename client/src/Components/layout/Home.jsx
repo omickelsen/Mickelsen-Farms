@@ -15,21 +15,21 @@ import { connect } from 'react-redux';
 
 
 const Home = () => {
-    
-    
 
-    return(
-    <div>
-        <Hero/>
-        <About />
-        <MainPageCarousel />
-        <Services />
-        <MainCalendar />
-        <Team />
-        <Contact />
-        <Footer />
-        <ScrollTop /> 
-    </div> 
+
+
+    return (
+        <div>
+            <Hero />
+            <About />
+            <MainPageCarousel />
+            <Services />
+            <MainCalendar />
+            <Team />
+            <Contact />
+            <Footer />
+            <ScrollTop />
+        </div>
     )
 }
 
