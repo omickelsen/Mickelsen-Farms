@@ -582,6 +582,77 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 45px;
 }
 
+
+/* ==================================================
+Carousel Styling
+   ================================================== */
+
+   .carousel img {
+    max-height: 550px;
+    margin: 0 auto;
+}
+/* ==================================================
+Service Card Styling
+   ================================================== */
+
+.services .card {
+  /* background-image: url('../images/Mickelsen_Logo.jpg'); */
+  background: #fff;
+  border-radius: 2px;
+  height: 275px;
+  margin: 1rem;
+  position: inherit;
+  width: 320px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+     -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .2s ease-out, background 1s ease-in;
+}
+
+.service-icon{
+  margin-top: 25px;
+  margin-right: 5px;
+}
+.service-description{
+      margin: 22px 24px 0px 0px;
+}
+
+.services .card:hover{
+box-shadow: 0px 12px #444 12px 1px #444;
+background:  #199EB8;  
+}
+
+.services .card:hover h3 {
+  border: #fff solid 4px;
+  color: #fff;
+  margin-right: 17px;
+  padding: 1em;
+  cursor: pointer;
+}
+.services .card:hover p{
+  display: none;
+
+}
+
+.services .card:hover{
+  background-position: 0 0;
+  color:#333;
+}
+
 /* ==================================================
   Services Styling
   ================================================== */
