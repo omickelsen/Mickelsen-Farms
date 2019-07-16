@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import {HashLink as Link} from 'react-router-hash-link';
 
 class ScrollTop extends Component {
   render() {
     return (
-      <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+      <Link smooth to="/#hero" class="scrolltop"><span class="fa fa-angle-up"></span></Link>
     );
   }
 }

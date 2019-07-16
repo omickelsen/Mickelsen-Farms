@@ -34,8 +34,8 @@ const App = () => {
       <Router>
         <Header />
         <Alert />
-          <Route exact path='/' component={Home}/>
         <Switch>
+        <Route exact path='/' component={Home}/>
           <Route exact path='/register' component={Register}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/about' component={About}/>
