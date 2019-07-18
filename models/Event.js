@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const NewEventSchema = new Schema({
     type: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'
+        type: String,
+        required: true
     },
     title: {
         type: String,
@@ -19,12 +19,21 @@ const NewEventSchema = new Schema({
         default: Date.now,
         required: true
     },
-    startTime: {
-        type:  Number,
+    end_date: {
+        type: Date,
+        default: Date.now,
         required: true
     },
-    endTime: {
+    timeIn: {
         type: Number,
+        required: true
+    },
+    timeOut: {
+        type: Number,
+        required: true
+    },
+    recurringDays: {
+        type: [],
         required: true
     }
 });

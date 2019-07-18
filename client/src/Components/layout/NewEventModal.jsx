@@ -6,6 +6,8 @@ import DatePicker from 'react-16-bootstrap-date-picker';
 import TimePicker from 'react-bootstrap-time-picker';
 import Select from 'react-select';
 import moment from 'moment';
+import axios from 'axios';
+
 
 import 'react-select/dist/react-select.css';
 
@@ -29,15 +31,50 @@ export default class NewEventModal extends Component {
 
   componentWillReceiveProps(newProps) {
     if(newProps.isOpen && !this.props.isOpen && this.state.submitted) {
-      this.setState({title: "", date: moment(), end_date: moment(), type: "Single", timeIn: (moment().hour() * 3600), timeOut: (moment().hour() * 3600) + (5 * 60), description: "", recurringDays: [], submitted: false});
+      this.setState({
+        title: "", 
+        date: moment(), 
+        end_date: moment(), 
+        type: "Single", 
+        timeIn: (moment().hour() * 3600), 
+        timeOut: (moment().hour() * 3600) + (5 * 60), 
+        description: "", 
+        recurringDays: [], 
+        submitted: false});
     }
   }
 
   processNewEvent() {
-    if(this.state.title !== "" && this.state.description !== "" && !(this.state.recurringDays.length === 0 && (this.state.type === "Week" || this.state.type === "BI"))) {
-      var evt = {id: -1, title: this.state.title, start: this.state.date.toDate(), end: this.state.end_date.toDate(), startTime: this.state.timeIn, endTime: this.state.timeOut, recurringDays: this.state.recurringDays, desc: this.state.description, type: this.state.type};
-      this.setState({submitted: true});
-      this.props.addEvent(evt);
+    if(
+      this.state.title !== "" && 
+      this.state.description !== "" && 
+      !(this.state.recurringDays.length === 0 && 
+      (this.state.type === "Week" || this.state.type === "BI"))) {
+      try {
+        
+        var evt = {
+          title: this.state.title, 
+          start: this.state.date.toDate(), 
+          end: this.state.end_date.toDate(), 
+          timeIn: this.state.timeIn, 
+          timeOut: this.state.timeOut, 
+          recurringDays: this.state.recurringDays, 
+          description: this.state.description, 
+          type: this.state.type
+        };
+
+        axios.post('/api/event', evt).then(data => {
+          evt.id = data._id;
+         
+          this.setState({submitted: true});
+          this.props.addEvent(evt);
+
+        })
+  
+    } catch (err) {
+          console.log(err.msg);
+          
+        }
     }
     if(this.state.title === "") {
       
@@ -48,6 +85,7 @@ export default class NewEventModal extends Component {
     if(this.state.recurringDays.length === 0 && (this.state.type === "Week" || this.state.type === "BI")) {
       
     }
+  
   }
 
 	timeIn = (e) => {

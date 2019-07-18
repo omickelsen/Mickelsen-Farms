@@ -18,6 +18,7 @@ const Header = ({ auth: { isAuthenticated, loading}, logout }) => {
           <li><Link smooth to="/#calendar">Calendar</Link></li>
           <li><Link smooth to="/#team">Team</Link></li>
           <li><Link smooth to="/#contact">Contact Us</Link></li>
+          <li><Link smooth to="/#profiles">Profiles</Link></li>
           <li>
             <Link to="#!" onClick={logout} >
               <i className='fas fa-sign-out-alt'/>{' '} 

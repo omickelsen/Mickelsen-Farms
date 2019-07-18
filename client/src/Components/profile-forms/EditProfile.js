@@ -1,10 +1,10 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile } from '../../actions/profile';
+import { createProfile, getCurrentProfile } from '../../actions/profile';
 
-const CreateProfile = ({ createProfile, history }) => {
+const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentProfile, history }) => {
     const [formData, setFormData] = useState({
         status: '',
         bio: '',
@@ -18,6 +18,22 @@ const CreateProfile = ({ createProfile, history }) => {
     });
 
     const [displaySocialInputs, toggleSocialInputs] = useState(false);
+
+    useEffect(() => {
+        getCurrentProfile();
+
+        setFormData({
+            status: loading || !profile.status ? '' : profile.status,
+            bio: loading || !profile.bio ? '' : profile.bio,
+            skills: loading || !profile.skills ? '' : profile.skills,
+            img: loading || !profile.img ? '' : profile.img,
+            youtube: loading || !profile.social ? '' : profile.social,
+            instagram: loading || !profile.social ? '' : profile.social.instagram,
+            twitter: loading || !profile.social ? '' : profile.social.twitter,
+            facebook: loading || !profile.social ? '' : profile.social.facebook,
+            linkedin: loading || !profile.social ? '' : profile.social.linkedin
+        })
+    }, [loading])
 
     const {
         status,
@@ -35,13 +51,13 @@ const CreateProfile = ({ createProfile, history }) => {
 
     const onSubmit = e => {
         e.preventDefault();
-        createProfile(formData, history)
+        createProfile(formData, history, true)
     }
 
     return (
         <Fragment>
             <div className='container'>
-                <h1 className="display-4 text-center">Create Your Profile</h1>
+                <h1 className="display-4 text-center">Edit Your Profile</h1>
                     <small className="d-block pb-3">* = required field</small>
                 <form className='form' action="add-experience.html" onSubmit={e => onSubmit(e)}>
                     <div className="form-group">
@@ -119,7 +135,7 @@ const CreateProfile = ({ createProfile, history }) => {
                                 </div>
                         </Fragment>)}
                 <br/>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn btn-info btn-block mt-4" /><br/>
                 <Link to='/dashboard' className='btn btn-info btn-block mt-4'>
                     Go Back
                 </Link>
@@ -129,8 +145,14 @@ const CreateProfile = ({ createProfile, history }) => {
     )
 }
 
-CreateProfile.propTypes = {
-    createProfile: PropTypes.func.isRequired
-}
+EditProfile.propTypes = {
+    createProfile: PropTypes.func.isRequired,
+    getCurrentProfile: PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired
+};
 
-export default connect(null, { createProfile })(withRouter(CreateProfile));
+const mapStateToProps = state => ({
+    profile: state.profile
+});
+
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(withRouter(EditProfile));
