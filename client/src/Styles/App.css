@@ -43,6 +43,10 @@
 .App {
   text-align: center;
 }
+.rbc-btn-group:last-child{
+  display: block;
+  white-space: initial;
+}
 
 h1, h2 {
   padding: 10px;
@@ -974,18 +978,21 @@ background:  #199EB8;
   background: #23c2e1;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 768px) {
     .maps{
-        width:600px;
+        position: inherit;
+        width:300px;
         height: 260px;
+        padding-left:40px;
+        padding-right: 0px;
     }
 }
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 768px) {
     .maps{
-        width:160px;
+        width:600px;
         height: 300px;
     }
-  }
+  } */
 
 /* ==================================================
   Footer Styling

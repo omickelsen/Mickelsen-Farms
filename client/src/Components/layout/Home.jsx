@@ -7,6 +7,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import ScrollTop from './ScrollTop';
 import MainCalendar from './MainCalendar';
+import Header from './Header';
 import MainPageCarousel from './MainPageCarousel';
 import '../../styles/Bootstrap.min.css'
 import '../../styles/App.css';
@@ -21,6 +22,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
+            <Header />
             <About />
             <MainPageCarousel />
             <Services />
