@@ -13,6 +13,7 @@ import Contact from './components/layout/Contact';
 import MainCalendar from './components/layout/MainCalendar';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
+import HorseBoarding from './pages/HorseBoarding'
 
 //Redux stuff
 import { Provider } from 'react-redux';
@@ -22,18 +23,18 @@ import setAuthToken from './utils/setAuthToken'
 import './styles/App.css'
 
 
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
+if ( localStorage.token ) {
+  setAuthToken( localStorage.token );
 }
 
 const App = () => {
-  useEffect(() => {
-    store.dispatch(loadUser());
-  }, []);
+  useEffect( () => {
+    store.dispatch( loadUser() );
+  }, [] );
   return (
     <Provider store={store}>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Alert />
         <Switch>
           <Route exact path='/' component={Home} />
@@ -44,6 +45,7 @@ const App = () => {
           <Route exact path='/team' component={Team} />
           <Route exact path='/calendar' component={MainCalendar} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/services/horse-boarding' component={HorseBoarding} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         </Switch>
