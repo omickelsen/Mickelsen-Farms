@@ -24,7 +24,6 @@ const HorseBoarding = () => {
             <Container>
                 <Row>
                     <Col sm={6}> <div className="row">
-
                         <div className="includes-container">
                             <h1 className="service-includes-title">Includes</h1>
                             <p>
@@ -42,15 +41,12 @@ const HorseBoarding = () => {
                                 </ul>
                             </p>
                         </div>
-
                     </div>
-
                     </Col>
                     <Col sm={6}>
                         <div className="second-container">
                             <div>
                                 <div className="row">
-
                                     <div className="pricing-container">
                                         <h1 className="service-pricing-title">Pricing</h1>
                                         <ul className="pricing-list">
