@@ -54,8 +54,8 @@ export default class NewEventModal extends Component {
         
         var evt = {
           title: this.state.title, 
-          start: this.state.date.toDate(), 
-          end: this.state.end_date.toDate(), 
+          start: this.state.date.toDate(),
+          end: this.state.end_date.toDate(),
           timeIn: this.state.timeIn, 
           timeOut: this.state.timeOut, 
           recurringDays: this.state.recurringDays, 
@@ -63,6 +63,9 @@ export default class NewEventModal extends Component {
           type: this.state.type
         };
 
+        
+        
+        
         axios.post('/api/event', evt).then(data => {
           evt.id = data._id;
          
@@ -72,7 +75,7 @@ export default class NewEventModal extends Component {
         })
   
     } catch (err) {
-          console.log(err.msg);
+          console.log(err);
           
         }
     }
