@@ -4,7 +4,8 @@ import logo from "../../images/Mickelsen_Logo.jpg";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth'
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
   const authLinks = (
@@ -32,7 +33,7 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
         </li>
       </ul>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
-        <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link to="#"><i className="fa fa-envelope"></i></Link>
+      <a href="https://twitter.com/mickelsen_s"><i className="fab fa-twitter"></i></a><a href="https://www.facebook.com/MickelsenFamilyFarms/"><i className="fab fa-facebook"></i></a> <Link to="/#contact"><i className="fa fa-envelope"></i></Link>
       </nav>
     </div>
   );
@@ -51,7 +52,7 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
         <li><Link to="/login">Login</Link></li>
       </ul>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
-        <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link smooth to="/#contact"><i className="fa fa-envelope"></i></Link>
+        <a href="https://twitter.com/mickelsen_s"><i className="fab fa-twitter"></i></a> <a href="https://www.facebook.com/MickelsenFamilyFarms/"><i className="fab fa-facebook"></i></a> <Link smooth to="/#contact"><i className="fa fa-envelope"></i></Link>
       </nav>
     </div>
   );
