@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import Header from '../layout/Header';
+
 
 
 const Login = ({ login, isAuthenticated }) => {
@@ -28,7 +30,8 @@ const Login = ({ login, isAuthenticated }) => {
 
   return(
     <Fragment>
-      
+      <div>
+      <Header />
       <div className='container'>
         <div className='login' id='login'>
             <div className="row">
@@ -49,6 +52,7 @@ const Login = ({ login, isAuthenticated }) => {
                 </p>
               </div>
             </div>
+        </div>
         </div>
         </div>
         

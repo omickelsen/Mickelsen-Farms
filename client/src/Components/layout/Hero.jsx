@@ -9,7 +9,7 @@ class Hero extends Component {
         <div className="container text-center">
           <div className="row">
             <div className="col-md-12">
-              <Link to="/" className="hero-brand" title="Home"><img className="horseLogo" alt="Mickelsen Logo" src={logo} /></Link>
+              {/* <Link to="/" className="hero-brand" title="Home"><img className="horseLogo" alt="Mickelsen Logo" src={logo} /></Link> */}
             </div>
           </div>
 

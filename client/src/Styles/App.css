@@ -193,7 +193,14 @@ a:hover {
   content: '';
   z-index: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.65);
+  background-image: url("../images/Background.jpg");
+  -webkit-background-size: cover;
+
+-moz-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
   width: 100%;
   height: 100%;
   left: 0;
