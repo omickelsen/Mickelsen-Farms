@@ -14,6 +14,7 @@ import MainCalendar from './components/layout/MainCalendar';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import HorseBoarding from './pages/HorseBoarding'
+import RidingLessons from './pages/RidingLessons'
 
 //Redux stuff
 import { Provider } from 'react-redux';
@@ -21,6 +22,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken'
 import './styles/App.css'
+
 
 
 if ( localStorage.token ) {
@@ -46,6 +48,7 @@ const App = () => {
           <Route exact path='/calendar' component={MainCalendar} />
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/services/horse-boarding' component={HorseBoarding} />
+          <Route exact path='/services/riding-lessons' component={RidingLessons} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         </Switch>

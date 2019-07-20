@@ -38,7 +38,7 @@ class Services extends Component {
                 </div>
                 <div>
                   <h3>
-                    Riding Lessons
+                    <Link to="/services/riding-lessons">Riding Lessons</Link>
                   </h3>
                   <p className='service-description'>
                     1 hour or 1/2 hour private riding lessons including horse rental, horse tack, helmet, and facility rental. Click for more details.

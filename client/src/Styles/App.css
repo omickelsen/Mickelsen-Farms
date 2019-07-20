@@ -228,7 +228,6 @@ a:hover {
   margin: 45px 0 75px 0;
   color: #fff;
 }
-
 /* ==================================================
   Header Styling
 ================================================== */
@@ -713,23 +712,23 @@ background:  #199EB8;
     color: #199EB8;
     text-align: center;
     /* padding: 40px; */
-    /* font-size: 40px; */
+    font-size: 52px;
   }
   
   .service-pricing-title{
     color: #199EB8;
     text-align: center;
-    padding: 10px;
   }
 
   .service-includes-title{
     color: #199EB8;
     text-align: center;
+    
   }
 
   .service-extra-title{
-     color: #199EB8;
-    text-align: center;
+  color: #199EB8;
+  text-align: center;
   }
 
   .includes-container{
@@ -744,7 +743,7 @@ background:  #199EB8;
   }
   
   .pricing-container{
-    background: #fff;
+  background: #fff;
   border-radius: 2px;
   height: 260px;
   margin: 1rem;
@@ -784,8 +783,56 @@ background:  #199EB8;
   .extra-list li{
     font-size: 18px;
     color: #333;
-    padding: 3px;
+    /* padding: 3px; */
   }
+  .price-table{
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .lesson-pricing-container{
+    width:100%;
+    margin-top: 80px;
+  }
+  .lesson-pricing-title{
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+  }
+  th{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  td{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+   h5{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .includes-container{
+      height: auto;
+      width: auto;
+    }
+    .pricing-container{
+      height: auto;
+    }
+    .extra-container{
+      height: auto;
+    }
+    .price-table{
+      width: auto;
+      height: auto;
+    }
+    .lesson-pricing-title{
+      color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+    }
+    .accordion-header:hover{
+      cursor: pointer;
+    }
+    
+  } 
 
 /* ==================================================
   Call-to-action Styling
