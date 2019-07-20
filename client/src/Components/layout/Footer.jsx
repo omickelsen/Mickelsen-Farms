@@ -18,22 +18,22 @@ class Footer extends Component {
               <div className="col-lg-6 col-xs-12 text-lg-right text-center">
                 <ul className="list-inline">
                   <li className="list-inline-item">
-                    <a href="index.html">Home</a>
+                    <Link smooth to="/#hero">Home</Link>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#about">About Us</a>
+                  <Link smooth to="/#about">About Us</Link>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#services">Services</a>
+                  <Link smooth to="/#services">Services</Link>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#calendar">Calendar</a>
+                  <Link smooth to="/#calendar">Calendar</Link>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#team">Team</a>
+                  <Link smooth to="/#team">Team</Link>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#contact">Contact</a>
+                  <Link smooth to="/#contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
