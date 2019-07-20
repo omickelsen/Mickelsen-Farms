@@ -12,25 +12,27 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
       <div id="logo" className="pull-left">
         <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
       </div>
-      <ul className="nav-menu">
-        <li><Link smooth to="/#about">About Us</Link></li>
-        <li><Link smooth to="/#services">Services</Link></li>
-        <li><Link smooth to="/#calendar">Calendar</Link></li>
-        <li><Link smooth to="/#team">Team</Link></li>
-        <li><Link smooth to="/#contact">Contact Us</Link></li>
-        <li>
-          <Link to="#!" onClick={logout} >
-            <i className='fas fa-sign-out-alt' />{' '}
-            <span className='hide-sm'>Logout</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/dashboard">
-            <i className='fas fa-user' />{' '}
-            <span className='hide-sm'>Dashboard</span>
-          </Link>
-        </li>
-      </ul>
+      <nav id="nav-menu-container">
+        <ul className="nav-menu">
+          <li><Link smooth to="/#about">About Us</Link></li>
+          <li><Link smooth to="/#services">Services</Link></li>
+          <li><Link smooth to="/#calendar">Calendar</Link></li>
+          <li><Link smooth to="/#team">Team</Link></li>
+          <li><Link smooth to="/#contact">Contact Us</Link></li>
+          <li>
+            <Link to="#!" onClick={logout} >
+              <i className='fas fa-sign-out-alt' />{' '}
+              <span className='hide-sm'>Logout</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/dashboard">
+              <i className='fas fa-user' />{' '}
+              <span className='hide-sm'>Dashboard</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
         <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link to="#"><i className="fa fa-envelope"></i></Link>
       </nav>
@@ -42,14 +44,16 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
       <div id="logo" className="pull-left">
         <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
       </div>
-      <ul className="nav-menu">
-        <li><Link smooth to="/#about">About Us</Link></li>
-        <li><Link smooth to="/#services">Services</Link></li>
-        <li><Link smooth to="/#calendar">Calendar</Link></li>
-        <li><Link smooth to="/#team">Team</Link></li>
-        <li><Link smooth to="/#contact">Contact Us</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
+      <nav id="nav-menu-container">
+        <ul className="nav-menu">
+          <li><Link smooth to="/#about">About Us</Link></li>
+          <li><Link smooth to="/#services">Services</Link></li>
+          <li><Link smooth to="/#calendar">Calendar</Link></li>
+          <li><Link smooth to="/#team">Team</Link></li>
+          <li><Link smooth to="/#contact">Contact Us</Link></li>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
+      </nav>
       <nav className="nav social-nav pull-right d-none d-lg-inline">
         <Link to="#"><i className="fab fa-twitter"></i></Link> <Link to="#"><i className="fab fa-facebook"></i></Link> <Link smooth to="/#contact"><i className="fa fa-envelope"></i></Link>
       </nav>
