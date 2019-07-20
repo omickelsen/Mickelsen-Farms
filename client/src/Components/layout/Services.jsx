@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import Footer from './Footer';
+import Header from './Header'
 // import ServiceCards from './ServiceCards'
 
 class Services extends Component {
@@ -65,7 +67,6 @@ class Services extends Component {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     );
