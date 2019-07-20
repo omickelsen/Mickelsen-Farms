@@ -14,7 +14,7 @@ import Card from 'react-bootstrap/Card'
 
 
 
-const TeamsPage = () => {
+const AlandJodee = () => {
     return (
 
         <div>
@@ -69,4 +69,4 @@ const TeamsPage = () => {
 
 
 
-export default TeamsPage
+export default AlandJodee
