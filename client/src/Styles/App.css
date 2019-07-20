@@ -441,6 +441,12 @@ a:hover {
   #mobile-nav-toggle {
     display: inline;
   }
+  #nav-menu-container{
+    display: none;
+  }
+  #mobile-nav-toggle{
+    display: none;
+  }
 }
 
 /* Mobile Nav Styling */
