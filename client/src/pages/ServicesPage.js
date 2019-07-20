@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/layout/Header'
+import Header from '../components/layout/Header';
 import { Link } from 'react-router-dom';
-import Services from '../components/Services'
-import Footer from '../components/layout/Footer'
+import Services from '../components/Services';
+import Footer from '../components/layout/Footer';
 
 
 
