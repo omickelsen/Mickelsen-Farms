@@ -23,6 +23,8 @@ export default class NewEventModal extends Component {
       timeOut       : (moment().hour() * 3600) + (5 * 60),
       description   : "",
       recurringDays : [],
+      resource: '',
+      allDay: false,
       submitted: true
     };
     this.processNewEvent = this.processNewEvent.bind(this);
@@ -45,6 +47,8 @@ export default class NewEventModal extends Component {
   }
 
   processNewEvent() {
+    console.log("NewEvent");
+    
     if(
       this.state.title !== "" && 
       this.state.description !== "" && 
@@ -54,18 +58,18 @@ export default class NewEventModal extends Component {
         
         var evt = {
           title: this.state.title, 
-          start: this.state.date.toDate(),
+          start: this.state.date,
           end: this.state.end_date.toDate(),
           timeIn: this.state.timeIn, 
           timeOut: this.state.timeOut, 
           recurringDays: this.state.recurringDays, 
           description: this.state.description, 
-          type: this.state.type
+          type: this.state.type,
+          allDay: this.state.allDay,
+          resource: ''
         };
 
-        
-        
-        
+     
         axios.post('/api/event', evt).then(data => {
           evt.id = data._id;
          
@@ -89,6 +93,24 @@ export default class NewEventModal extends Component {
       
     }
   
+  }
+
+  componentDidMount(){
+    return axios.get('/api/event').then(data => {
+      console.log(data);
+      // this.setState({
+      //     title: data.title, 
+      //     date: data.date, 
+      //     end_date: data.end_date, 
+      //     type: data.type, 
+      //     timeIn: data.timeIn, 
+      //     timeOut: data.timeOut, 
+      //     description: data.description, 
+      //     recurringDays: data.recurringDays,
+      //     allDay: data.allDay,
+      //     resource: data.resource
+      //   })     
+    })
   }
 
 	timeIn = (e) => {

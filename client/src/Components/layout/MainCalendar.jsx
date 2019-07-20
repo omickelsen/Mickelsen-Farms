@@ -4,6 +4,7 @@ import NCalendar from './Calendar';
 import EventModal from './EventModal';
 import NewEventModal from './NewEventModal';
 import moment from 'moment';
+import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -17,12 +18,22 @@ export default class Calendar extends Component {
       modalOpen: false,
       newModalOpen: false,
       selectedEvent: null,
-      events: [
-
-      ]
+      popup: true,
+      events: []
     };
   }
+componentDidMount(){
+ this.addEventsFromMongo()
+}
 
+addEventsFromMongo = () =>{
+  return axios.get('/api/event').then(data => {
+    console.log(data);
+    this.setState({
+      events: data.data
+    })
+  })
+}
   toggleModal = ( evt ) => {
     if ( !this.state.modalOpen ) {
       this.setState( { modalOpen: !this.state.modalOpen, selectedEvent: evt } );

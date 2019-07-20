@@ -19,6 +19,14 @@ const NewEventSchema = new Schema({
         default: Date.now,
         required: true
     },
+    start: {
+        type: Date,
+        
+    },
+    end: {
+        type: Date,
+        
+    },
     end_date: {
         type: Date,
         default: Date.now,
@@ -35,6 +43,12 @@ const NewEventSchema = new Schema({
     recurringDays: {
         type: [],
         required: true
+    },
+    allDay: {
+        type: Boolean
+    },
+    resource: {
+        type: String
     }
 });
 
