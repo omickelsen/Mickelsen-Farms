@@ -599,7 +599,6 @@ Service Card Styling
    ================================================== */
 
 .services .card {
-  /* background-image: url('../images/Mickelsen_Logo.jpg'); */
   background: #fff;
   border-radius: 2px;
   height: 275px;
@@ -645,6 +644,11 @@ background:  #199EB8;
   margin-right: 17px;
   padding: 1em;
   cursor: pointer;
+  text-decoration: none;
+}
+.services .card-link:hover{
+  text-decoration: none;
+  color: white;
 }
 .services .card:hover p{
   display: none;

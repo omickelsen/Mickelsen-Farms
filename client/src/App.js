@@ -16,6 +16,7 @@ import CreateProfile from './components/profile-forms/CreateProfile';
 import HorseBoarding from './pages/HorseBoarding'
 import RidingLessons from './pages/RidingLessons'
 
+
 //Redux stuff
 import { Provider } from 'react-redux';
 import store from './store';
