@@ -67,4 +67,19 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.delete('delete/:id', async (req, res) => {
+    try {
+        let event = await Event.findOne( req.param.id )
+        await event.remove(req.param.id);
+
+        res.json({ msg: 'Post has been removed' });
+    } catch (err) {
+        console.error(err.message);
+        if(err.kind === 'ObjectId') {
+            return res.status(404).json({ msg: 'Event not found' });
+        }
+        res.status(500).send('Server Error');
+    }
+});
+
 module.exports = router;

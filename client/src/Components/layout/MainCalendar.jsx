@@ -55,106 +55,23 @@ addEventsFromMongo = () =>{
 
     events.push(evt);
 
-    // var startHours = Math.floor( evt["startTime"] / 3600 );
-    // var startMinutes = startHours;
-    // if ( startHours !== 0 ) {
-    //   startMinutes = evt["startTime"] % ( 3600 * Math.floor( startHours ) ) / 60;
-    // }
-    // else {
-    //   startMinutes = evt["startTime"] / 60;
-    // }
-    // var endHours = Math.floor( evt["endTime"] / 3600 );
-    // var endMinutes = endHours;
-    // if ( endHours !== 0 ) {
-    //   endMinutes = evt["endTime"] % ( 3600 * Math.floor( endHours ) ) / 60;
-    // }
-    // else {
-    //   endMinutes = evt["endTime"] / 60;
-    // }
-    // // evt["start"].setHours( startHours );
-    // // evt["start"].setMinutes( startMinutes );
-    // // evt["end"].setHours( endHours );
-    // // evt["end"].setMinutes( endMinutes );
-    // var recurringDays = evt["recurringDays"];
-    // var recurringDayValues = [];
-    // var recurrenceStart = evt["start"];
-    // var recurrenceEnd = evt["end"];
-    // for ( let obj of recurringDays ) {
-    //   recurringDayValues.push( obj["value"] );
-    // }
-    // evt["recurringDays"] = recurringDayValues;
-    // if ( evt["type"] === "BI" ) {
-    //   let startDate = moment( evt["start"] );
-    //   let startDateDay = startDate.day();
-    //   let endDate = moment( evt["end"] );
-    //   while ( startDate.isBefore( endDate ) ) {
-    //     if ( recurringDayValues.indexOf( startDate.day() ) !== -1 ) {
-    //       let evtCopy = Object.assign( {}, evt );
-    //       evtCopy["start"] = startDate.toDate();
-    //       evtCopy["end"] = startDate.toDate();
-    //       evtCopy["end"].setHours( evt["end"].getHours() );
-    //       evtCopy["end"].setMinutes( evt["end"].getMinutes() );
-    //       evtCopy["recurrenceStart"] = recurrenceStart;
-    //       evtCopy["recurrenceEnd"] = recurrenceEnd;
-    //       console.log(evtCopy);
-          
-    //       events.push( evtCopy );
-    //     }
-    //     let startDateClone = moment( startDate );
-    //     let nextDateDay = startDateClone.add( 1, "days" ).day();
-    //     if ( nextDateDay === startDateDay ) {
-    //       startDate = startDate.add( 8, "days" );
-    //     }
-    //     else {
-    //       startDate = startDate.add( 1, "days" );
-    //     }
-    //   }
-    // }
-    // else if ( evt["type"] === "Week" ) {
-    //   let startDate = moment( evt["start"] );
-    //   let endDate = moment( evt["end"] );
-    //   while ( startDate.isBefore( endDate ) ) {
-    //     if ( recurringDayValues.indexOf( startDate.day() ) !== -1 ) {
-    //       let evtCopy = Object.assign( {}, evt );
-    //       evtCopy["start"] = startDate.toDate();
-    //       evtCopy["end"] = startDate.toDate();
-    //       evtCopy["end"].setHours( evt["end"].getHours() );
-    //       evtCopy["end"].setMinutes( evt["end"].getMinutes() );
-    //       evtCopy["recurrenceStart"] = recurrenceStart;
-    //       evtCopy["recurrenceEnd"] = recurrenceEnd;
-    //       events.push( evtCopy );
-    //     }
-    //     startDate = startDate.add( 1, "days" );
-    //   }
-    // }
-    // else if ( evt["type"] === "Month" ) {
-    //   let startDate = moment( evt["start"] );
-    //   let endDate = moment( evt["end"] );
-    //   while ( startDate.isBefore( endDate ) ) {
-    //     let evtCopy = Object.assign( {}, evt );
-    //     evtCopy["start"] = startDate.toDate();
-    //     evtCopy["end"] = startDate.toDate();
-    //     evtCopy["end"].setHours( evt["end"].getHours() );
-    //     evtCopy["end"].setMinutes( evt["end"].getMinutes() );
-    //     evtCopy["recurrenceStart"] = recurrenceStart;
-    //     evtCopy["recurrenceEnd"] = recurrenceEnd;
-    //     events.push( evtCopy );
-    //     startDate = startDate.add( 1, "month" );
-    //   }
-    // }
-    // else {
-    //   console.log(evt);
-      
-    //   events.push( evt );
-    // }
     this.setState( { events: events } );
     this.close();
   }
 
   deleteEvent = ( id ) => {
 
-    const events = this.state.events.filter( event => event.id !== id )
-    this.setState( { events: events } )
+    //Axios delete call then ,()=> this.addEventsFromMongo()
+
+    return axios.delete(`/api/event/delete/${id}`).then(data => {
+      console.log(data);
+      // this.setState({
+      //   events: data.data
+      // })
+      this.addEventsFromMongo()
+    })
+    // const events = this.state.events.filter( event => event._id !== id )
+    // this.setState( { events: events } )
   }
 
   close = () => {
