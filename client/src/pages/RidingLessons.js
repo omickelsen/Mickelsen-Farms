@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col'
 import Table from 'react-bootstrap/Table'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
+import Footer from '../components/layout/Footer'
+
 
 
 const RidingLessons = () => {
@@ -110,6 +112,7 @@ const RidingLessons = () => {
                     </Row>
                 </Row>
             </Container>
+            <Footer />
         </div>
     )
 }
