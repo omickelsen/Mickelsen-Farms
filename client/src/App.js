@@ -15,7 +15,9 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import HorseBoarding from './pages/HorseBoarding'
 import RidingLessons from './pages/RidingLessons'
-import Teams from './pages/Teams'
+import AlandJoDee from './pages/AlandJoDee'
+import Other2 from './pages/Other2'
+import Other3 from './pages/Other3'
 
 
 //Redux stuff
@@ -51,9 +53,11 @@ const App = () => {
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/services/horse-boarding' component={HorseBoarding} />
           <Route exact path='/services/riding-lessons' component={RidingLessons} />
-          <Route exact path='/teams' component={Teams} />
+          <Route exact path='/create-profile' component={CreateProfile} />
+          <Route exact path='/AlandJoDee' component={AlandJoDee} />
+          <Route exact path='/Other2' component={Other2} />
+          <Route exact path='/Other3' component={Other3} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
-          <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         </Switch>
       </Router>
     </Provider>
