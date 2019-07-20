@@ -50,7 +50,7 @@ class Services extends Component {
               <div className="card card-block text-center">
                 <div>
                   <div className="service-icon">
-                    <span className="fa fa-gifts"></span>
+                    <span className="fas fa-gift"></span>
                   </div>
                 </div>
                 <div>
