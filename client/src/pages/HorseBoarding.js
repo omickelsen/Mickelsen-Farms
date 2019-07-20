@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../components/layout/Header'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Footer from '../components/layout/Footer'
 
 
 
@@ -76,6 +76,7 @@ const HorseBoarding = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer />
         </div>
     )
 }
