@@ -20,11 +20,15 @@ class Contact extends Component {
                 </div>
                 <div>
                   <i className="fa fa-envelope"></i>
-                  <p>alandjodee@msn.com</p>
+                  <p>mickelsenfamilyfarms@gmail.com</p>
                 </div>
                 <div>
                   <i className="fa fa-phone"></i>
-                  <p>+1 801-372-2070</p>
+                  <p>JoDee Mickelsen +1 801-372-2070</p>
+                </div>
+                <div>
+                  <i className="fa fa-phone"></i>
+                  <p>AL Mickelsen: +1 801-960-6671</p>
                 </div>
               </div>
             </div>
