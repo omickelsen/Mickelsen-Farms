@@ -35,6 +35,9 @@ class Footer extends Component {
                   <li className="list-inline-item">
                   <Link smooth to="/#contact">Contact Us</Link>
                   </li>
+                  {/* <li className="list-inline-item">
+                    <Link to="/login">Login</Link>
+                    </li> */}
                 </ul>
               </div>
             </div>
