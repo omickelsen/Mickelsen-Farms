@@ -67,12 +67,16 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.delete('delete/:id', async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     try {
-        let event = await Event.findOne( req.param.id )
-        await event.remove(req.param.id);
+        console.log(req.params.id);
+        
+        let remEvent = await Event.findOne( {_id: {'$eq':req.params.id}} )
+        console.log('my Event' + remEvent);
+        
+        await remEvent.remove();
 
-        res.json({ msg: 'Post has been removed' });
+        res.json({ msg: 'Event has been removed' });
     } catch (err) {
         console.error(err.message);
         if(err.kind === 'ObjectId') {

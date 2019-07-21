@@ -60,14 +60,12 @@ addEventsFromMongo = () =>{
   }
 
   deleteEvent = ( id ) => {
-
+    console.log(id)
     //Axios delete call then ,()=> this.addEventsFromMongo()
 
     return axios.delete(`/api/event/delete/${id}`).then(data => {
       console.log(data);
-      // this.setState({
-      //   events: data.data
-      // })
+      
       this.addEventsFromMongo()
     })
     // const events = this.state.events.filter( event => event._id !== id )

@@ -11,6 +11,13 @@ export default class EventModal extends Component {
     };
   }
 
+  deleteEvent = (id) => {
+    this.props.deleteEvent(id)
+    .then(() => {
+      this.props.close()
+    })
+  }
+
   render() {
     var title = "";
     var description = "";
@@ -103,7 +110,7 @@ export default class EventModal extends Component {
           {recurringElement}
           {recurrenceStart}
           {recurrenceEnd}
-          <button onClick={() => this.props.deleteEvent(this.props.evt._id)}>Delete Event </button>
+          <button onClick={() => this.deleteEvent(this.props.evt._id)}>Delete Event </button>
         </Modal.Body>
       </Modal>
     );
