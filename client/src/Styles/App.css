@@ -1039,7 +1039,7 @@ background:  #199EB8;
   } 
 
 .team .card {
-  background-image: url("../images/farm.jpeg");
+  background-image: url("../images/team.jpg");
   border-radius: 2px;
   height: 275px;
   margin: 1rem;
@@ -1077,12 +1077,12 @@ background-size: cover;
 }
 .team-description{
   margin: 22px 24px 0px 0px;
-  color: white;
+  color: red;
 }
 
 .team .card p{
   display:none;
-  color: white;
+  color: red;
 }
 
 .team .card:hover{
@@ -1090,7 +1090,7 @@ background-size: cover;
 /* background-color:black;  */
 /* opacity:.7;  */
 /* z-index:10; */
-color:white;
+color:red;
 } 
 
 .team .card:hover h3 {
@@ -1104,12 +1104,12 @@ color:white;
 }
 .team .card-link:hover{
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
+  color: red(0, 0%, 100%);
 }
 .team .card:hover p{
 display: inherit;
 font-size: 28px;
-color:white;
+color:red;
 text-align:center;
 font:24px sans serif;
 text-decoration:none;

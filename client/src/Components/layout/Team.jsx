@@ -20,7 +20,7 @@ class Team extends Component {
                       Alfred and JoDee Mickelsen
                     </h3>
                     <p className='team-description'>
-                      This is the summary of Al and JoDee.
+                      Owners and Operators of Mickelsen Family Farms. Experienced In all things Horses.
                   </p>
                   </div>
                 </div>
@@ -31,10 +31,10 @@ class Team extends Component {
                 <div className="card card-block text-center">
                   <div>
                     <h3 className="team-card-title">
-                      Other Team Member 2
+                      Olivia Lindstrom
                     </h3>
                     <p className='team-description'>
-                      This information will be added by Orie.
+                      Horse Trainer and Lesson Teacher. 2019-20 Stawberry Days Rodeo Queen.
                   </p>
                   </div>
                 </div>
@@ -45,10 +45,10 @@ class Team extends Component {
                 <div className="card card-block text-center">
                   <div>
                     <h3 className="team-card-title">
-                      Other Team Member 3
+                      Izzy Barnes
                     </h3>
                     <p className='team-description'>
-                      If there is another team member they will be added here by Orie
+                      Horse enthusiast, Trainer, Teacher. 2019-20 Strawbery Days 1st Attendant.
                   </p>
                   </div>
                 </div>

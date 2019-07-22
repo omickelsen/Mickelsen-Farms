@@ -32,7 +32,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 col-md-8">
+            {/* <div className="col-lg-5 col-md-8">
               <div className="form">
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
@@ -56,7 +56,7 @@ class Contact extends Component {
                   <div className="text-center"><button type="submit">Send Message</button></div>
                 </form>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-4 col-md-2">
               <div className="maps">
                 <GoogleMaps />
