@@ -833,6 +833,15 @@ background:  #199EB8;
     margin-bottom: 80px;
   
   }
+  .event-images{
+    height: 80%;
+    width: 100%;
+    
+
+  }
+  
+
+   
 
   @media only screen and (max-width: 600px) {
     .includes-container{
@@ -857,6 +866,7 @@ background:  #199EB8;
     .accordion-header:hover{
       cursor: pointer;
     }
+    
     
   }
 

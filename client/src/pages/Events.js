@@ -17,7 +17,7 @@ import P6 from '../images/P6.JPEG';
 import P7 from '../images/P7.JPEG';
 import P8 from '../images/P8.JPEG';
 import P9 from '../images/P9.JPEG';
-import Farm from '../images/farm.jpeg';
+
 
 
 const Events = () => {
@@ -71,37 +71,37 @@ const Events = () => {
                                     <Container>
                                         <Row>
                                             <Col >
-                                                <Image src={P1} rounded />
+                                                <Image src={P1} rounded className='event-images' />
                                             </Col>
                                             <Col >
-                                                <Image src={P2} rounded />
+                                                <Image src={P2} rounded className='event-images' />
                                             </Col>
                                             <Col >
-                                                <Image src={P3} rounded />
-                                            </Col>
-                                        </Row>
-                                        <br />
-                                        <Row>
-                                            <Col >
-                                                <Image src={P4} rounded />
-                                            </Col>
-                                            <Col >
-                                                <Image src={P5} rounded />
-                                            </Col>
-                                            <Col >
-                                                <Image src={P6} rounded />
+                                                <Image src={P3} rounded className='event-images' />
                                             </Col>
                                         </Row>
                                         <br />
                                         <Row>
                                             <Col >
-                                                <Image src={P7} rounded />
+                                                <Image src={P4} rounded className='event-images' />
                                             </Col>
                                             <Col >
-                                                <Image src={P8} rounded />
+                                                <Image src={P5} rounded className='event-images' />
                                             </Col>
                                             <Col >
-                                                <Image src={P9} rounded />
+                                                <Image src={P6} rounded className='event-images' />
+                                            </Col>
+                                        </Row>
+                                        <br />
+                                        <Row>
+                                            <Col >
+                                                <Image src={P7} rounded className='event-images' />
+                                            </Col>
+                                            <Col >
+                                                <Image src={P8} rounded className='event-images' />
+                                            </Col>
+                                            <Col >
+                                                <Image src={P9} rounded className='event-images' />
                                             </Col>
                                         </Row>
                                     </Container>
