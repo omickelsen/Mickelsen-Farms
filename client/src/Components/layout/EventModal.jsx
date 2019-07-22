@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 import moment from 'moment';
+import Register from 'register';
 
 export default class EventModal extends Component {
   constructor(props) {
@@ -16,7 +17,6 @@ export default class EventModal extends Component {
       this.props.close()
     })
   }
-
   render() {
     var title = "";
     var description = "";
