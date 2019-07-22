@@ -34,14 +34,9 @@ export default class EventModal extends Component {
       startDate = this.props.evt.start.toString().substring(0, dateEndIndex);
       dateEndIndex = this.props.evt.end.toString().indexOf(":") - 3;
       endDate = this.props.evt.end.toString().substring(0, dateEndIndex); 
-      var startHours = Math.floor(this.props.evt.startTime/3600);
-      var startMinutes = this.props.evt.startTime;
-      if(startHours !== 0) {
-        startMinutes = startMinutes % (3600 * startHours)/60;
-      }
-      else {
-        startMinutes = startMinutes/60;
-      }
+      var startHours = Math.floor(this.props.evt.timeIn / 3600) % 12;
+      startHours = startHours === 0? 12 : startHours;
+      var startMinutes = (this.props.evt.timeIn / 60) % 60;
       var startHoursText = "";
       var startMinutesText = "";
       if(startHours < 10) {
@@ -57,8 +52,9 @@ export default class EventModal extends Component {
         startMinutesText = "" + startMinutes;
       }
       startTime = startHoursText + ":" + startMinutesText;
-      var endHours = Math.floor(this.props.evt.endTime/3600);
-      var endMinutes = this.props.evt.endTime%(3600 * endHours)/60;
+      var endHours = Math.floor(this.props.evt.timeOut / 3600) % 12;
+      endHours = endHours === 0? 12 : endHours;
+      var endMinutes = (this.props.evt.timeOut / 60) % 60;
       var endHoursText = "";
       var endMinutesText =  "";
       if(endHours < 10) {
@@ -94,8 +90,10 @@ export default class EventModal extends Component {
         recurrenceEnd = (<p>Recurrence End: {recurrenceEndDate}</p>);
       }
 
-      startTime = moment(this.props.evt.start).format('hh:mm A');
-      endTime = moment(this.props.evt.end).format('hh:mm A');
+      let timeInAMPM = this.props.evt.timeIn < 43200? ' AM' : ' PM';
+      let timeOutAMPM = this.props.evt.timeOut < 43200? ' AM' : ' PM';
+      startTime = startTime + timeInAMPM;
+      endTime = endTime + timeOutAMPM;
 
     }
     return (
