@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Button, FormControl, FormGroup, Label} from 'react-bootstrap';
@@ -219,4 +218,3 @@ NewEventModal.propTypes = {
   toggleModal: PropTypes.func,
   addEvent: PropTypes.func
 };
-

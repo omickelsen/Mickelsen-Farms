@@ -14,7 +14,7 @@ import MainCalendar from './components/layout/MainCalendar';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
-import Profiles from './components/profiles/Profiles';
+
 
 //Redux stuff
 import { Provider } from 'react-redux';
@@ -39,17 +39,16 @@ const App = () => {
         <Alert />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/about' component={About} />
           <Route exact path='/services' component={Services} />
           <Route exact path='/team' component={Team} />
           <Route exact path='/calendar' component={MainCalendar} />
           <Route exact path='/contact' component={Contact} />
-          <Route exact path='/profiles' component={Profiles} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
           <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+          <PrivateRoute exact path='/register' component={Register} />
           
         </Switch>
       </Router>
