@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
+import moment from 'moment';
 
 export default class EventModal extends Component {
   constructor(props) {
@@ -10,9 +11,16 @@ export default class EventModal extends Component {
     };
   }
 
+  deleteEvent = (id) => {
+    this.props.deleteEvent(id)
+    .then(() => {
+      this.props.close()
+    })
+  }
+
   render() {
     var title = "";
-    var desc = "";
+    var description = "";
     var startDate = "";
     var endDate = "";
     var startTime = "";
@@ -21,7 +29,7 @@ export default class EventModal extends Component {
     var recurringDays = [];
     if(this.props.evt != null) {
       title = this.props.evt.title;
-      desc = this.props.evt.desc;
+      description = this.props.evt.description;
       var dateEndIndex = this.props.evt.start.toString().indexOf(":") - 3;
       startDate = this.props.evt.start.toString().substring(0, dateEndIndex);
       dateEndIndex = this.props.evt.end.toString().indexOf(":") - 3;
@@ -85,12 +93,16 @@ export default class EventModal extends Component {
       let recurrenceEndDate = this.props.evt.recurrenceEnd.toString().substring(0, dateEndIndex); 
         recurrenceEnd = (<p>Recurrence End: {recurrenceEndDate}</p>);
       }
+
+      startTime = moment(this.props.evt.start).format('hh:mm A');
+      endTime = moment(this.props.evt.end).format('hh:mm A');
+
     }
     return (
       <Modal show={this.props.isOpen} onHide={this.props.close} >
         <Modal.Header closeButton>{title}</Modal.Header>
         <Modal.Body>
-          <p>Description: {desc}</p>
+          <p>Description: {description}</p>
           <p>Start Date: {startDate.toString()}</p>
           <p>End Date: {endDate.toString()}</p>
           <p>Start Time: {startTime}</p>
@@ -98,7 +110,7 @@ export default class EventModal extends Component {
           {recurringElement}
           {recurrenceStart}
           {recurrenceEnd}
-          <button onClick={() => this.props.deleteEvent(this.props.evt.id)}>Delete Event </button>
+          <button onClick={() => this.deleteEvent(this.props.evt._id)}>Delete Event </button>
         </Modal.Body>
       </Modal>
     );

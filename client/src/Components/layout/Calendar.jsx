@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
+import axios from 'axios';
 
 BigCalendar.momentLocalizer(moment);
 
@@ -36,7 +37,8 @@ export default class Calendar extends BigCalendar {
 
 Calendar.defaultProps = {
   events: [],
-  onSelectEvent:  null
+  onSelectEvent:  null,
+  popup:true
 };
 
 Calendar.propTypes = {

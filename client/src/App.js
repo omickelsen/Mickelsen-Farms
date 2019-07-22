@@ -60,6 +60,7 @@ const App = () => {
           <Route exact path='/Other2' component={Other2} />
           <Route exact path='/Other3' component={Other3} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
+
         </Switch>
       </Router>
     </Provider>

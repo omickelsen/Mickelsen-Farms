@@ -7,13 +7,13 @@ import PropTypes from 'prop-types';
 import style from '../../styles/App.css';
 
 
-const Register = ({ setAlert, register, isAuthenticated }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    password2: ''
-  });
+  const Register = ({ setAlert, register, isAuthenticated }) => {
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      password: '',
+      password2: ''
+    });
 
   const { name, email, password, password2 } = formData;
 
