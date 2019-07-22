@@ -45,7 +45,6 @@ const App = () => {
         <Alert />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/about' component={About} />
           <Route exact path='/services' component={Services} />
@@ -60,7 +59,6 @@ const App = () => {
           <Route exact path='/Other2' component={Other2} />
           <Route exact path='/Other3' component={Other3} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
-
         </Switch>
       </Router>
     </Provider>

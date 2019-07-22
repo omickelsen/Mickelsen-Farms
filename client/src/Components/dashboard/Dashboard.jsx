@@ -23,6 +23,9 @@ const Dashboard = ({
                     <p className='lead'>
                         <i className='fas fa-user'/>Welcome { user && user.name }
                     </p>
+                    <Link to='/register' className='btn btn-primary my-1'>
+                    Register
+                </Link>
         {profile !== null ? (
             <Fragment>
                 <DashboardActions />

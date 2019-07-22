@@ -219,4 +219,3 @@ NewEventModal.propTypes = {
   toggleModal: PropTypes.func,
   addEvent: PropTypes.func
 };
-
