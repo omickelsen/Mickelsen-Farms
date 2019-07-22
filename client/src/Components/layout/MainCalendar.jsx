@@ -68,6 +68,8 @@ addEventsFromMongo = () =>{
       
       this.addEventsFromMongo()
     })
+    // const events = this.state.events.filter( event => event._id !== id )
+    // this.setState( { events: events } )
   }
 
   close = () => {
@@ -101,4 +103,3 @@ addEventsFromMongo = () =>{
     );
   }
 }
-
