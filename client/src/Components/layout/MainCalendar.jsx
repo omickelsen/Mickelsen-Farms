@@ -26,14 +26,21 @@ componentDidMount(){
  this.addEventsFromMongo()
 }
 
-addEventsFromMongo = () =>{
-  return axios.get('/api/event').then(data => {
-    console.log(data);
+addEventsFromMongo = () => {
+  return axios.get("/api/event").then(data => {
+    const events = data.data.map(event => ({
+        ...event,
+        date: new Date(event.date),
+        start: new Date(event.start),
+        end: new Date(event.end),
+      })
+    );
+    window.console.log(events);
     this.setState({
-      events: data.data
-    })
-  })
-}
+      events
+    });
+  });
+};
   toggleModal = ( evt ) => {
     if ( !this.state.modalOpen ) {
       this.setState( { modalOpen: !this.state.modalOpen, selectedEvent: evt } );
