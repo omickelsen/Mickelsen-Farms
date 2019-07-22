@@ -15,7 +15,7 @@ import Footer from '../components/layout/Footer'
 
 
 
-const Other2 = () => {
+const OliviaLindstrom = () => {
     return (
 
         <div>
@@ -73,4 +73,4 @@ const Other2 = () => {
 
 
 
-export default Other2
+export default OliviaLindstrom

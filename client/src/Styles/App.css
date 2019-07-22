@@ -1323,13 +1323,16 @@ text-shadow: 1px 1px black;
   .team-container{
   background: #fff;
   /* border-radius: 2px; */
-  height: 260px;
+  height: 500px;
   margin: 1rem;
-  position: relative;
-  width: 520px;
+  /* position: relative; */
+  width: 560px;
   /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
   text-align: left;
-  padding: 5px;
+  font-size: 5;
+  /* padding: 5px; */
+  overflow: auto;
+  padding-bottom: 10px;
   }
 
   .about-team-title{
@@ -1341,6 +1344,15 @@ text-shadow: 1px 1px black;
   color: #199EB8;
     text-align: center;
     font-size: 50px;
+  }
+  .about-farm-list{
+    height: 20px;
+    /* overflow: auto;
+    padding-bottom: 100px; */
+
+  }
+  .about-farm-list li{
+    font-size: 1vw;
   }
 
   .about-accordion-list li{
@@ -1357,6 +1369,8 @@ text-shadow: 1px 1px black;
   width: 520px;
   /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
   text-align: left;
+  overflow: auto;
+    padding-bottom: 100px;
   
   }
 
@@ -1673,7 +1687,11 @@ text-shadow: 1px 1px black;
   ================================================== */
 .site-footer {
   background-color: #111;
-  padding: 0;
+  /* padding: 0; */
+  height: 60px;
+  display: relative;
+  margin-top: 0px;
+  clear:both;
 }
 
 .site-footer h2, .site-footer p {
@@ -1699,10 +1717,11 @@ text-shadow: 1px 1px black;
   opacity: 1;
 }
 
-.site-footer .bottom {
+/* .site-footer .bottom {
   background-color: #000;
-  padding: 20px 0;
-}
+  padding: 20px;
+  margin-top: 500px;
+} */
 
 .site-footer .bottom .list-inline, .site-footer .bottom p {
   margin: 0;
