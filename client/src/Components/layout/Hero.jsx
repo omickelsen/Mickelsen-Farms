@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from "../../images/Mickelsen_Logo.jpg";
 import {HashLink as Link} from 'react-router-hash-link';
 
 class Hero extends Component {
