@@ -13,7 +13,7 @@ import Footer from '../components/layout/Footer'
 
 const HorseBoarding = () => {
     return (
-
+        <div>
         <div>
             <Header />
             <div className="container">
@@ -51,10 +51,10 @@ const HorseBoarding = () => {
                                     <h1 className="service-pricing-title">Pricing</h1>
                                     <p>
                                         <ul className="pricing-list">
-                                            <li>$275 per month</li>
-                                            <li>$250 per month if purchase once a week lesson. Trailer parking available.</li>
+                                            <li>Currently: $275 per month</li>
+                                            <li>Currently: $250 per month if purchase once a week lesson. Trailer parking available.</li>
                                             <li>$25 discount for more than one horse.</li>
-                                            <li><strong>Boarding fees are due at the first of the month.</strong></li>
+                                            <li><strong>Boarding fees are subject to change.</strong></li>
                                         </ul>
                                     </p>
                                 </div>
@@ -76,8 +76,10 @@ const HorseBoarding = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer />
+            
         </div>
+        <Footer />
+      </div>
     )
 }
 
