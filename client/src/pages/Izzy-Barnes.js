@@ -14,7 +14,7 @@ import Footer from '../components/layout/Footer'
 
 
 
-const Other3 = () => {
+const IzzyBarnes = () => {
     return (
 
         <div>
@@ -24,7 +24,7 @@ const Other3 = () => {
                     <h1 className="service-title">Izzy Barnes</h1>
                 </div>
             </div>
-             <Container>
+            <Container>
                 <Row>
                     <Col > <div className="row">
                         <div className="photo-container">
@@ -64,7 +64,7 @@ const Other3 = () => {
 
                     </Col>
                 </Row>
-                </Container>
+            </Container>
             <Footer />
         </div>
     )
@@ -72,4 +72,4 @@ const Other3 = () => {
 
 
 
-export default Other3
+export default IzzyBarnes
