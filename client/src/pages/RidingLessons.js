@@ -30,7 +30,7 @@ const RidingLessons = () => {
                                 <li>All monies due each visit or first of month unless other arrangments are made ahead of time.</li>
                                 <li>Lessons may be paid for by cash, check, or Venmo at JoDee Mickelsen@JoDee-Mickelsen (which I prefer for convenience).</li>
                                 <li>Payment includes horse rental, horse tack, helmet, and horse-riding facility rental.</li>
-                                <li>Please read andmake note of cancellation policy below.</li>
+                                <li>Please read and make note of cancellation policy below.</li>
                             </ul>
                             <Accordion defaultActiveKey="1">
                                 <Card>

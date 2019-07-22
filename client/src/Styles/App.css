@@ -798,6 +798,7 @@ background:  #199EB8;
   .price-table{
     margin-top: 100px;
     margin-left: 30px;
+    margin-bottom: 200px;
   }
   .lesson-pricing-container{
     width:100%;
@@ -816,6 +817,14 @@ background:  #199EB8;
   }
    h5{
     font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  .gallery-title{
+    
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+  
   }
 
   @media only screen and (max-width: 600px) {
@@ -1360,6 +1369,7 @@ text-shadow: 1px 1px black;
 }
 
 .team-card-title{
+  position: inherit;
 
 }
 /* ==================================================

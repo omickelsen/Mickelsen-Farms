@@ -15,6 +15,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import HorseBoarding from './pages/HorseBoarding'
 import RidingLessons from './pages/RidingLessons'
+import Events from './pages/Events'
 import AlandJoDee from './pages/AlandJoDee'
 import Other2 from './pages/Other2'
 import Other3 from './pages/Other3'
@@ -53,6 +54,7 @@ const App = () => {
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/services/horse-boarding' component={HorseBoarding} />
           <Route exact path='/services/riding-lessons' component={RidingLessons} />
+          <Route exact path='/services/events' component={Events} />
           <Route exact path='/create-profile' component={CreateProfile} />
           <Route exact path='/AlandJoDee' component={AlandJoDee} />
           <Route exact path='/Other2' component={Other2} />
