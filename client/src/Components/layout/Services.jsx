@@ -57,7 +57,7 @@ class Services extends Component {
                 </div>
                 <div>
                   <h3>
-                    <Link to="/services/riding-lessons" >Events</Link>
+                    <Link to="/services/events" >Events</Link>
                   </h3>
                   <p className='service-description'>
                     We can help you plan and assist your party and other events! Contact
