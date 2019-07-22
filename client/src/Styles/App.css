@@ -43,6 +43,10 @@
 .App {
   text-align: center;
 }
+.rbc-btn-group:last-child{
+  display: block;
+  white-space: initial;
+}
 
 h1, h2 {
   padding: 10px;
@@ -189,7 +193,14 @@ a:hover {
   content: '';
   z-index: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.65);
+  background-image: url("../images/Background.jpg");
+  -webkit-background-size: cover;
+
+-moz-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
   width: 100%;
   height: 100%;
   left: 0;
@@ -224,7 +235,6 @@ a:hover {
   margin: 45px 0 75px 0;
   color: #fff;
 }
-
 /* ==================================================
   Header Styling
 ================================================== */
@@ -438,6 +448,12 @@ a:hover {
   #mobile-nav-toggle {
     display: inline;
   }
+  #nav-menu-container{
+    display: none;
+  }
+  #mobile-nav-toggle{
+    display: none;
+  }
 }
 
 /* Mobile Nav Styling */
@@ -596,7 +612,6 @@ Service Card Styling
    ================================================== */
 
 .services .card {
-  /* background-image: url('../images/Mickelsen_Logo.jpg'); */
   background: #fff;
   border-radius: 2px;
   height: 275px;
@@ -642,6 +657,11 @@ background:  #199EB8;
   margin-right: 17px;
   padding: 1em;
   cursor: pointer;
+  text-decoration: none;
+}
+.services .card-link:hover{
+  text-decoration: none;
+  color: white;
 }
 .services .card:hover p{
   display: none;
@@ -662,6 +682,7 @@ background:  #199EB8;
 
 .services h2 {
   color: #199EB8;
+  cursor: pointer;
 }
 
 .service-col {
@@ -700,7 +721,664 @@ background:  #199EB8;
   font-size: 14px;
   color: #999;
 }
+/* ==================================================
+  Services Pages Styling
+  ================================================== */
+  
+  .service-title{
+    color: #199EB8;
+    text-align: center;
+    /* padding: 40px; */
+    font-size: 52px;
+  }
+  
+  .service-pricing-title{
+    color: #199EB8;
+    text-align: center;
+  }
 
+  .service-includes-title{
+    color: #199EB8;
+    text-align: center;
+    
+  }
+
+  .service-extra-title{
+  color: #199EB8;
+  text-align: center;
+  }
+
+  .includes-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 485px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  }
+  
+  .pricing-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 260px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  padding: 5px;
+  }
+
+  .extra-container{  
+  background: #fff;
+  border-radius: 2px;
+  height: 160px;
+  margin: 1rem;
+  margin-top: 55px;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  
+  }
+  .second-container{
+    float: right
+  }
+
+  .includes-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .pricing-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .extra-list li{
+    font-size: 18px;
+    color: #333;
+    /* padding: 3px; */
+  }
+  .price-table{
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-bottom: 200px;
+  }
+  .lesson-pricing-container{
+    width:100%;
+    margin-top: 80px;
+  }
+  .lesson-pricing-title{
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+  }
+  th{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  td{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+   h5{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  .gallery-title{
+    
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+  
+  }
+
+  @media only screen and (max-width: 600px) {
+    .includes-container{
+      height: auto;
+      width: auto;
+    }
+    .pricing-container{
+      height: auto;
+    }
+    .extra-container{
+      height: auto;
+    }
+    .price-table{
+      width: auto;
+      height: auto;
+    }
+    .lesson-pricing-title{
+      color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+    }
+    .accordion-header:hover{
+      cursor: pointer;
+    }
+    
+  }
+
+/* ==================================================
+  Team Styling
+  ================================================== */
+.team {
+  padding-bottom: 45px;
+}
+
+.team h2 {
+  color: #199EB8;
+  cursor: pointer;
+}
+
+.team-col {
+  display: table;
+  padding-bottom: 45px;
+}
+
+.team-col > div > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.team-col > div > div:last-child {
+  padding-left: 20px;
+}
+
+.team-col .team-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  background: #199EB8;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.team-col h3 {
+  color: #199EB8;
+}
+
+.team-col p {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #999;
+}
+/* ==================================================
+  Team Pages Styling
+  ================================================== */
+  
+  .team-title{
+    color: #199EB8;
+    text-align: center;
+    /* padding: 40px; */
+    font-size: 52px;
+  }
+  
+  .team-pricing-title{
+    color: #199EB8;
+    text-align: center;
+  }
+
+  .team-includes-title{
+    color: #199EB8;
+    text-align: center;
+    
+  }
+
+  .team-extra-title{
+  color: #199EB8;
+  text-align: center;
+  }
+
+  .includes-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 485px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  }
+  
+  .pricing-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 260px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  padding: 5px;
+  }
+
+  .extra-container{  
+  background: #fff;
+  border-radius: 2px;
+  height: 160px;
+  margin: 1rem;
+  margin-top: 55px;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  
+  }
+  .second-container{
+    float: right
+  }
+
+  .includes-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .pricing-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .extra-list li{
+    font-size: 18px;
+    color: #333;
+    /* padding: 3px; */
+  }
+  .price-table{
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .lesson-pricing-container{
+    width:100%;
+    margin-top: 80px;
+  }
+  .lesson-pricing-title{
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+  }
+  th{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  td{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+   h5{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .includes-container{
+      height: auto;
+      width: auto;
+    }
+    .pricing-container{
+      height: auto;
+    }
+    .extra-container{
+      height: auto;
+    }
+    .price-table{
+      width: auto;
+      height: auto;
+    }
+    .lesson-pricing-title{
+      color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+    }
+    .accordion-header:hover{
+      cursor: pointer;
+    }
+    
+  } 
+
+.team .card {
+  background-image: url("../images/farm.jpeg");
+  border-radius: 2px;
+  height: 275px;
+  margin: 1rem;
+  position: inherit;
+  width: 320px;
+  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+  text-align: left;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    /* background-color: #fff; */
+    /* background-clip: border-box; */
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+     /* -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  transition:color .2s ease-out, background 1s ease-in;
+  -webkit-filter: grayscale(70%);
+ filter: grayscale(70%); */
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+
+.team-icon{
+  margin-top: 25px;
+  margin-right: 5px;
+}
+.team-description{
+  margin: 22px 24px 0px 0px;
+  color: white;
+}
+
+.team .card p{
+  display:none;
+  color: white;
+}
+
+.team .card:hover{
+/* box-shadow: 0px 12px #444 12px 1px #444; */
+/* background-color:black;  */
+/* opacity:.7;  */
+/* z-index:10; */
+color:white;
+} 
+
+.team .card:hover h3 {
+  /* border: #fff solid 4px;
+  color: #fff;
+  margin-right: 17px;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none; */
+  display:none;
+}
+.team .card-link:hover{
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+.team .card:hover p{
+display: inherit;
+font-size: 28px;
+color:white;
+text-align:center;
+font:24px sans serif;
+text-decoration:none;
+text-shadow: 1px 1px black;
+}
+
+/* .team-description .card{
+  color:red;
+} */
+
+
+/* .team .card:hover{
+  background-position: 0 0;
+  color:red;
+} */
+
+/* ==================================================
+  Teams Styling
+  ================================================== */
+.team {
+  padding-bottom: 45px;
+}
+
+.team h2 {
+  color: #199EB8;
+  cursor: pointer;
+}
+
+.team-col {
+  display: table;
+  padding-bottom: 45px;
+}
+
+.team-col > div > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.team-col > div > div:last-child {
+  padding-left: 20px;
+}
+
+.team-col .team-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  background: #199EB8;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.team-col h3 {
+  color: white;
+  font:24px;
+}
+
+.team-col p {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #999;
+}
+/* ==================================================
+  Teams Pages Styling
+  ================================================== */
+  
+  .team-title{
+    color: #199EB8;
+    text-align: center;
+    /* padding: 40px; */
+    font-size: 52px;
+  }
+  
+  .team-pricing-title{
+    color: #199EB8;
+    text-align: center;
+  }
+
+  .team-includes-title{
+    color: #199EB8;
+    text-align: center;
+    
+  }
+
+  .team-extra-title{
+  color: #199EB8;
+  text-align: center;
+  }
+
+  .includes-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 485px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  }
+  
+  .pricing-container{
+  background: #fff;
+  border-radius: 2px;
+  height: 260px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  padding: 5px;
+  }
+
+  .extra-container{  
+  background: #fff;
+  border-radius: 2px;
+  height: 160px;
+  margin: 1rem;
+  margin-top: 55px;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  
+  }
+  .second-container{
+    float: right
+  }
+
+  .includes-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .pricing-list li{
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+  }
+  .extra-list li{
+    font-size: 18px;
+    color: #333;
+    /* padding: 3px; */
+  }
+  .price-table{
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .lesson-pricing-container{
+    width:100%;
+    margin-top: 80px;
+  }
+  .lesson-pricing-title{
+    color: #199EB8;
+    text-align: center;
+    font-size: 40px;
+  }
+  th{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+  td{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+   h5{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .includes-container{
+      height: auto;
+      width: auto;
+    }
+    .pricing-container{
+      height: auto;
+    }
+    .extra-container{
+      height: auto;
+    }
+    .price-table{
+      width: auto;
+      height: auto;
+    }
+    .lesson-pricing-title{
+      color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+    }
+    .accordion-header:hover{
+      cursor: pointer;
+    }
+    
+  }
+
+  .photo-container{
+  border-radius: 2px;
+  height: 485px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  }
+
+  .familyphoto{
+    width: 520px;
+    height: 485px;
+  }
+
+  .team-container{
+  background: #fff;
+  /* border-radius: 2px; */
+  height: 260px;
+  margin: 1rem;
+  position: relative;
+  width: 520px;
+  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+  text-align: left;
+  padding: 5px;
+  }
+
+  .about-team-title{
+  color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+  }
+  .about-farm-title{
+  color: #199EB8;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .about-accordion-list li{
+    width: 100%;
+    color: black;
+  }
+
+  .about-farm-container{  
+  background: #fff;
+  /* border-radius: 2px; */
+  height: 160px;
+  margin: 1rem;
+  position: inherit;
+  width: 520px;
+  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+  text-align: left;
+  
+  }
+
+  .about-farm-title{
+  color: #199EB8;
+  text-align: center;
+  }
+
+.team-container h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.team-accordion{
+  color: black;
+
+}
+
+.team-card-title{
+  position: inherit;
+
+}
 /* ==================================================
   Call-to-action Styling
   ================================================== */
@@ -974,18 +1652,21 @@ background:  #199EB8;
   background: #23c2e1;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 768px) {
     .maps{
-        width:600px;
+        position: inherit;
+        width:300px;
         height: 260px;
+        padding-left:40px;
+        padding-right: 0px;
     }
 }
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 768px) {
     .maps{
-        width:160px;
+        width:600px;
         height: 300px;
     }
-  }
+  } */
 
 /* ==================================================
   Footer Styling

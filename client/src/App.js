@@ -13,8 +13,13 @@ import Contact from './components/layout/Contact';
 import MainCalendar from './components/layout/MainCalendar';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
-import EditProfile from './components/profile-forms/EditProfile';
-import Profiles from './components/profiles/Profiles';
+import HorseBoarding from './pages/HorseBoarding'
+import RidingLessons from './pages/RidingLessons'
+import Events from './pages/Events'
+import AlandJoDee from './pages/AlandJoDee'
+import Other2 from './pages/Other2'
+import Other3 from './pages/Other3'
+
 
 //Redux stuff
 import { Provider } from 'react-redux';
@@ -22,6 +27,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken'
 import './styles/App.css'
+
 
 
 if (localStorage.token) {
@@ -35,7 +41,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Alert />
         <Switch>
           <Route exact path='/' component={Home} />
@@ -46,11 +52,15 @@ const App = () => {
           <Route exact path='/team' component={Team} />
           <Route exact path='/calendar' component={MainCalendar} />
           <Route exact path='/contact' component={Contact} />
-          <Route exact path='/profiles' component={Profiles} />
+          <Route exact path='/services/horse-boarding' component={HorseBoarding} />
+          <Route exact path='/services/riding-lessons' component={RidingLessons} />
+          <Route exact path='/services/events' component={Events} />
+          <Route exact path='/create-profile' component={CreateProfile} />
+          <Route exact path='/AlandJoDee' component={AlandJoDee} />
+          <Route exact path='/Other2' component={Other2} />
+          <Route exact path='/Other3' component={Other3} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
-          <PrivateRoute exact path='/create-profile' component={CreateProfile} />
-          <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-          
+
         </Switch>
       </Router>
     </Provider>

@@ -1,8 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import Header from '../layout/Header';
+
 
 
 const Login = ({ login, isAuthenticated }) => {
@@ -22,11 +25,13 @@ const Login = ({ login, isAuthenticated }) => {
 
 // Redirect if logged in
   if(isAuthenticated) {
-    return <Redirect to='/dashboard' />
+    return <Redirect to='/' />
   }
 
   return(
     <Fragment>
+      <div>
+      <Header />
       <div className='container'>
         <div className='login' id='login'>
             <div className="row">
@@ -49,6 +54,8 @@ const Login = ({ login, isAuthenticated }) => {
             </div>
         </div>
         </div>
+        </div>
+        
     </Fragment>
   )
 }
