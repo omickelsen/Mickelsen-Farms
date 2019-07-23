@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/auth/Login';
-import Register from './components/auth/Register';
+// import Register from './components/auth/Register';
 import Home from './components/layout/Home';
 import Alert from './components/layout/Alert';
-import Header from './components/layout/Header';
+// import Header from './components/layout/Header';
 import Dashboard from './components/dashboard/Dashboard';
 import About from './components/layout/About';
 import Services from './components/layout/Services';
@@ -26,7 +26,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken'
-import './styles/styles/App.css'
+import './styles/App.css'
 
 
 
