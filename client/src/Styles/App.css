@@ -1345,6 +1345,16 @@ text-shadow: 1px 1px black;
   padding-bottom: 10px;
   }
 
+  .team-container h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.team-container i,
+.team-container p{
+  font-size: 24px;
+}
+
   .about-team-title{
   color: #199EB8;
     text-align: center;
@@ -1373,7 +1383,7 @@ text-shadow: 1px 1px black;
   .about-farm-container{  
   background: #fff;
   /* border-radius: 2px; */
-  height: 160px;
+  height: 490px;
   margin: 1rem;
   position: inherit;
   width: 520px;
