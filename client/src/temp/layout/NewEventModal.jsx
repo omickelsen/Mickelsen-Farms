@@ -71,7 +71,8 @@ export default class NewEventModal extends Component {
 
      
         axios.post('/api/event', evt).then(data => {
-          evt._id = data._id;
+          evt._id = data.data._id;
+          console.log(data)
          
           this.setState({submitted: true});
           this.props.addEvent(evt);

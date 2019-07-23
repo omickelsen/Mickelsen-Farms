@@ -59,14 +59,14 @@ addEventsFromMongo = () => {
     
     
     var events = this.state.events;
-
+    console.log(events)
     events.push(evt);
-
+    console.log(evt)
     this.setState( { events: events } );
     this.close();
   }
 
-  deleteEvent = ( id ) => {
+  deleteEvent = (id) => {
     console.log(id)
     //Axios delete call then ,()=> this.addEventsFromMongo()
 
