@@ -26,13 +26,13 @@ router.post(
 
         try {
             // See if event exists
-            let event = await Event.findOne({ title })
+            // let event = await Event.findOne({ title })
 
-            if(event) {
-                return res
-                .status(400)
-                .json({ errors: [ { msg: 'Event already included for this time'} ] });
-            }
+            // if(event) {
+            //     return res
+            //     .status(400)
+            //     .json({ errors: [ { msg: 'Event already included for this time'} ] });
+            // }
             event = new Event({
                 type, 
                 title,
