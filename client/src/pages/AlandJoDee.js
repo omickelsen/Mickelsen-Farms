@@ -52,7 +52,7 @@ const AlandJodee = () => {
                         </div>
                         <div>
                             <div className="row">
-                                <div className="aj-team-container">
+                                <div className="team-container">
                                     <h1 className="about-team-title">Contact Us</h1>
                                     <h1>
                                         <nav className="nav social-nav pull-center d-none d-lg-inline">
