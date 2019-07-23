@@ -58,7 +58,7 @@ export default class NewEventModal extends Component {
         
         var evt = {
           title: this.state.title, 
-          start: this.state.date,
+          start: this.state.date.toDate(),
           end: this.state.end_date.toDate(),
           timeIn: this.state.timeIn, 
           timeOut: this.state.timeOut, 
@@ -71,7 +71,7 @@ export default class NewEventModal extends Component {
 
      
         axios.post('/api/event', evt).then(data => {
-          evt.id = data._id;
+          evt._id = data._id;
          
           this.setState({submitted: true});
           this.props.addEvent(evt);
@@ -119,10 +119,12 @@ export default class NewEventModal extends Component {
 
 	timeOut = (e) => {
 		this.setState({timeOut: e});
-	}
+  }
+  
 
   handleEndChange(date) {
     this.setState({end_date: moment(date)});
+  
   }
 
   handleDate = (e) => {
