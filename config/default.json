@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://tyson123:tyson123@mickelsen-farms-85ke1.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://omickelsen:omic6253@cluster0-mxz9j.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "mickelsenfarms"
 }
