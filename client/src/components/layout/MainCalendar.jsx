@@ -27,7 +27,7 @@ componentDidMount(){
 }
 
 addEventsFromMongo = () => {
-  return axios.get("/api/event").then(data => {
+  return axios.get("/routes/api/event").then(data => {
     const events = data.data.map(event => ({
         ...event,
         date: new Date(event.date),
