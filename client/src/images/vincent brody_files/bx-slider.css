@@ -1,0 +1,19 @@
+.bx-pager.bx-default-pager {
+   text-align : center;
+}
+
+.bx-pager-item {
+    display: inline-block;
+}
+
+.bx-pager-item a.active {
+    background: transparent url("../images/bullets-page-green.png") bottom center no-repeat;
+}
+.bx-pager-item a {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background: transparent url("../images/bullets-page-gray.png") bottom center no-repeat;
+}

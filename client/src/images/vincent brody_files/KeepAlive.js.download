@@ -1,0 +1,41 @@
+﻿SSO = {}
+
+SSO.KeepAlive = {
+    GetPingImage: function () {
+        var element = $('#sso_pinger');
+        if (element.length > 0) {
+
+            var split = element.attr('src').split('?time=');
+            var src = split[0];
+
+            var now = new Date();
+            var time = now.getHours().toString();
+            time = time + now.getUTCMinutes().toString();
+            time = time + now.getUTCSeconds().toString();
+            time = time + now.getUTCMilliseconds().toString();
+            src = src + '?time=' + time;
+
+            element.attr('src', src);
+
+            setTimeout(SSO.KeepAlive.GetPingImage, SSO.KeepAlive.PingTime);
+        }
+    },
+
+    PingTime: 600000,
+
+    Start: function (pingUrl) {
+        SSO.KeepAlive.PingUrl = pingUrl;
+        var now = new Date();
+        var time = now.getUTCHours().toString();
+        time = time + now.getUTCMinutes().toString();
+        time = time + now.getUTCSeconds().toString();
+        time = time + now.getUTCMilliseconds().toString();
+
+        var src = SSO.KeepAlive.PingUrl + '?time=' + time;
+
+        $('body').append('<img src="' + src + '" id="sso_pinger" alt=""/>');
+        setTimeout(SSO.KeepAlive.GetPingImage, SSO.KeepAlive.PingTime);
+    },
+
+    PingUrl: ''
+};
