@@ -33,7 +33,7 @@ router.post(
             //     .status(400)
             //     .json({ errors: [ { msg: 'Event already included for this time'} ] });
             // }
-            event = new Event({
+            let event = new Event({
                 type, 
                 title,
                 description,
@@ -47,8 +47,8 @@ router.post(
                 allDay,
                 resource
             });    
-            event.save()
-            res.json(event)
+            event.save();
+            res.json(event);
             
         } catch(err) {
             console.log(err.message);
@@ -60,6 +60,7 @@ router.post(
 router.get('/', async (req, res) => {
     try {
         const events = await Event.find().sort({ date: -1 });
+        console.log(events);
         res.json(events);
     } catch (err) {
         console.error(err.message);
@@ -71,7 +72,7 @@ router.delete('/delete/:id', async (req, res) => {
     try {
         console.log(req.params.id);
         
-        let remEvent = await Event.findOne( {_id: {'$eq':req.params.id}} )
+        let remEvent = await Event.findOne( {_id: {'$eq':req.params.id}} );
         console.log('my Event' + remEvent);
         
         await remEvent.remove();

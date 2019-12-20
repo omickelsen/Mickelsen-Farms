@@ -48,11 +48,11 @@ addEventsFromMongo = () => {
     else {
       this.setState( { modalOpen: !this.state.modalOpen } );
     }
-  }
+  };
 
   toggleNewModal = () => {
     this.setState( { newModalOpen: !this.state.newModalOpen } );
-  }
+  };
 
   addEvent = ( evt ) => {
 
@@ -64,7 +64,7 @@ addEventsFromMongo = () => {
     console.log(evt)
     this.setState( { events: events } );
     this.close();
-  }
+  };
 
   deleteEvent = (id) => {
     console.log(id)
@@ -77,7 +77,7 @@ addEventsFromMongo = () => {
     })
     // const events = this.state.events.filter( event => event._id !== id )
     // this.setState( { events: events } )
-  }
+  };
 
   close = () => {
     this.setState( { newModalOpen: false, modalOpen: false } );
