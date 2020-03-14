@@ -23,8 +23,8 @@ export default class NewEventModal extends Component {
       date          : moment(),
       end_date      : moment(),
       type          : "Single",
-      timeIn        : (moment().hour() * 3600),
-      timeOut       : (moment().hour() * 3600) + (5 * 60),
+      startTime        : (moment().hour() * 3600),
+      endTime       : (moment().hour() * 3600) + (5 * 60),
       description   : "",
       recurringDays : [],
       resource: '',
@@ -42,8 +42,8 @@ export default class NewEventModal extends Component {
         date: moment(), 
         end_date: moment(), 
         type: "Single", 
-        timeIn: (moment().hour() * 3600), 
-        timeOut: (moment().hour() * 3600) + (5 * 60), 
+        startTime: (moment().hour() * 3600),
+        endTime: (moment().hour() * 3600) + (5 * 60),
         description: "", 
         recurringDays: [], 
         submitted: false});
@@ -59,13 +59,22 @@ export default class NewEventModal extends Component {
       !(this.state.recurringDays.length === 0 && 
       (this.state.type === "Week" || this.state.type === "BI"))) {
       try {
-        
-        var evt = {
+
+          let start = this.state.date.toDate();
+          let end = this.state.end_date.toDate();
+
+          let startMilliseconds = (start.getTime() + this.state.startTime * 1000) - 43200000;
+          let endMilliseconds = (end.getTime() + this.state.endTime * 1000) - 43200000;
+
+          let newStart = new Date(startMilliseconds);
+          let newEnd = new Date(endMilliseconds);
+
+        let evt = {
           title: this.state.title, 
-          start: this.state.date.toDate(),
-          end: this.state.end_date.toDate(),
-          timeIn: this.state.timeIn, 
-          timeOut: this.state.timeOut, 
+          start: newStart,
+          end: newEnd,
+          startTime: this.state.startTime, 
+          endTime: this.state.endTime,
           recurringDays: this.state.recurringDays, 
           description: this.state.description, 
           type: this.state.type,
@@ -76,7 +85,7 @@ export default class NewEventModal extends Component {
      
         axios.post('/api/event', evt).then(data => {
           evt._id = data.data._id;
-          console.log(data)
+          console.log(data);
          
           this.setState({submitted: true});
           this.props.addEvent(evt);
@@ -102,12 +111,12 @@ export default class NewEventModal extends Component {
 
   
 
-	timeIn = (e) => {
-		this.setState({timeIn: e});
+	startTime = (e) => {
+		this.setState({startTime: e});
 	}
 
-	timeOut = (e) => {
-		this.setState({timeOut: e});
+	endTime = (e) => {
+		this.setState({endTime: e});
   }
   
 
@@ -143,8 +152,8 @@ export default class NewEventModal extends Component {
       //     date: data.date, 
       //     end_date: data.end_date, 
       //     type: data.type, 
-      //     timeIn: data.timeIn, 
-      //     timeOut: data.timeOut, 
+      //     startTime: data.startTime, 
+      //     endTime: data.endTime, 
       //     description: data.description, 
       //     recurringDays: data.recurringDays,
       //     allDay: data.allDay,
@@ -158,15 +167,15 @@ export default class NewEventModal extends Component {
       <Modal show={this.props.isOpen} onHide={this.props.close}>
         <Modal.Header closeButton>New Calendar Event</Modal.Header>
         <Modal.Body>
-          <FormGroup>
-            <Label>Event Type:</Label>
-            <FormControl componentClass="select" value={this.state.type} onChange={this.handleType}>
-              <option value="Single">Single</option>
-              <option value="Week">Weekly</option>
-              <option value="BI">BI-Weekly</option>
-              <option value="Month">Monthly</option>
-            </FormControl>
-          </FormGroup>
+          {/*<FormGroup>*/}
+          {/*  <Label>Event Type:</Label>*/}
+          {/*  <FormControl componentClass="select" value={this.state.type} onChange={this.handleType}>*/}
+          {/*    <option value="Single">Single</option>*/}
+          {/*    <option value="Week">Weekly</option>*/}
+          {/*    <option value="BI">BI-Weekly</option>*/}
+          {/*    <option value="Month">Monthly</option>*/}
+          {/*  </FormControl>*/}
+          {/*</FormGroup>*/}
 
           <FormGroup>
             <Label>Title:</Label>
@@ -194,12 +203,12 @@ export default class NewEventModal extends Component {
 
           <FormGroup>
             <Label>Starting Time: </Label>
-						<TimePicker value={this.state.timeIn} onChange={this.timeIn} step={5} start={'07:00 AM'} />
+						<TimePicker value={this.state.startTime} onChange={this.startTime} step={5} start={'07:00 AM'} />
           </FormGroup>
           
           <FormGroup>
             <Label>Ending Time:</Label>
-						<TimePicker value={this.state.timeOut} onChange={this.timeOut} step={5} start={'07:05 AM'} />
+						<TimePicker value={this.state.endTime} onChange={this.endTime} step={5} start={'07:05 AM'} />
           </FormGroup>
 
           { (this.state.type === "Week" || this.state.type === "BI") && 

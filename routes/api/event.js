@@ -9,20 +9,22 @@ router.post(
     '/', 
     async (req,res) => {
 
+
         const { 
             type, 
             title,
             description,
             date,
             end_date,
-            timeIn,
-            timeOut,
+            startTime,
+            endTime,
             recurringDays,
             start,
             end,
             allDay,
             resource
         } = req.body;
+        console.log(req.body);
 
         try {
             // See if event exists
@@ -39,8 +41,8 @@ router.post(
                 description,
                 date,
                 end_date,
-                timeIn,
-                timeOut,
+                startTime,
+                endTime,
                 recurringDays,
                 start,
                 end,

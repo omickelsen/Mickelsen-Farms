@@ -22,8 +22,8 @@ export default class EventModal extends Component {
     var description = "";
     var startDate = "";
     var endDate = "";
-    var timeIn = "";
-    var timeOut = "";
+    var startTime = "";
+    var endTime = "";
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var recurringDays = [];
     if(this.props.evt != null) {
@@ -33,8 +33,8 @@ export default class EventModal extends Component {
       startDate = this.props.evt.start.toString().substring(0, dateEndIndex);
       dateEndIndex = this.props.evt.end.toString().indexOf(":") - 3;
       endDate = this.props.evt.end.toString().substring(0, dateEndIndex); 
-      var startHours = Math.floor(this.props.evt.timeIn/3600);
-      var startMinutes = this.props.evt.timeIn;
+      var startHours = Math.floor(this.props.evt.startTime/3600);
+      var startMinutes = this.props.evt.startTime;
       if(startHours !== 0) {
         startMinutes = startMinutes % (3600 * startHours)/60;
       }
@@ -55,9 +55,9 @@ export default class EventModal extends Component {
       else {
         startMinutesText = "" + startMinutes;
       }
-      timeIn = startHoursText + ":" + startMinutesText;
-      var endHours = Math.floor(this.props.evt.timeOut/3600);
-      var endMinutes = this.props.evt.timeOut%(3600 * endHours)/60;
+      startTime = startHoursText + ":" + startMinutesText;
+      var endHours = Math.floor(this.props.evt.endTime/3600);
+      var endMinutes = this.props.evt.endTime%(3600 * endHours)/60;
       var endHoursText = "";
       var endMinutesText =  "";
       if(endHours < 10) {
@@ -72,7 +72,7 @@ export default class EventModal extends Component {
       else {
         endMinutesText = "" + endMinutes;
       }
-      timeOut = endHoursText + ":" + endMinutesText;
+      endTime = endHoursText + ":" + endMinutesText;
       for(var day of this.props.evt.recurringDays) {
         recurringDays.push(days[day]);
       }
@@ -102,8 +102,8 @@ export default class EventModal extends Component {
           <p>Description: {description}</p>
           <p>Start Date: {startDate.toString()}</p>
           <p>End Date: {endDate.toString()}</p>
-          <p>Start Time: {timeIn}</p>
-          <p>End Time: {timeOut}</p>
+          <p>Start Time: {startTime}</p>
+          <p>End Time: {endTime}</p>
           {recurringElement}
           {recurrenceStart}
           {recurrenceEnd}

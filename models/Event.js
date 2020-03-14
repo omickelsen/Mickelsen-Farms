@@ -32,11 +32,11 @@ const NewEventSchema = new Schema({
         default: Date.now,
         required: true
     },
-    timeIn: {
+    startTime: {
         type: Number,
         required: true
     },
-    timeOut: {
+    endTime: {
         type: Number,
         required: true
     },
