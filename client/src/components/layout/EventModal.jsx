@@ -2,7 +2,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
-import moment from 'moment';
 
 export default class EventModal extends Component {
   constructor(props) {
@@ -17,14 +16,14 @@ export default class EventModal extends Component {
       this.props.close()
     })
   }
-
+ 
   render() {
     var title = "";
     var description = "";
     var startDate = "";
     var endDate = "";
-    var startTime = "";
-    var endTime = "";
+    var timeIn = "";
+    var timeOut = "";
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var recurringDays = [];
     if(this.props.evt != null) {
@@ -34,9 +33,14 @@ export default class EventModal extends Component {
       startDate = this.props.evt.start.toString().substring(0, dateEndIndex);
       dateEndIndex = this.props.evt.end.toString().indexOf(":") - 3;
       endDate = this.props.evt.end.toString().substring(0, dateEndIndex); 
-      var startHours = Math.floor(this.props.evt.timeIn / 3600) % 12;
-      startHours = startHours === 0? 12 : startHours;
-      var startMinutes = (this.props.evt.timeIn / 60) % 60;
+      var startHours = Math.floor(this.props.evt.timeIn/3600);
+      var startMinutes = this.props.evt.timeIn;
+      if(startHours !== 0) {
+        startMinutes = startMinutes % (3600 * startHours)/60;
+      }
+      else {
+        startMinutes = startMinutes/60;
+      }
       var startHoursText = "";
       var startMinutesText = "";
       if(startHours < 10) {
@@ -51,10 +55,9 @@ export default class EventModal extends Component {
       else {
         startMinutesText = "" + startMinutes;
       }
-      startTime = startHoursText + ":" + startMinutesText;
-      var endHours = Math.floor(this.props.evt.timeOut / 3600) % 12;
-      endHours = endHours === 0? 12 : endHours;
-      var endMinutes = (this.props.evt.timeOut / 60) % 60;
+      timeIn = startHoursText + ":" + startMinutesText;
+      var endHours = Math.floor(this.props.evt.timeOut/3600);
+      var endMinutes = this.props.evt.timeOut%(3600 * endHours)/60;
       var endHoursText = "";
       var endMinutesText =  "";
       if(endHours < 10) {
@@ -69,7 +72,7 @@ export default class EventModal extends Component {
       else {
         endMinutesText = "" + endMinutes;
       }
-      endTime = endHoursText + ":" + endMinutesText;
+      timeOut = endHoursText + ":" + endMinutesText;
       for(var day of this.props.evt.recurringDays) {
         recurringDays.push(days[day]);
       }
@@ -89,13 +92,9 @@ export default class EventModal extends Component {
       let recurrenceEndDate = this.props.evt.recurrenceEnd.toString().substring(0, dateEndIndex); 
         recurrenceEnd = (<p>Recurrence End: {recurrenceEndDate}</p>);
       }
-
-      let timeInAMPM = this.props.evt.timeIn < 43200? ' AM' : ' PM';
-      let timeOutAMPM = this.props.evt.timeOut < 43200? ' AM' : ' PM';
-      startTime = startTime + timeInAMPM;
-      endTime = endTime + timeOutAMPM;
-
     }
+   
+   
     return (
       <Modal show={this.props.isOpen} onHide={this.props.close} >
         <Modal.Header closeButton>{title}</Modal.Header>
@@ -103,8 +102,8 @@ export default class EventModal extends Component {
           <p>Description: {description}</p>
           <p>Start Date: {startDate.toString()}</p>
           <p>End Date: {endDate.toString()}</p>
-          <p>Start Time: {startTime}</p>
-          <p>End Time: {endTime}</p>
+          <p>Start Time: {timeIn}</p>
+          <p>End Time: {timeOut}</p>
           {recurringElement}
           {recurrenceStart}
           {recurrenceEnd}

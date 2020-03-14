@@ -3,12 +3,14 @@ import { Button } from 'react-bootstrap';
 import NCalendar from './Calendar';
 import EventModal from './EventModal';
 import NewEventModal from './NewEventModal';
-import moment from 'moment';
 import axios from 'axios';
+import moment from 'moment';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import '../../styles/App.css';
+
 
 
 export default class Calendar extends Component {
@@ -54,17 +56,113 @@ addEventsFromMongo = () => {
     this.setState( { newModalOpen: !this.state.newModalOpen } );
   };
 
-  addEvent = ( evt ) => {
+  addEvent = (evt) => {
+		console.log("hello");
+    var events = this.state.events;
+    evt["id"] = events.length;
+    var startHours = Math.floor(evt["startTime"]/3600);
+    var startMinutes = startHours;
+    if(startHours !== 0) {
+      startMinutes = evt["startTime"] % (3600 * Math.floor(startHours))/60;
+    }
+    else {
+      startMinutes = evt["startTime"]/60;
+    }
+    var endHours = Math.floor(evt["endTime"]/3600);
+    var endMinutes = endHours;
+    if(endHours !== 0) {
+      endMinutes = evt["endTime"] % (3600 * Math.floor(endHours))/60;
+    }
+    else {
+      endMinutes = evt["endTime"]/60;
+    }
+    evt["start"].setHours(startHours);
+    evt["start"].setMinutes(startMinutes);
+    evt["end"].setHours(endHours);
+    evt["end"].setMinutes(endMinutes);
+    var recurringDays = evt["recurringDays"];
+    var recurringDayValues = [];
+    var recurrenceStart = evt["start"];
+    var recurrenceEnd = evt["end"];
+    for(let obj of recurringDays) {
+      recurringDayValues.push(obj["value"]);
+    }
+    evt["recurringDays"] = recurringDayValues;
+    if(evt["type"] === "BI") {
+      let startDate = moment(evt["start"]);
+      let startDateDay = startDate.day();
+      let endDate = moment(evt["end"]);
+      while(startDate.isBefore(endDate)) {
+        if(recurringDayValues.indexOf(startDate.day()) !== -1) {
+          let evtCopy = Object.assign({}, evt);
+          evtCopy["start"] = startDate.toDate();
+          evtCopy["end"] = startDate.toDate();
+          evtCopy["end"].setHours(evt["end"].getHours());
+          evtCopy["end"].setMinutes(evt["end"].getMinutes());
+          evtCopy["recurrenceStart"] = recurrenceStart;
+          evtCopy["recurrenceEnd"] = recurrenceEnd;
+          events.push(evtCopy);
+        }
+        let startDateClone = moment(startDate);
+        let nextDateDay = startDateClone.add(1, "days").day();
+        if(nextDateDay === startDateDay) {
+            startDate = startDate.add(8, "days");
+        }
+        else {
+            startDate = startDate.add(1, "days");
+        }
+      }
+    }
+    else if(evt["type"] === "Week") {
+      let startDate = moment(evt["start"]);
+      let endDate = moment(evt["end"]);
+      while(startDate.isBefore(endDate)) {
+        if(recurringDayValues.indexOf(startDate.day()) !== -1) {
+          let evtCopy = Object.assign({}, evt);
+          evtCopy["start"] = startDate.toDate();
+          evtCopy["end"] = startDate.toDate();
+          evtCopy["end"].setHours(evt["end"].getHours());
+          evtCopy["end"].setMinutes(evt["end"].getMinutes());
+          evtCopy["recurrenceStart"] = recurrenceStart;
+          evtCopy["recurrenceEnd"] = recurrenceEnd;
+          events.push(evtCopy);
+        }
+        startDate = startDate.add(1, "days");
+      }
+    }
+    else if(evt["type"] === "Month") {
+      let startDate = moment(evt["start"]);
+      let endDate = moment(evt["end"]);
+      while(startDate.isBefore(endDate)) {
+        let evtCopy = Object.assign({}, evt);
+        evtCopy["start"] = startDate.toDate();
+        evtCopy["end"] = startDate.toDate();
+        evtCopy["end"].setHours(evt["end"].getHours());
+        evtCopy["end"].setMinutes(evt["end"].getMinutes());
+        evtCopy["recurrenceStart"] = recurrenceStart;
+        evtCopy["recurrenceEnd"] = recurrenceEnd;
+        events.push(evtCopy);
+        startDate = startDate.add(1, "month");
+      }
+    }
+    else {
+    events.push(evt);
+    }
+    this.setState({events: events});
+    this.close();
+  }
+
+  // addEvent = ( evt ) => {
 
     
     
-    var events = this.state.events;
-    console.log(events)
-    events.push(evt);
-    console.log(evt)
-    this.setState( { events: events } );
-    this.close();
-  };
+  //   var events = this.state.events;
+  //   console.log(events)
+  //   events.push(evt);
+  //   console.log(evt)
+  //   this.setState( { events: events } );
+  //   this.close();
+  // };
 
   deleteEvent = (id) => {
     console.log(id)

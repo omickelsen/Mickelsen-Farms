@@ -12,6 +12,10 @@ import axios from 'axios';
 import 'react-select/dist/react-select.css';
 
 export default class NewEventModal extends Component {
+
+
+  //with database and getting wrong information back correctly.
+
   constructor(props) {
     super(props);
     this.state = {
@@ -65,7 +69,7 @@ export default class NewEventModal extends Component {
           recurringDays: this.state.recurringDays, 
           description: this.state.description, 
           type: this.state.type,
-          allDay: this.state.allDay,
+          // allDay: this.state.allDay,
           resource: ''
         };
 
@@ -96,23 +100,7 @@ export default class NewEventModal extends Component {
   
   }
 
-  componentDidMount(){
-    return axios.get('/api/event').then(data => {
-      console.log(data);
-      // this.setState({
-      //     title: data.title, 
-      //     date: data.date, 
-      //     end_date: data.end_date, 
-      //     type: data.type, 
-      //     timeIn: data.timeIn, 
-      //     timeOut: data.timeOut, 
-      //     description: data.description, 
-      //     recurringDays: data.recurringDays,
-      //     allDay: data.allDay,
-      //     resource: data.resource
-      //   })     
-    })
-  }
+  
 
 	timeIn = (e) => {
 		this.setState({timeIn: e});
@@ -147,7 +135,24 @@ export default class NewEventModal extends Component {
   handleDaySelectChange = (e) => {
     this.setState({recurringDays: e});
   }
-
+  componentDidMount(){
+    return axios.get('/api/event').then(data => {
+      console.log(data);
+      // this.setState({
+      //     title: data.title, 
+      //     date: data.date, 
+      //     end_date: data.end_date, 
+      //     type: data.type, 
+      //     timeIn: data.timeIn, 
+      //     timeOut: data.timeOut, 
+      //     description: data.description, 
+      //     recurringDays: data.recurringDays,
+      //     allDay: data.allDay,
+      //     resource: data.resource
+      //   })     
+    })
+  }
+  
   render() {
     return (
       <Modal show={this.props.isOpen} onHide={this.props.close}>

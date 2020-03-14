@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
-import axios from 'axios';
+
 
 BigCalendar.momentLocalizer(moment);
 
@@ -27,6 +27,7 @@ export default class Calendar extends BigCalendar {
   render() {
     return (
       <BigCalendar 
+        culture='en-GB'
         events={this.props.events}
         onSelectEvent={this.props.onSelectEvent}
         eventPropGetter={this.propGetter}
