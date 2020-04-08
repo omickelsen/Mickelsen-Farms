@@ -25,7 +25,7 @@ const HorseBoarding = () => {
                 <Row>
                     <Col > <div className="row">
                         <div className="includes-container">
-                            <h1 className="service-includes-title">Includes</h1>
+                            <h2 className="service-includes-title">Includes</h2>
                             <p>
                                 <ul className="includes-list">
                                     <li>Use of all the facility</li>
@@ -48,7 +48,7 @@ const HorseBoarding = () => {
                         <div>
                             <div className="row">
                                 <div className="pricing-container">
-                                    <h1 className="service-pricing-title">Pricing</h1>
+                                    <h2 className="service-pricing-title">Pricing</h2>
                                     <p>
                                         <ul className="pricing-list">
                                             <li>Currently: $275 per month.</li>
@@ -62,7 +62,7 @@ const HorseBoarding = () => {
                         <div>
                             <div className="row">
                                 <div className="extra-container">
-                                    <h1 className="service-extra-title">Extras</h1>
+                                    <h2 className="service-extra-title">Extras</h2>
                                     <p>
                                         <ul className="extra-list">
                                             <li>Horshoeing, trimming, scheduled worming is avaialble at owner expense</li>
