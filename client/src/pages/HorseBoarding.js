@@ -37,7 +37,7 @@ const HorseBoarding = () => {
                                     <li>Fresh water</li>
                                     <li>Use of tack room and storage of tack</li>
                                     <li>Use of barn equipment-whips, jumps, barrels, etc.</li>
-                                    <li>Also health records kept on every horse boarded at our facility</li>
+                                    <li>Health records kept on every horse boarded at our facility</li>
                                 </ul>
                             </p>
                         </div>
@@ -51,10 +51,9 @@ const HorseBoarding = () => {
                                     <h1 className="service-pricing-title">Pricing</h1>
                                     <p>
                                         <ul className="pricing-list">
-                                            <li>Currently: $275 per month</li>
-                                            <li>Currently: $250 per month if purchase once a week lesson. Trailer parking available.</li>
-                                            <li>$25 discount for more than one horse.</li>
-                                            <li><strong>Boarding fees are subject to change.</strong></li>
+                                            <li>Currently: $275 per month.</li>
+                                            <li>$50 initial deposit</li>
+                                            <li><strong>Boarding fees are subject to change  subject to change based off of feed cost.</strong></li>
                                         </ul>
                                     </p>
                                 </div>
@@ -76,9 +75,9 @@ const HorseBoarding = () => {
                     </Col>
                 </Row>
             </Container>
-            
+            <Footer />
         </div>
-        <Footer />
+        
       </div>
     )
 }

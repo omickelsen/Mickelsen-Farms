@@ -18,7 +18,7 @@ const RidingLessons = () => {
             <Header />
             <div className="container">
                 <div className='service-container'>
-                    <h1 className="service-title">Riding Lessons</h1>
+                    <h1 className="service-title">Riding Lessons and Trail Rides</h1>
                 </div>
             </div>
             <Container>
@@ -28,7 +28,7 @@ const RidingLessons = () => {
                         <p>
                             <ul className="includes-list">
                                 <li>All monies due each visit or first of month unless other arrangments are made ahead of time.</li>
-                                <li>Lessons may be paid for by cash, check, or Venmo at JoDee Mickelsen@JoDee-Mickelsen (which I prefer for convenience).</li>
+                                <li>Lessons may be paid for by cash, check, or Venmo Mickelsen Family Farms @Alfred-Mickelsen (which is preferred for convenience).</li>
                                 <li>Payment includes horse rental, horse tack, helmet, and horse-riding facility rental.</li>
                                 <li>Please read and make note of cancellation policy below.</li>
                             </ul>
@@ -64,7 +64,7 @@ const RidingLessons = () => {
                     <Row>
                         <Col sm={12}>
                             <div className="price-table">
-                                <h1 className="lesson-pricing-title">Pricing</h1>
+                                <h1 className="lesson-pricing-title">Lesson Pricing</h1>
                                 <Table responsive="xs">
                                     <thead>
                                         <tr className="table-headers">
@@ -92,21 +92,23 @@ const RidingLessons = () => {
                                             <td>Huntyr, Olivia, Izzy</td>
 
                                             <td>$20.00 (per lesson) once a week.<br />
-                                                $15 (per lesson) if you use your own boarded horse.<br />
-                                                <br /><center>OR</center><br />$15.00 (per lesson) for twice a week.
                                              </td>
                                             <td>$30.00 (per lesson) once a week.<br />
-                                                $25 (per lesson) if you use your own boarded horse.<br />
-                                                <br /><center>OR</center><br />$25.00 (per lesson) for twice a week. <br />
-                                                $20 (per lesson) if you use your own boarded horse. </td>
+                                                </td>
                                             <td>Each lesson is 10 minutes saddle up time. <br />Remaining time is spent riding.</td>
                                         </tr>
 
                                     </tbody>
                                 </Table>
-                                <h5><strong>Sibling discount: $20.00 (per 1/2 lesson) once a week. <br />
-                                    $35 an hour if siblings share the hour lesson and use the same horse.<br />
-                                    **Huntyr will be assisted by JoDee for all her lessons.</strong></h5>
+                                <h5><strong>Sibling and Group lesson discounts available. <br />
+                                    <br />
+                                    </strong></h5>
+                                    <h1 className="lesson-pricing-title">Trail Ride Pricing</h1>
+                                    <h4>Private trail rides $100</h4>
+                                    <h4>Couples Trail rides $75 each</h4>
+                                    <h4>Three or more riders $50 each</h4>
+                                    <h5><strong>Average trail ride 2.5 hrs. Discounts available for families.<br />
+                                    </strong></h5>
                             </div>
                         </Col>
                     </Row>
