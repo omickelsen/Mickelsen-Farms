@@ -34,6 +34,9 @@ export default class NewEventModal extends Component {
     this.processNewEvent = this.processNewEvent.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
   }
+  convertDate = (date) => {
+    return moment.utc(date).toDate()
+  }
 
   componentWillReceiveProps(newProps) {
     if(newProps.isOpen && !this.props.isOpen && this.state.submitted) {
@@ -144,21 +147,11 @@ export default class NewEventModal extends Component {
   handleDaySelectChange = (e) => {
     this.setState({recurringDays: e});
   }
+  
+
   componentDidMount(){
     return axios.get('/api/event').then(data => {
       console.log(data);
-      // this.setState({
-      //     title: data.title, 
-      //     date: data.date, 
-      //     end_date: data.end_date, 
-      //     type: data.type, 
-      //     startTime: data.startTime, 
-      //     endTime: data.endTime, 
-      //     description: data.description, 
-      //     recurringDays: data.recurringDays,
-      //     allDay: data.allDay,
-      //     resource: data.resource
-      //   })     
     })
   }
   

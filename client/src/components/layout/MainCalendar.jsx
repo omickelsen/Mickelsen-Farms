@@ -24,6 +24,9 @@ export default class Calendar extends Component {
       events: []
     };
   }
+  convertDate = (date) => {
+    return moment.utc(date).toDate()
+  }
 componentDidMount(){
  this.addEventsFromMongo();
 }
@@ -32,7 +35,7 @@ addEventsFromMongo = () => {
   return axios.get("/api/event").then(data => {
     const events = data.data.map(event => ({
         ...event,
-        date: new Date(event.date),
+        // date: new Date(event.date),
         start: new Date(event.start),
         end: new Date(event.end),
       })
@@ -56,101 +59,6 @@ addEventsFromMongo = () => {
     this.setState( { newModalOpen: !this.state.newModalOpen } );
   };
 
-  // addEvent = (evt) => {
-	// 	console.log("hello");
-  //   var events = this.state.events;
-  //   evt["id"] = events.length;
-  //   var startHours = Math.floor(evt["startTime"]/3600);
-  //   var startMinutes = startHours;
-  //   if(startHours !== 0) {
-  //     startMinutes = evt["startTime"] % (3600 * Math.floor(startHours))/60;
-  //   }
-  //   else {
-  //     startMinutes = evt["startTime"]/60;
-  //   }
-  //   var endHours = Math.floor(evt["endTime"]/3600);
-  //   var endMinutes = endHours;
-  //   if(endHours !== 0) {
-  //     endMinutes = evt["endTime"] % (3600 * Math.floor(endHours))/60;
-  //   }
-  //   else {
-  //     endMinutes = evt["endTime"]/60;
-  //   }
-  //   evt["start"].setHours(startHours);
-  //   evt["start"].setMinutes(startMinutes);
-  //   evt["end"].setHours(endHours);
-  //   evt["end"].setMinutes(endMinutes);
-  //   var recurringDays = evt["recurringDays"];
-  //   var recurringDayValues = [];
-  //   var recurrenceStart = evt["start"];
-  //   var recurrenceEnd = evt["end"];
-  //   for(let obj of recurringDays) {
-  //     recurringDayValues.push(obj["value"]);
-  //   }
-  //   evt["recurringDays"] = recurringDayValues;
-  //   if(evt["type"] === "BI") {
-  //     let startDate = moment(evt["start"]);
-  //     let startDateDay = startDate.day();
-  //     let endDate = moment(evt["end"]);
-  //     while(startDate.isBefore(endDate)) {
-  //       if(recurringDayValues.indexOf(startDate.day()) !== -1) {
-  //         let evtCopy = Object.assign({}, evt);
-  //         evtCopy["start"] = startDate.toDate();
-  //         evtCopy["end"] = startDate.toDate();
-  //         evtCopy["end"].setHours(evt["end"].getHours());
-  //         evtCopy["end"].setMinutes(evt["end"].getMinutes());
-  //         evtCopy["recurrenceStart"] = recurrenceStart;
-  //         evtCopy["recurrenceEnd"] = recurrenceEnd;
-  //         events.push(evtCopy);
-  //       }
-  //       let startDateClone = moment(startDate);
-  //       let nextDateDay = startDateClone.add(1, "days").day();
-  //       if(nextDateDay === startDateDay) {
-  //           startDate = startDate.add(8, "days");
-  //       }
-  //       else {
-  //           startDate = startDate.add(1, "days");
-  //       }
-  //     }
-  //   }
-  //   else if(evt["type"] === "Week") {
-  //     let startDate = moment(evt["start"]);
-  //     let endDate = moment(evt["end"]);
-  //     while(startDate.isBefore(endDate)) {
-  //       if(recurringDayValues.indexOf(startDate.day()) !== -1) {
-  //         let evtCopy = Object.assign({}, evt);
-  //         evtCopy["start"] = startDate.toDate();
-  //         evtCopy["end"] = startDate.toDate();
-  //         evtCopy["end"].setHours(evt["end"].getHours());
-  //         evtCopy["end"].setMinutes(evt["end"].getMinutes());
-  //         evtCopy["recurrenceStart"] = recurrenceStart;
-  //         evtCopy["recurrenceEnd"] = recurrenceEnd;
-  //         events.push(evtCopy);
-  //       }
-  //       startDate = startDate.add(1, "days");
-  //     }
-  //   }
-  //   else if(evt["type"] === "Month") {
-  //     let startDate = moment(evt["start"]);
-  //     let endDate = moment(evt["end"]);
-  //     while(startDate.isBefore(endDate)) {
-  //       let evtCopy = Object.assign({}, evt);
-  //       evtCopy["start"] = startDate.toDate();
-  //       evtCopy["end"] = startDate.toDate();
-  //       evtCopy["end"].setHours(evt["end"].getHours());
-  //       evtCopy["end"].setMinutes(evt["end"].getMinutes());
-  //       evtCopy["recurrenceStart"] = recurrenceStart;
-  //       evtCopy["recurrenceEnd"] = recurrenceEnd;
-  //       events.push(evtCopy);
-  //       startDate = startDate.add(1, "month");
-  //     }
-  //   }
-  //   else {
-  //   events.push(evt);
-  //   }
-  //   this.setState({events: events});
-  //   this.close();
-  // }
 
   addEvent = ( evt ) => {
     let events = this.state.events;

@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
 
-
+moment.locale("en-GB");
 BigCalendar.momentLocalizer(moment);
 
 export default class Calendar extends BigCalendar {
   constructor(props) {
     super(props);
     this.state = {
-
+      
     };
     this.propGetter = this.propGetter.bind(this);
+  
   }
 
   propGetter(evt, start, end, isSelected) {
@@ -20,6 +21,7 @@ export default class Calendar extends BigCalendar {
     if(evt.color) {
       style.fontSize="12px";
       style.backgroundColor = evt.color;
+      
     }
     return {style: style};
   }

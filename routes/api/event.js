@@ -61,7 +61,7 @@ router.post(
 
 router.get('/', async (req, res) => {
     try {
-        const events = await Event.find().sort({ date: -1 });
+        const events = await Event.find().sort({date: 1});
         console.log(events);
         res.json(events);
     } catch (err) {
