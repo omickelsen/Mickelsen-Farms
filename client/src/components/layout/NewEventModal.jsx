@@ -9,6 +9,7 @@ import moment from 'moment';
 import axios from 'axios';
 
 
+import '../../styles/App.css';
 import 'react-select/dist/react-select.css';
 
 export default class NewEventModal extends Component {
@@ -160,15 +161,6 @@ export default class NewEventModal extends Component {
       <Modal show={this.props.isOpen} onHide={this.props.close}>
         <Modal.Header closeButton>New Calendar Event</Modal.Header>
         <Modal.Body>
-          {/*<FormGroup>*/}
-          {/*  <Label>Event Type:</Label>*/}
-          {/*  <FormControl componentClass="select" value={this.state.type} onChange={this.handleType}>*/}
-          {/*    <option value="Single">Single</option>*/}
-          {/*    <option value="Week">Weekly</option>*/}
-          {/*    <option value="BI">BI-Weekly</option>*/}
-          {/*    <option value="Month">Monthly</option>*/}
-          {/*  </FormControl>*/}
-          {/*</FormGroup>*/}
 
           <FormGroup>
             <Label>Title:</Label>
@@ -182,17 +174,9 @@ export default class NewEventModal extends Component {
  
           <FormGroup>
               <Label>Event Date</Label>
-              <DatePicker autoComplete="on" placeholder="Date" 
+              <DatePicker autoComplete="on" placeholder="Date"
               value={this.state.date.format()} onChange={this.handleDate} dateFormat="MM-DD-YYYY"/>
           </FormGroup>
-    
-          { this.state.type !== "Single" && 
-            <FormGroup>
-              <Label>End Date: </Label>
-              <DatePicker autoComplete="on" placeholder="Date" 
-              value={this.state.end_date.format()} onChange={this.handleEndChange} dateFormat="MM-DD-YYYY"/>
-            </FormGroup>
-          }
 
           <FormGroup>
             <Label>Starting Time: </Label>
@@ -204,11 +188,7 @@ export default class NewEventModal extends Component {
 						<TimePicker value={this.state.endTime} onChange={this.endTime} step={5} start={'07:05 AM'} />
           </FormGroup>
 
-          { (this.state.type === "Week" || this.state.type === "BI") && 
-            <FormGroup>
-            <Label>Recurring Days:</Label><Select multi options={[{label: "Sunday", value: 0}, {label: "Monday", value: 1}, {label: "Tuesday", value: 2}, {label: "Wednesday", value: 3}, {label: "Thursday", value: 4}, {label: "Friday", value: 5}, {label: "Saturday", value: 6}]} value={this.state.recurringDays} onChange={this.handleDaySelectChange} />
-            </FormGroup>
-          }
+         
           <br/>
           <Button bsStyle="success" onClick={this.processNewEvent}>Add Event</Button>
         </Modal.Body>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
 
+
 moment.locale("en-GB");
 BigCalendar.momentLocalizer(moment);
 

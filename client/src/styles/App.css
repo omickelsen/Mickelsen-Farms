@@ -70,6 +70,7 @@ h1, h2 {
 
 
 
+
 /* Css for Calendar */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
@@ -181,7 +182,6 @@ a:hover {
 .hero {
   display: table;
   position: relative;
-  /* background-image: url(https://cdn.appzaib.com/public/bell/img/cover.jpg); */
   background-size: cover;
   padding: 150px 0;
   color: #fff;
@@ -1512,6 +1512,9 @@ text-shadow: 1px 1px black;
   visibility: visible;
 }
 
+
+
+
 /* ==================================================
   Team Styling
   ================================================== */
@@ -1849,4 +1852,8 @@ text-shadow: 1px 1px black;
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+.modal-header{
+  display: initial;
+  margin-top: -10px;
 }

@@ -3,6 +3,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 
+
+
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
 export default class EventModal extends Component {
   constructor(props) {
     super(props);
