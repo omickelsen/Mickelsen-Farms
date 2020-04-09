@@ -9,7 +9,7 @@ import ScrollTop from './ScrollTop';
 import MainCalendar from './MainCalendar';
 import Header from './Header';
 import MainPageCarousel from './MainPageCarousel';
-import '../../styles/Bootstrap.min.css'
+// import '../../styles/Bootstrap.min.css'
 import '../../styles/App.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';

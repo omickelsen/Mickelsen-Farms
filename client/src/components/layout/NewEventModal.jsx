@@ -9,8 +9,9 @@ import moment from 'moment';
 import axios from 'axios';
 
 
-import '../../styles/App.css';
+
 import 'react-select/dist/react-select.css';
+import '../../styles/App.css';
 
 export default class NewEventModal extends Component {
 

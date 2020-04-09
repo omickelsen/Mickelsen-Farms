@@ -8,8 +8,9 @@ import moment from 'moment';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../styles/App.css';
+
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import '../../styles/App.css';
 
 
 

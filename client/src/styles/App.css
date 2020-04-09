@@ -1,9 +1,4 @@
-/*
-    Theme Name: Bell
-    Theme URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
+
 
 /* CSS for Redux */
 .alert {
@@ -1441,76 +1436,7 @@ text-shadow: 1px 1px black;
   top: 13px;
 }
 
-/* ==================================================
-  calendar Styling
-  ================================================== */
-.calendar {
-  background-color: #edf6ff;
-  padding-bottom: 0;
-}
 
-.calendar h2 {
-  color: #199EB8;
-  margin-bottom: 25px;
-}
-
-.calendar-grid {
-  margin-top: 65px;
-}
-
-.calendar-grid .row {
-  margin: 0;
-}
-
-.calendar-grid .row > div {
-  padding: 0;
-}
-
-.calendar-grid .row > div .card img {
-  width: 100%;
-}
-
-.calendar-grid .row > div .card .calendar-over {
-  position: absolute;
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.calendar-grid .row > div .card .calendar-over > div {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.calendar-grid .row > div .card .calendar-over .card-title {
-  color: #fff;
-  font-size: 30px;
-}
-
-.calendar-grid .row > div .card .calendar-over .card-text {
-  color: #fff;
-  opacity: .75;
-  padding: 0 45px;
-}
-
-.calendar-grid .row > div .card:hover .calendar-over {
-  opacity: 1;
-  visibility: visible;
-}
 
 
 
@@ -1857,3 +1783,73 @@ text-shadow: 1px 1px black;
   display: initial;
   margin-top: -10px;
 }
+/* ==================================================
+  calendar Styling
+  ================================================== */
+  .calendar {
+    background-color: #edf6ff;
+    padding-bottom: 0;
+  }
+  
+  .calendar h2 {
+    color: #199EB8;
+    margin-bottom: 25px;
+  }
+  
+  .calendar-grid {
+    margin-top: 65px;
+  }
+  
+  .calendar-grid .row {
+    margin: 0;
+  }
+  
+  .calendar-grid .row > div {
+    padding: 0;
+  }
+  
+  .calendar-grid .row > div .card img {
+    width: 100%;
+  }
+  
+  .calendar-grid .row > div .card .calendar-over {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .calendar-grid .row > div .card .calendar-over > div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .calendar-grid .row > div .card .calendar-over .card-title {
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  .calendar-grid .row > div .card .calendar-over .card-text {
+    color: #fff;
+    opacity: .75;
+    padding: 0 45px;
+  }
+  
+  .calendar-grid .row > div .card:hover .calendar-over {
+    opacity: 1;
+    visibility: visible;
+  }
