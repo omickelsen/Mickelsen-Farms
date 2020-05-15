@@ -30,9 +30,9 @@ const HorseBoarding = () => {
                                 <ul className="includes-list">
                                     <li>Use of all the facility</li>
                                     <li>Lighted indoor arena 40 X 60</li>
-                                    <li>Outdoor arean 72 X 72</li>
+                                    <li>Lighted Outdoor arean 72 X 72</li>
                                     <li>Enclosed stalls and daily turnout</li>
-                                    <li>Daily cleaning of stalls</li>
+                                    <li>Stalls cleaned 3X per week</li>
                                     <li>High quality alfalfa feed and pasture turn out in the summer</li>
                                     <li>Fresh water</li>
                                     <li>Use of tack room and storage of tack</li>
@@ -51,7 +51,7 @@ const HorseBoarding = () => {
                                     <h2 className="service-pricing-title">Pricing</h2>
                                     <p>
                                         <ul className="pricing-list">
-                                            <li>Currently: $275 per month.</li>
+                                            <li>Currently: $300 per month.</li>
                                             <li>$50 initial deposit</li>
                                             <li><strong>Boarding fees are subject to change  subject to change based off of feed cost.</strong></li>
                                         </ul>

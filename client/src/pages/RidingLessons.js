@@ -71,43 +71,47 @@ const RidingLessons = () => {
                                             <th>Instructor</th>
                                             <th>1/2 hour private lesson</th>
                                             <th>1 hour private lesson</th>
-                                            <th>Time</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Jodee Mickelsen</td>
+                                            <td>All Instructors</td>
 
                                             <td>$25.00 (per lesson) once a week.<br />
                                                 $20 (per lesson) if you use your own boarded horse.<br />
                                                 <br /><center>OR</center><br />$20.00 (per lesson) for twice a week. <br />
-                                                $15 (per lesson) if you use your own boarded horse. </td>
+                                                </td>
                                             <td>$40.00 (per lesson) once a week.<br />
                                                 $35 (per lesson) if you use your own boarded horse.<br />
                                                 <br /><center>OR</center><br />$35.00 (per lesson) for twice a week. <br />
-                                                $30 (per lesson) if you use your own boarded horse. </td>
-                                            <td>Each lesson is 10 minutes saddle up time. <br />Remaining time is spent riding.</td>
+                                                 </td>
+                                            <td><br /></td>
                                         </tr>
                                         <tr>
-                                            <td>Huntyr, Olivia, Izzy</td>
+                                            <td></td>
 
-                                            <td>$20.00 (per lesson) once a week.<br />
+                                            <td><br />
                                              </td>
-                                            <td>$30.00 (per lesson) once a week.<br />
+                                            <td><br />
                                                 </td>
-                                            <td>Each lesson is 10 minutes saddle up time. <br />Remaining time is spent riding.</td>
+                                            <td><br /></td>
                                         </tr>
 
                                     </tbody>
                                 </Table>
+                                <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
                                 <h5><strong>Sibling and Group lesson discounts available. <br />
+                                <h5><strong>2 Siblings $35 an hour</strong></h5>
+                                <h5><strong>Group of 3 $30 per person for 1.5 hrs</strong></h5>
+                                <h5><strong>Group of 4 $25 per person for 1.5 hrs</strong></h5>
                                     <br />
                                     </strong></h5>
                                     <h1 className="lesson-pricing-title">Trail Ride Pricing</h1>
                                     <h4>Private trail rides $100</h4>
                                     <h4>Couples Trail rides $75 each</h4>
                                     <h4>Three or more riders $50 each</h4>
-                                    <h5><strong>Average trail ride 2.5 hrs. Discounts available for families.<br />
+                                    <h5><strong>Average trail ride 2.5 hrs.<br />
                                     </strong></h5>
                             </div>
                         </Col>
