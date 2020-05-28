@@ -8,6 +8,9 @@ import Table from 'react-bootstrap/Table'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Footer from '../components/layout/Footer'
+import Pdf from '../pdfs/Private riding lesson registration form.pdf'
+import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
+import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
 
 
 
@@ -25,6 +28,7 @@ const RidingLessons = () => {
                 <Row>
                     <Col><div className="lesson-pricing-container">
                         <h1 className="service-includes-title">Payment Information</h1>
+                        
                         <p>
                             <ul className="includes-list">
                                 <li>All monies due each visit or first of month unless other arrangments are made ahead of time.</li>
@@ -50,7 +54,7 @@ const RidingLessons = () => {
                                                     <li>With 3 instructors, we will try not to cancel any lessons. If someone is gone on vacations, we will
                                                         try not to cancel any lessons. If someone is on vacation, we will see if the other two can cover the
                                                     lesson.</li>
-                                                    <li>Trail rides are usually reserved for Saturday because if usually takes two instructors-one to ride tail
+                                                    <li>Trail rides are usually reserved for Saturday because it usually takes two instructors-one to ride tail
                                                     and one to ride lead. Trail rides can occur other days if arranged by instructors in advance.</li>
                                                 </p>
                                             </ul>
@@ -79,12 +83,13 @@ const RidingLessons = () => {
                                             <td>All Instructors</td>
 
                                             <td>$25.00 (per lesson) once a week.<br />
-                                                $20 (per lesson) if you use your own boarded horse.<br />
+                                                $20 (per lesson) sibling/boarder discount<br />
                                                 <br /><center>OR</center><br />$20.00 (per lesson) for twice a week. <br />
                                                 </td>
                                             <td>$40.00 (per lesson) once a week.<br />
-                                                $35 (per lesson) if you use your own boarded horse.<br />
+                                                $35 (per lesson) sibling/boarder discount<br />
                                                 <br /><center>OR</center><br />$35.00 (per lesson) for twice a week. <br />
+                                                Sibling 1 hour lesson (2 in a lesson) $25 per person - $50 total
                                                  </td>
                                             <td><br /></td>
                                         </tr>
@@ -100,13 +105,15 @@ const RidingLessons = () => {
 
                                     </tbody>
                                 </Table>
+                                <a href={Pdf}>Click here for Private riding lesson registration form</a> <br />
+                                <a href={Pdf2}>Click here for Group riding lesson registration form</a>
                                 <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
-                                <h5><strong>Sibling and Group lesson discounts available. <br />
-                                <h5><strong>2 Siblings $35 an hour</strong></h5>
-                                <h5><strong>Group of 3 $30 per person for 1.5 hrs</strong></h5>
-                                <h5><strong>Group of 4 $25 per person for 1.5 hrs</strong></h5>
+                                <h5><strong>Group of 3 $30 per person for 1.5 hrs ($25 each sibling/boarder discount)</strong></h5>
+                                <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5>
+                                <h5><strong>Date Night options available upon request</strong></h5>
+                                <a href={Pdf3}>Click here for 4-H registration form</a>
+
                                     <br />
-                                    </strong></h5>
                                     <h1 className="lesson-pricing-title">Trail Ride Pricing</h1>
                                     <h4>Private trail rides $100</h4>
                                     <h4>Couples Trail rides $75 each</h4>

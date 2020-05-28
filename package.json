@@ -22,21 +22,21 @@
   "homepage": "https://github.com/omickelsen/Mickelsen-Farms#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.3.1",
-    "config": "^3.1.0",
+    "bootstrap": "^4.5.0",
+    "config": "^3.3.1",
     "express": "^4.17.1",
-    "express-validator": "^6.1.1",
-    "google-maps-react": "^2.0.2",
+    "express-validator": "^6.5.0",
+    "google-maps-react": "^2.0.6",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.6.2",
-    "node": "^12.6.0",
+    "mongoose": "^5.9.16",
+    "node": "^12.17.0",
     "react-big-calendar": "^0.17.0",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "request": "^2.88.0"
+    "react-bootstrap": "^1.0.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
-    "concurrently": "^4.1.1",
-    "nodemon": "^1.19.1"
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.4"
   }
 }

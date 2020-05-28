@@ -17,6 +17,7 @@ import P6 from '../images/P6.JPEG';
 import P7 from '../images/P7.JPEG';
 import P8 from '../images/P8.JPEG';
 import P9 from '../images/P9.JPEG';
+import Pdf4 from '../pdfs/Horse-Pony birthday parties registration form.pdf'
 
 
 
@@ -41,6 +42,7 @@ const Events = () => {
                                         <li>Down on the Farm DayCamps</li>
                                         <li>Farm Parties</li>
                                         <li>Birthday Parties</li>
+                                        <a href={Pdf4}>Click here for Horse/Pony Birthday Parties Form</a>
                                         <li>Specialized Trainings</li>
                                     </ul>
                                     <Accordion defaultActiveKey="1">
@@ -52,7 +54,7 @@ const Events = () => {
                                                 <Card.Body>
                                                     <ul className="accordion-list">
                                                         <p>
-                                                            <li>Down on the farm day camp - (8-12:30 pm) Participants will get help feed, visit, pet, groom, and get pictures with all the animals on the farm.  In addition they will enjoy games and activities and a horse/pony ride. A campfire lunch will be included.</li>
+                                                            <li>Down on the farm day camp - (9-12:00 pm) Participants will get help feed, visit, pet, groom, and get pictures with all the animals on the farm.  In addition they will enjoy games and activities and a horse/pony ride.</li>
                                                             <li>Farm parties - participants can design their own type of farm party which can include learning to feed animals, interact with animals, hay rides or ride horses/pony.  (Lunch or refreshments are optional)</li>
                                                             <li>Birthday parties - participants will get to visit, pet and get pictures on the farm and get a horse/pony ride.  For an additional charge games and activities, piñata breaking, cake and refreshments can be included.</li>
                                                             <li>Payment for these events vary on type of activity and number of participants attending. Contact owner to discuss price and availability.</li>
