@@ -108,6 +108,7 @@ const RidingLessons = () => {
                                 </Table>
                                 <a href={Pdf}>Click here for Private riding lesson registration form</a> <br />
                                 <a href={Pdf2}>Click here for Group riding lesson registration form</a>
+                                <br />
                                 <a href={Pdf4}>Click here for Fall lesson registration form</a>
                                 <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
                                 <h5><strong>Group of 3 $30 per person for 1.5 hrs ($25 each sibling/boarder discount)</strong></h5>
