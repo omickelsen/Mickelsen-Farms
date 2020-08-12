@@ -11,6 +11,7 @@ import Footer from '../components/layout/Footer'
 import Pdf from '../pdfs/Private riding lesson registration form.pdf'
 import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
+import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
 
 
 
@@ -107,6 +108,7 @@ const RidingLessons = () => {
                                 </Table>
                                 <a href={Pdf}>Click here for Private riding lesson registration form</a> <br />
                                 <a href={Pdf2}>Click here for Group riding lesson registration form</a>
+                                <a href={Pdf4}>Click here for Fall lesson registration form</a>
                                 <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
                                 <h5><strong>Group of 3 $30 per person for 1.5 hrs ($25 each sibling/boarder discount)</strong></h5>
                                 <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5>
