@@ -23,6 +23,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
+                    <h2 className="lesson-pricing-container"> Fall Lesson Schedule is from 3:00 PM to 8:30 PM. Please check the Calendar for cancellations and openings daily if interested.</h2>
                 </div>
             </div>
             <Container>
