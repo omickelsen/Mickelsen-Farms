@@ -11,8 +11,8 @@ import Footer from '../components/layout/Footer'
 import Pdf from '../pdfs/Private riding lesson registration form.pdf'
 import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
-import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
-
+// import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
+import Pdf5 from '../pdfs/Spring session registration form 2021.pdf'
 
 
 const RidingLessons = () => {
@@ -23,7 +23,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> Fall Lesson Schedule is from 3:00 PM to 8:30 PM. Please check the Calendar for cancellations and openings daily if interested.</h2>
+                    <h2 className="lesson-pricing-container"> Spring Lesson Schedule is Monday-Friday 2:30 PM to 7:30 PM, and Saturday 8:00 AM to 12 PM and 2:00 PM - 7:30 PM. Please check the Calendar for cancellations and openings daily if interested.</h2>
                 </div>
             </div>
             <Container>
@@ -110,7 +110,7 @@ const RidingLessons = () => {
                                 <a href={Pdf}>Click here for Private riding lesson registration form</a> <br />
                                 <a href={Pdf2}>Click here for Group riding lesson registration form</a>
                                 <br />
-                                <a href={Pdf4}>Click here for Fall lesson registration form</a>
+                                <a href={Pdf5}>Click here for Spring lesson registration form</a>
                                 <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
                                 <h5><strong>Group of 3 $30 per person for 1.5 hrs ($25 each sibling/boarder discount)</strong></h5>
                                 <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5>
