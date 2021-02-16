@@ -26,7 +26,7 @@ class Team extends Component {
                 </div>
               </div>
             </Link>
-            <Link to="/Olivia-Lindstrom" >
+            {/* <Link to="/Olivia-Lindstrom" >
               <div className="team-col col-lg-4 col-xs-12">
                 <div className="card card-block text-center">
                   <div>
@@ -53,7 +53,7 @@ class Team extends Component {
                   </div>
                 </div>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section >
