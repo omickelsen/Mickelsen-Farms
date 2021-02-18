@@ -8,7 +8,7 @@ import Table from 'react-bootstrap/Table'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Footer from '../components/layout/Footer'
-import Pdf from '../pdfs/Private riding lesson registration form.pdf'
+import Pdf from '../pdfs/Equine Release and Wavier of Liability form for Mickelsen Farm.pdf'
 import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
 // import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
@@ -107,21 +107,21 @@ const RidingLessons = () => {
 
                                     </tbody>
                                 </Table>
-                                <a href={Pdf}>Click here for Private riding lesson registration form</a> <br />
-                                <a href={Pdf2}>Click here for Group riding lesson registration form</a>
-                                <br />
+                                <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
+                                {/* <a href={Pdf2}>Click here for Group riding lesson registration form</a> */}
+                                {/* <br /> */}
                                 <a href={Pdf5}>Click here for Spring lesson registration form</a>
                                 <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
-                                <h5><strong>Group of 3 $30 per person for 1.5 hrs ($25 each sibling/boarder discount)</strong></h5>
-                                <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5>
+                                <h5><strong>Group of 3 $35 per person for 1.5 hrs ($30 each sibling/boarder discount)</strong></h5>
+                                {/* <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5> */}
                                 <h5><strong>Date Night options available upon request</strong></h5>
                                 <a href={Pdf3}>Click here for 4-H registration form</a>
 
                                     <br />
                                     <h1 className="lesson-pricing-title">Trail Ride Pricing</h1>
-                                    <h4>Private trail rides $100</h4>
-                                    <h4>Couples Trail rides $75 each</h4>
-                                    <h4>Three or more riders $50 each</h4>
+                                    <h4>Private trail rides $125</h4>
+                                    <h4>Couples Trail rides $80 each</h4>
+                                    <h4>Three or more riders $65 each (family group rates available)</h4>
                                     <h5><strong>Average trail ride 2.5 hrs.<br />
                                     </strong></h5>
                             </div>

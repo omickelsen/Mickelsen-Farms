@@ -30,7 +30,7 @@ class Footer extends Component {
                   <Link smooth to="/#calendar">Calendar</Link>
                   </li>
                   <li className="list-inline-item">
-                  <Link smooth to="/#team">Team</Link>
+                  <Link smooth to="/#team">Owners</Link>
                   </li>
                   <li className="list-inline-item">
                   <Link smooth to="/#contact">Contact Us</Link>

@@ -53,6 +53,7 @@ const HorseBoarding = () => {
                                         <ul className="pricing-list">
                                             <li>Currently: $300 per month.</li>
                                             <li>$50 initial deposit</li>
+                                            <li>Extra Fees for special requests (SawDust)</li>
                                             <li><strong>Boarding fees are subject to change  subject to change based off of feed cost.</strong></li>
                                         </ul>
                                     </p>

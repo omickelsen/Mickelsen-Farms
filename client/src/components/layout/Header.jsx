@@ -18,7 +18,7 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
           <li><Link smooth to="/#about">About Us</Link></li>
           <li><Link smooth to="/#services">Services</Link></li>
           <li><Link smooth to="/#calendar">Calendar</Link></li>
-          <li><Link smooth to="/#team">Team</Link></li>
+          <li><Link smooth to="/#team">Owners</Link></li>
           <li><Link smooth to="/#contact">Contact Us</Link></li>
           <li><Link smooth to="/#profiles">Profiles</Link></li>
           <li>
@@ -52,7 +52,7 @@ const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
             <li><Link smooth to="/#about">About Us</Link></li>
             <li><Link smooth to="/#services">Services</Link></li>
             <li><Link smooth to="/#calendar">Calendar</Link></li>
-            <li><Link smooth to="/#team">Team</Link></li>
+            <li><Link smooth to="/#team">Owners</Link></li>
             <li><Link smooth to="/#contact">Contact Us</Link></li>
             <li><Link to="/login">Login</Link></li>
           </ul>

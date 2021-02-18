@@ -9,7 +9,7 @@ class Team extends Component {
       <section className="team" id="team">
         <div className="container">
           <h2 className="text-center">
-            <Link to="/team" >Team</Link>
+            <Link to="/team" >Owners</Link>
           </h2 >
           <div className="row">
             <Link to="/AlandJoDee" >
