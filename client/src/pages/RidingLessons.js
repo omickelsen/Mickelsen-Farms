@@ -12,7 +12,10 @@ import Pdf from '../pdfs/Equine Release and Wavier of Liability form for Mickels
 import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
 // import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
-import Pdf5 from '../pdfs/Spring session registration form 2021.pdf'
+// import Pdf5 from '../pdfs/Spring session registration form 2021.pdf'
+import Pdf6 from '../pdfs/Trail ride registration form.pdf'
+import Pdf7 from '../pdfs/AM Summer lesson registration form.pdf'
+import Pdf8 from '../pdfs/PM Summer lesson registration form.pdf'
 
 
 const RidingLessons = () => {
@@ -23,7 +26,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> Spring Lesson Schedule is Monday-Friday 2:30 PM to 7:30 PM, and Saturday 8:00 AM to 12 PM and 2:00 PM - 7:30 PM. Please check the Calendar for cancellations and openings daily if interested.</h2>
+                    <h2 className="lesson-pricing-container"> Summer session lessons are Jun-August. Click registration forms for pricing and details.</h2>
                 </div>
             </div>
             <Container>
@@ -33,7 +36,7 @@ const RidingLessons = () => {
                         
                         <p>
                             <ul className="includes-list">
-                                <li>All monies due each visit or first of month unless other arrangments are made ahead of time.</li>
+                                <li>All monies due at the beginning of each month for lessons occuring during the month</li>
                                 <li>Lessons may be paid for by cash, check, or Venmo Mickelsen Family Farms @Alfred-Mickelsen (which is preferred for convenience).</li>
                                 <li>Payment includes horse rental, horse tack, helmet, and horse-riding facility rental.</li>
                                 <li>Please read and make note of cancellation policy below.</li>
@@ -47,15 +50,11 @@ const RidingLessons = () => {
                                         <Card.Body>
                                             <ul className="accordion-list">
                                                 <p>
-                                                    <li>If instructor or student cancels for any reason, credit will be applied to next lesson.</li>
                                                     <li>No money will be returned unless instructor is unable to make up lesson within a 2-week window.</li>
-                                                    <li>Beacuse I have instructors and students traveling to my barn for lessons, I expect at least a 4-hour
+                                                    <li>Beacuse I have instructors and students traveling to my barn for lessons, I expect at least a 24-hour
                                                     cancellation notice by instructor or student unless an illness or emergency might arise. </li>
-                                                    <li>If a 4-hour notice is not given for cancellations, a $10 fee will be charged to cover the person's
-                                                    time and gas to come out for the lesson.</li>
-                                                    <li>With 3 instructors, we will try not to cancel any lessons. If someone is gone on vacations, we will
-                                                        try not to cancel any lessons. If someone is on vacation, we will see if the other two can cover the
-                                                    lesson.</li>
+                                                    <li>Makeup lessons may be scheduled if Instructors or students miss a lesson with prior notice.</li>
+                                                    <li>If a 24-hour notice is not given for cancellations, no makeup lesson will be given.</li>
                                                     <li>Trail rides are usually reserved for Saturday because it usually takes two instructors-one to ride tail
                                                     and one to ride lead. Trail rides can occur other days if arranged by instructors in advance.</li>
                                                 </p>
@@ -85,13 +84,11 @@ const RidingLessons = () => {
                                             <td>All Instructors</td>
 
                                             <td>$25.00 (per lesson) once a week.<br />
-                                                $20 (per lesson) sibling/boarder discount<br />
-                                                <br /><center>OR</center><br />$20.00 (per lesson) for twice a week. <br />
+                                                <br />
                                                 </td>
                                             <td>$40.00 (per lesson) once a week.<br />
-                                                $35 (per lesson) sibling/boarder discount<br />
-                                                <br /><center>OR</center><br />$35.00 (per lesson) for twice a week. <br />
-                                                Sibling 1 hour lesson (2 in a lesson) $25 per person - $50 total
+                                                <br />
+                                                1 hour lesson (2 in a lesson) $30 per person - $60 total
                                                  </td>
                                             <td><br /></td>
                                         </tr>
@@ -110,19 +107,23 @@ const RidingLessons = () => {
                                 <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
                                 {/* <a href={Pdf2}>Click here for Group riding lesson registration form</a> */}
                                 {/* <br /> */}
-                                <a href={Pdf5}>Click here for Spring lesson registration form</a>
-                                <h5><strong>First lesson: 1hr is required and JoDee Mickelsen will be instructor.</strong></h5>
-                                <h5><strong>Group of 3 $35 per person for 1.5 hrs ($30 each sibling/boarder discount)</strong></h5>
+                                <a href={Pdf7}>Click here for Morning Summer lessons registration form</a>
+                                <br></br>
+                                <a href={Pdf8}>Click here for Afternoon/Evening Summer lessons registration form</a>
+                                <h5><strong></strong></h5>
+                                <h5><strong>For other options please view registration forms</strong></h5>
                                 {/* <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5> */}
                                 <h5><strong>Date Night options available upon request</strong></h5>
                                 <a href={Pdf3}>Click here for 4-H registration form</a>
 
                                     <br />
-                                    <h1 className="lesson-pricing-title">Trail Ride Pricing</h1>
-                                    <h4>Private trail rides $125</h4>
-                                    <h4>Couples Trail rides $80 each</h4>
-                                    <h4>Three or more riders $65 each (family group rates available)</h4>
-                                    <h5><strong>Average trail ride 2.5 hrs.<br />
+                                    <h1 className="lesson-pricing-title">Trail Rides</h1>
+                                    <h4>Trail rides can be scheduled on the Saturdays listed on the website June to August and must be reserved a head of time.
+See registration form for pricing and details, by appointment only.
+</h4>
+                                    <a href={Pdf6}>Click here for Trail Ride Registration form</a>
+
+                                    <h5><strong><br />
                                     </strong></h5>
                             </div>
                         </Col>
