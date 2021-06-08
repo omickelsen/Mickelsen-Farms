@@ -18,6 +18,8 @@ import P7 from '../images/P7.JPEG';
 import P8 from '../images/P8.JPEG';
 import P9 from '../images/P9.JPEG';
 import Pdf4 from '../pdfs/Horse-Pony birthday parties registration form.pdf'
+import Pdf9 from '../pdfs/Down on the farm registration form.pdf'
+import Pdf10 from '../pdfs/Down on the farm and birthday parties Release and Wavier of Liability form for Mickelsen Farm.pdf'
 
 
 
@@ -37,13 +39,16 @@ const Events = () => {
                         <Col>
                             <div className="lesson-pricing-container">
                                 <h1 className="service-includes-title">Available Events</h1>
+                                    <center><h3><a href={Pdf10}>Click here for Release and Wavier of Liability form for Mickelsen Farm</a></h3></center>
                                 <p>
                                     <ul className="includes-list">
-                                        <li>Down on the Farm DayCamps</li>
+                                        <li>Down on the Farm Day Camps</li>
+                                        <a href={Pdf9}>Click here for Down on the Farm Registration Form</a>
                                         <li>Farm Parties</li>
                                         <li>Birthday Parties</li>
                                         <a href={Pdf4}>Click here for Horse/Pony Birthday Parties Form</a>
                                         <li>Specialized Trainings</li>
+
                                     </ul>
                                     <Accordion defaultActiveKey="1">
                                         <Card>
