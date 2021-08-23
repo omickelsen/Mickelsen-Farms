@@ -11,11 +11,11 @@ import Footer from '../components/layout/Footer'
 import Pdf from '../pdfs/Equine Release and Wavier of Liability form for Mickelsen Farm.pdf'
 import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
-// import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
+import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
 // import Pdf5 from '../pdfs/Spring session registration form 2021.pdf'
 import Pdf6 from '../pdfs/Trail ride registration form.pdf'
-import Pdf7 from '../pdfs/AM Summer lesson registration form.pdf'
-import Pdf8 from '../pdfs/PM Summer lesson registration form.pdf'
+import Pdf7 from '../pdfs/Hooves and Halos Fall session registration form.pdf'
+// import Pdf8 from '../pdfs/PM Summer lesson registration form.pdf'
 
 
 const RidingLessons = () => {
@@ -26,7 +26,8 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> Summer session lessons are Jun-August. Click registration forms for pricing and details.</h2>
+                    <h2 className="lesson-pricing-container"> <center>Summer session lessons are Jun-August.<br />Fall session lessons are September-December. <br />Click registration forms for pricing and details.</center></h2>
+                    
                 </div>
             </div>
             <Container>
@@ -73,23 +74,13 @@ const RidingLessons = () => {
                                 <Table responsive="xs">
                                     <thead>
                                         <tr className="table-headers">
-                                            <th>Instructor</th>
-                                            <th>1/2 hour private lesson</th>
-                                            <th>1 hour private lesson</th>
+                                            
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>All Instructors</td>
-
-                                            <td>$25.00 (per lesson) once a week.<br />
-                                                <br />
-                                                </td>
-                                            <td>$40.00 (per lesson) once a week.<br />
-                                                <br />
-                                                1 hour lesson (2 in a lesson) $30 per person - $60 total
-                                                 </td>
+                                            <h2><center>See registration form for pricing</center></h2>
                                             <td><br /></td>
                                         </tr>
                                         <tr>
@@ -107,9 +98,9 @@ const RidingLessons = () => {
                                 <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
                                 {/* <a href={Pdf2}>Click here for Group riding lesson registration form</a> */}
                                 {/* <br /> */}
-                                <a href={Pdf7}>Click here for Morning Summer lessons registration form</a>
+                                <a href={Pdf7}>Click here for Lessons with Izzy/Hooves and Halos</a>
                                 <br></br>
-                                <a href={Pdf8}>Click here for Afternoon/Evening Summer lessons registration form</a>
+                                <a href={Pdf4}>Click here for Lessons with All other instructors at Mickelsen Family Farms</a>
                                 <h5><strong></strong></h5>
                                 <h5><strong>For other options please view registration forms</strong></h5>
                                 {/* <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5> */}
@@ -118,7 +109,7 @@ const RidingLessons = () => {
 
                                     <br />
                                     <h1 className="lesson-pricing-title">Trail Rides</h1>
-                                    <h4>Trail rides can be scheduled on the Saturdays listed on the website June to August and must be reserved a head of time.
+                                    <h4>Trail rides can be scheduled on Saturdays and must be reserved a head of time.
 See registration form for pricing and details, by appointment only.
 </h4>
                                     <a href={Pdf6}>Click here for Trail Ride Registration form</a>
