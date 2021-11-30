@@ -16,6 +16,7 @@ import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
 import Pdf6 from '../pdfs/Trail ride registration form.pdf'
 import Pdf7 from '../pdfs/Hooves and Halos Fall session registration form.pdf'
 // import Pdf8 from '../pdfs/PM Summer lesson registration form.pdf'
+import Pdf9 from '../pdfs/Winter session Registration.pdf'
 
 
 const RidingLessons = () => {
@@ -26,7 +27,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> <center>Summer session lessons are Jun-August.<br />Fall session lessons are September-December. <br />Click registration forms for pricing and details.</center></h2>
+                    <h2 className="lesson-pricing-container"> <center>Summer session lessons are Jun-August.<br />Fall session lessons are September-November. <br />Winter Session "No Lessons" are December-February. <br />Click registration forms for pricing and details.</center></h2>
                     
                 </div>
             </div>
@@ -101,6 +102,8 @@ const RidingLessons = () => {
                                 <a href={Pdf7}>Click here for Lessons with Izzy/Hooves and Halos</a>
                                 <br></br>
                                 <a href={Pdf4}>Click here for Lessons with All other instructors at Mickelsen Family Farms</a>
+                                <br />
+                                <a href={Pdf9}>Click here for Winter Session Registration Form</a>
                                 <h5><strong></strong></h5>
                                 <h5><strong>For other options please view registration forms</strong></h5>
                                 {/* <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5> */}
