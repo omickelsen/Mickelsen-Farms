@@ -9,14 +9,9 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Footer from '../components/layout/Footer'
 import Pdf from '../pdfs/Equine Release and Wavier of Liability form for Mickelsen Farm.pdf'
-import Pdf2 from '../pdfs/Group riding lessons registration form.pdf'
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
-import Pdf4 from '../pdfs/Fall lesson registration form.pdf'
-// import Pdf5 from '../pdfs/Spring session registration form 2021.pdf'
 import Pdf6 from '../pdfs/Trail ride registration form.pdf'
-import Pdf7 from '../pdfs/Hooves and Halos Fall session registration form.pdf'
-// import Pdf8 from '../pdfs/PM Summer lesson registration form.pdf'
-import Pdf9 from '../pdfs/Winter session Registration.pdf'
+import Pdf10 from '../pdfs/Lesson Registration form.pdf'
 
 
 const RidingLessons = () => {
@@ -97,16 +92,12 @@ const RidingLessons = () => {
                                     </tbody>
                                 </Table>
                                 <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
-                                {/* <a href={Pdf2}>Click here for Group riding lesson registration form</a> */}
-                                {/* <br /> */}
-                                <a href={Pdf7}>Click here for Lessons with Izzy/Hooves and Halos</a>
+                                <a href={Pdf10}>Click here for Horse Lesson Registration Form</a>
                                 <br></br>
-                                <a href={Pdf4}>Click here for Lessons with All other instructors at Mickelsen Family Farms</a>
-                                <br />
-                                <a href={Pdf9}>Click here for Winter Session Registration Form</a>
+                                
                                 <h5><strong></strong></h5>
                                 <h5><strong>For other options please view registration forms</strong></h5>
-                                {/* <h5><strong>Group of 4 $25 per person for 1.5 hrs ($20 each sibling/boarder discount)</strong></h5> */}
+                                
                                 <h5><strong>Date Night options available upon request</strong></h5>
                                 <a href={Pdf3}>Click here for 4-H registration form</a>
 
