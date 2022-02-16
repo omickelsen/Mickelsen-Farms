@@ -1,8 +1,12 @@
 {
   "name": "mickelsen-farms",
   "version": "1.0.0",
+  "engines":{
+    "node": "^12.22.10"
+  },
   "description": "website for mickelsen farms",
   "main": "server.js",
+  
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
