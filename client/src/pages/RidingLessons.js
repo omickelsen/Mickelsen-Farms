@@ -47,11 +47,10 @@ const RidingLessons = () => {
                                         <Card.Body>
                                             <ul className="accordion-list">
                                                 <p>
-                                                    <li>No money will be returned unless instructor is unable to make up lesson within a 2-week window.</li>
+                                                    
                                                     <li>Beacuse I have instructors and students traveling to my barn for lessons, I expect at least a 24-hour
                                                     cancellation notice by instructor or student unless an illness or emergency might arise. </li>
-                                                    <li>Makeup lessons may be scheduled if Instructors or students miss a lesson with prior notice.</li>
-                                                    <li>If a 24-hour notice is not given for cancellations, no makeup lesson will be given.</li>
+                                                    <li>No makeup lesson will be given if student cancels or no shows to lessons.</li>
                                                     <li>Trail rides are usually reserved for Saturday because it usually takes two instructors-one to ride tail
                                                     and one to ride lead. Trail rides can occur other days if arranged by instructors in advance.</li>
                                                 </p>
