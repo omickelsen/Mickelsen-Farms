@@ -12,6 +12,11 @@ import Pdf from '../pdfs/Equine Release and Wavier of Liability form for Mickels
 import Pdf3 from '../pdfs/horse 4-H registration form.pdf'
 import Pdf6 from '../pdfs/Trail ride registration form.pdf'
 import Pdf10 from '../pdfs/Lesson Registration form.pdf'
+import Pdf11 from '../pdfs/Riding Progression Skills - Beginner.pdf'
+import Pdf12 from '../pdfs/Riding Progression Skills - Intermediate.pdf'
+import Pdf13 from '../pdfs/Riding Progression Skills - advanced.pdf'
+import Pdf14 from '../pdfs/Riding Progression Skills - Pony Pals.pdf'
+import Pdf15 from '../pdfs/Horse Care and Connenction skills.pdf'
 
 
 const RidingLessons = () => {
@@ -91,7 +96,14 @@ const RidingLessons = () => {
                                     </tbody>
                                 </Table>
                                 <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
-                                <a href={Pdf10}>Click here for Horse Lesson Registration Form</a>
+                                <a href={Pdf10}>Click here for Horse Lesson Registration Form</a><br />
+                                <a href={Pdf11}>Beginner class skills click here</a><br />
+                                <a href={Pdf12}>Intermediate class skills click here</a><br />
+                                <a href={Pdf13}>Advance class skills click here</a><br />
+                                <a href={Pdf14}>Pony pals class skills click here</a><br />
+                                <a href={Pdf15}>Horse Care and Connection class skills click here</a>
+                                <br />
+
                                 <br></br>
                                 
                                 <h5><strong></strong></h5>
