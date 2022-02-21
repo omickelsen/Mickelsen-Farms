@@ -41,9 +41,9 @@ const RidingLessons = () => {
                                 <li>All monies due at the beginning of each month for lessons occuring during the month</li>
                                 <li>Lessons may be paid for by cash, check, or Venmo Mickelsen Family Farms @Alfred-Mickelsen (which is preferred for convenience).</li>
                                 <li>Payment includes horse rental, horse tack, helmet, and horse-riding facility rental.</li>
-                                <li>Please read and make note of cancellation policy below.</li>
+                                {/* <li>Please read and make note of cancellation policy below.</li> */}
                             </ul>
-                            <Accordion defaultActiveKey="1">
+                            {/* <Accordion defaultActiveKey="1">
                                 <Card>
                                     <Accordion.Toggle as={Card.Header} eventKey="0" >
                                         <center>Click for cancellation policy</center>
@@ -63,7 +63,7 @@ const RidingLessons = () => {
                                         </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
-                            </Accordion>
+                            </Accordion> */}
                         </p>
                     </div>
                     </Col>
