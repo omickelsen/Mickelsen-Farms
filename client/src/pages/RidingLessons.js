@@ -17,6 +17,8 @@ import Pdf12 from '../pdfs/Riding Progression Skills - Intermediate.pdf'
 import Pdf13 from '../pdfs/Riding Progression Skills - advanced.pdf'
 import Pdf14 from '../pdfs/Riding Progression Skills - Pony Pals.pdf'
 import Pdf15 from '../pdfs/Horse Care and Connenction skills.pdf'
+import Pdf16 from '../pdfs/Riding Progression Skills - Advanced Beginner.pdf'
+import Pdf17 from '../pdfs/Riding Progression Skills - Advanced Intermediate.pdf'
 
 
 const RidingLessons = () => {
@@ -80,9 +82,12 @@ const RidingLessons = () => {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <h2><center>See registration form for pricing</center></h2>
+                                            <h2><center>See registration form <a href={Pdf10}>CLICK HERE</a><br /></center></h2>
                                             <td><br /></td>
+                                         <br />
+                                         
                                         </tr>
+                                          <center><a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a></center>  
                                         <tr>
                                             <td></td>
 
@@ -95,13 +100,15 @@ const RidingLessons = () => {
 
                                     </tbody>
                                 </Table>
-                                <a href={Pdf}>Click here for Equine Release and Waiver of Liability form</a> <br />
-                                <a href={Pdf10}>Click here for Horse Lesson Registration Form</a><br />
-                                <a href={Pdf11}>Beginner class skills click here</a><br />
-                                <a href={Pdf12}>Intermediate class skills click here</a><br />
-                                <a href={Pdf13}>Advance class skills click here</a><br />
-                                <a href={Pdf14}>Pony pals class skills click here</a><br />
-                                <a href={Pdf15}>Horse Care and Connection class skills click here</a>
+                                <h2><center>Riding Levels Offered</center></h2>
+                                
+                                <li> <a href={Pdf14}>Pony pals class skills click here</a><br /></li>
+                                <li><a href={Pdf11}>Beginner class skills click here</a><br /></li>
+                                <li><a href={Pdf16}>Advanced Beginner class skills click here</a><br /></li>
+                                <li> <a href={Pdf12}>Intermediate class skills click here</a><br /></li>
+                                <li> <a href={Pdf17}>Advanced Intermediate class skills click here</a><br /></li>
+                                <li> <a href={Pdf13}>Advanced class skills click here</a><br /></li>
+                                <li> <a href={Pdf15}>Horse Care and Connection class skills click here</a></li>
                                 <br />
 
                                 <br></br>
