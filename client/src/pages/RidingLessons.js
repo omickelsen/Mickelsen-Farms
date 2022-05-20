@@ -114,7 +114,7 @@ const RidingLessons = () => {
                                 <br></br>
                                 
                                 <h5><strong></strong></h5>
-                                <h5><strong>For other options please view registration forms</strong></h5>
+                
                                 
                                 <h5><strong>Date Night options available upon request</strong></h5>
                                 <a href={Pdf3}>Click here for 4-H registration form</a>
