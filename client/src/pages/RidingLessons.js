@@ -29,7 +29,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> <center>Summer session lessons are Jun-August.<br />Fall session lessons are September-November. <br />Winter Session "No Lessons" are December-February. <br />Click registration forms for pricing and details.</center></h2>
+                    <h2 className="lesson-pricing-container"> <center>Summer session lessons are Jun-August and are currently full.<br />Fall session lessons are September-November. <br />Winter Session "No Lessons" are December-February. <br />Click registration forms for pricing and details.</center></h2>
                     
                 </div>
             </div>
@@ -121,7 +121,7 @@ const RidingLessons = () => {
 
                                     <br />
                                     <h1 className="lesson-pricing-title">Trail Rides</h1>
-                                    <h4>Trail rides can be scheduled on Saturdays and must be reserved a head of time.
+                                    <h4>Trail rides can be scheduled on Saturdays only and must be reserved a head of time.
 See registration form for pricing and details, by appointment only.
 </h4>
                                     <a href={Pdf6}>Click here for Trail Ride Registration form</a>
