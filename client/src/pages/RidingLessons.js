@@ -29,7 +29,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> <center>Registration Opens February 28th. Lessons start March 6th.<br /><br /><br />Click registration forms for pricing and details.</center></h2>
+                    <h2 className="lesson-pricing-container"> <center>Summer Registration Form is Now Online.<br /><br /><br />Click registration forms for pricing and details.</center></h2>
                     
                 </div>
             </div>
