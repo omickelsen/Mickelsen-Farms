@@ -29,7 +29,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> <center>Summer Registration Form is Now Online.<br /><br /><br />Click registration forms for pricing and details.</center></h2>
+                    <h2 className="lesson-pricing-container"> <center>Fall Registration Form is Now Online.<br /><br /><br />Click registration forms for pricing and details.</center></h2>
                     
                 </div>
             </div>
@@ -108,7 +108,7 @@ const RidingLessons = () => {
                                 <li> <a href={Pdf12}>Intermediate class skills click here</a><br /></li>
                                 <li> <a href={Pdf17}>Advanced Intermediate class skills click here</a><br /></li>
                                 <li> <a href={Pdf13}>Advanced class skills click here</a><br /></li>
-                                <li> <a href={Pdf15}>Horse Care and Connection class skills click here</a></li>
+                                {/* <li> <a href={Pdf15}>Horse Care and Connection class skills click here</a></li> */}
                                 <br />
 
                                 <br></br>
@@ -117,7 +117,7 @@ const RidingLessons = () => {
                 
                                 
                                 <h5><strong>Date Night options available upon request</strong></h5>
-                                <a href={Pdf3}>Click here for 4-H registration form</a>
+                                {/* <a href={Pdf3}>Click here for 4-H registration form</a> */}
 
                                     <br />
                                     <h1 className="lesson-pricing-title">Trail Rides</h1>
