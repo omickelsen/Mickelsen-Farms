@@ -29,7 +29,7 @@ const RidingLessons = () => {
             <div className="container">
                 <div className='service-container'>
                     <h1 className="service-title">Riding Lessons and Trail Rides</h1>
-                    <h2 className="lesson-pricing-container"> <center>Fall Registration Form is Now Online.<br /><br /><br />Click registration forms for pricing and details.</center></h2>
+                    <h2 className="lesson-pricing-container"> <center><br /><br /><br />Click registration forms for pricing and details.</center></h2>
                     
                 </div>
             </div>
@@ -41,7 +41,6 @@ const RidingLessons = () => {
                         <p>
                             <ul className="includes-list">
                                 <li>All monies due at the beginning of each month for lessons occuring during the month</li>
-                                <li>Lessons may be paid for by cash, check, or Venmo Mickelsen Family Farms @Alfred-Mickelsen (which is preferred for convenience).</li>
                                 <li>Payment includes horse rental, horse tack, helmet, and horse-riding facility rental.</li>
                                 {/* <li>Please read and make note of cancellation policy below.</li> */}
                             </ul>
@@ -124,7 +123,9 @@ const RidingLessons = () => {
                                     <h4>Trail rides can be scheduled on Saturdays only and must be reserved a head of time.
 See registration form for pricing and details, by appointment only.
 </h4>
-                                    <a href={Pdf6}>Click here for Trail Ride Registration form</a>
+<h2 >
+    <a href={Pdf6}>Click here for Trail Ride Registration form</a>
+</h2>
 
                                     <h5><strong><br />
                                     </strong></h5>
