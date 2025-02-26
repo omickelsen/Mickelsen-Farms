@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import Login from './components/auth/Login';
-// import Register from './components/auth/Register';
 import Home from './components/layout/Home';
 import Alert from './components/layout/Alert';
-// import Header from './components/layout/Header';
 import Dashboard from './components/dashboard/Dashboard';
 import About from './components/layout/About';
 import Services from './components/layout/Services';
@@ -19,16 +19,9 @@ import Events from './pages/Events';
 import AlandJoDee from './pages/AlandJoDee';
 import OliviaLindstrom from './pages/Olivia-Lindstrom';
 import IzzyBarnes from './pages/Izzy-Barnes';
-
-
-//Redux stuff
-import { Provider } from 'react-redux';
-import store from './store';
 import { loadUser } from './actions/auth';
-import setAuthToken from './utils/setAuthToken'
-import './styles/App.css'
-
-
+import setAuthToken from './utils/setAuthToken';
+import './styles/App.css';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -38,31 +31,31 @@ const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
+
   return (
     <Provider store={store}>
       <Router>
-        {/* <Header /> */}
         <Alert />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/services' component={Services} />
-          <Route exact path='/team' component={Team} />
-          <Route exact path='/calendar' component={MainCalendar} />
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/services/horse-boarding' component={HorseBoarding} />
-          <Route exact path='/services/riding-lessons' component={RidingLessons} />
-          <Route exact path='/services/events' component={Events} />
-          <Route exact path='/create-profile' component={CreateProfile} />
-          <Route exact path='/AlandJoDee' component={AlandJoDee} />
-          <Route exact path='/Olivia-Lindstrom' component={OliviaLindstrom} />
-          <Route exact path='/Izzy-Barnes' component={IzzyBarnes} />
-          <PrivateRoute exact path='/dashboard' component={Dashboard} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/services" element={<Services />} />
+          <Route exact path="/team" element={<Team />} />
+          <Route exact path="/calendar" element={<MainCalendar />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/services/horse-boarding" element={<HorseBoarding />} />
+          <Route exact path="/services/riding-lessons" element={<RidingLessons />} />
+          <Route exact path="/services/events" element={<Events />} /> {/* Use as default export */}
+          <Route exact path="/create-profile" element={<CreateProfile />} />
+          <Route exact path="/AlandJoDee" element={<AlandJoDee />} />
+          <Route exact path="/Olivia-Lindstrom" element={<OliviaLindstrom />} />
+          <Route exact path="/Izzy-Barnes" element={<IzzyBarnes />} />
+          <Route exact path="/dashboard" element={<PrivateRoute element={Dashboard} />} />
+        </Routes>
       </Router>
     </Provider>
   );
-}
+};
 
 export default App;

@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure this is at the top
 import App from './App';
-// import './styles/index.css';
-import './styles/App.css'
-import registerServiceWorker from './registerServiceWorker';
+import './styles/App.css';
 
-
-ReactDOM.render( <App />, document.getElementById( 'root' ) );
-registerServiceWorker();
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

@@ -1,91 +1,63 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import logo from '../../images/Mickelsen_Logo.jpg';
 
-import React, { Fragment } from 'react';
-import logo from "../../images/Mickelsen_Logo.jpg";
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { logout } from '../../actions/auth'
-import { HashLink as Link } from 'react-router-hash-link';
+const Header = () => {
+  const location = useLocation();
 
-
-const Header = ( { auth: { isAuthenticated, loading }, logout } ) => {
-  const authLinks = (
-    <div className="container">
-      <div id="logo" className="pull-left">
-        <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
-      </div>
-      <nav id="nav-menu-container nav" >
-        <ul className="nav-menu">
-          <li><Link smooth to="/#about">About Us</Link></li>
-          <li><Link smooth to="/#services">Services</Link></li>
-          <li><Link smooth to="/#calendar">Calendar</Link></li>
-          <li><Link smooth to="/#team">Owners</Link></li>
-          <li><Link smooth to="/#contact">Contact Us</Link></li>
-          <li><Link smooth to="/#profiles">Profiles</Link></li>
-          <li>
-            <Link to="#!" onClick={logout} >
-              <i className='fas fa-sign-out-alt' />{' '}
-              <span className='hide-sm'>Logout</span>
-            </Link>
-          </li>
-          <li>
-            {/* <Link to="/dashboard">
-            <i className='fas fa-user' />{' '}
-            <span className='hide-sm'>Dashboard</span>
-          </Link> */}
-          </li>
-        </ul>
-      </nav>
-      <nav className="nav social-nav pull-right d-none d-lg-inline">
-        <a href="https://twitter.com/mickelsen_s"><i className="fab fa-twitter"></i></a><a href="https://www.facebook.com/MickelsenFamilyFarms/"><i className="fab fa-facebook"></i></a> <Link to="/#contact"><i className="fa fa-envelope"></i></Link>
-      </nav>
-    </div>
-  );
-
-  const guestLinks = (
-    <header id='header'>
-      <div className="container">
-        <div id="logo" className="pull-left">
-          <Link smooth to="/#hero"><img src={logo} alt="" title="" /></Link>
-        </div>
-        <nav id="nav-menu-container">
-          <ul className="nav-menu">
-            <li><Link smooth to="/#about">About Us</Link></li>
-            <li><Link smooth to="/#services">Services</Link></li>
-            <li><Link smooth to="/#calendar">Calendar</Link></li>
-            <li><Link smooth to="/#team">Owners</Link></li>
-            <li><Link smooth to="/#contact">Contact Us</Link></li>
-            <li><Link to="/login">Login</Link></li>
-          </ul>
-        </nav>
-        <nav className="nav social-nav pull-right d-none d-lg-inline">
-          <a href="https://twitter.com/mickelsen_s"><i className="fab fa-twitter"></i></a> <a href="https://www.facebook.com/MickelsenFamilyFarms/"><i className="fab fa-facebook"></i></a> <Link smooth to="/#contact"><i className="fa fa-envelope"></i></Link>
-        </nav>
-      </div>
-    </header>
-  );
+  const scrollToSection = (sectionId) => {
+    if (location.pathname === '/') {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // Navigate to home and then scroll
+      window.location.href = `/#${sectionId}`;
+    }
+  };
 
   return (
-    // console.log('loading')
-
-    <header id="header">
-      <nav id="nav-menu-container">
-        {console.log( loading )}
-        {!loading && ( <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment> )}
-      </nav>
-    </header>
+    <Navbar bg="primary" expand="lg" fixed="top" id="header" className="py-2">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img src={logo} alt="Mickelsen Family Farms Logo" className="horseLogo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav className="ml-auto">
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link 
+              onClick={() => scrollToSection('services')} 
+              as={Link} 
+              to="/" 
+              className={location.pathname === '/' ? 'active' : ''}>
+              Services
+            </Nav.Link>
+            <Nav.Link 
+              onClick={() => scrollToSection('calendar')} 
+              as={Link} 
+              to="/" 
+              className={location.pathname === '/' ? 'active' : ''}>
+              Calendar
+            </Nav.Link>
+            <Nav.Link as={Link} to="/team">Owners</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+          </Nav>
+          <Nav className="social-nav ms-3">
+            <Nav.Link href="https://twitter.com" target="_blank" className="me-2">
+              <i className="fab fa-twitter"></i>
+            </Nav.Link>
+            <Nav.Link href="https://facebook.com" target="_blank">
+              <i className="fab fa-facebook"></i>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
-
-Header.propTypes = {
-  logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => ( {
-  auth: state.auth
-} );
-
-export default connect(
-  mapStateToProps,
-  { logout }
-)( Header );
+export default Header;

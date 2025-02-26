@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {HashLink as Link} from 'react-router-hash-link';
+import { Link } from 'react-router-dom'; // Replaced HashLink with Link
 
 class ScrollTop extends Component {
   render() {
     return (
-      <Link smooth to="/#hero" class="scrolltop"><span class="fa fa-angle-up"></span></Link>
+      <Link to="/#hero" className="scrolltop"><span className="fa fa-angle-up"></span></Link> // Removed smooth prop
     );
   }
 }

@@ -1,45 +1,47 @@
 const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User' // Consistent with models/User.js
+  },
+  status: {
+    type: String,
+    required: true
+  },
+  bio: {
+    type: String
+  },
+  skills: {
+    type: String
+  },
+  avatar: {
+    type: String, // Changed from 'img' with Buffer to String for URL consistency with UserSchema
+    default: '' // Added default for optional field
+  },
+  social: {
+    youtube: {
+      type: String
     },
-    status: {
-        type: String,
-        required: true
+    twitter: {
+      type: String
     },
-    bio: {
-        type: String
+    facebook: {
+      type: String
     },
-    skills: {
-        type: String
+    instagram: {
+      type: String
     },
-    img: {
-        data: Buffer, 
-        contentType: String
-    },
-    social: {
-        youtube: {
-            type: String
-        },
-        twitter: {
-            type: String
-        },
-        facebook: {
-            type: String
-        },
-        instagram: {
-            type: String
-        },
-        linkedin: {
-            type: String
-        },
-    },
-    date: {
-        type: Date, 
-        default: Date.now
+    linkedin: {
+      type: String
     }
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
+}, {
+  timestamps: true // Added to track creation and update times
 });
 
-module.exports = Profile = mongoose.model('profile', ProfileSchema)
+module.exports = mongoose.model('Profile', ProfileSchema);

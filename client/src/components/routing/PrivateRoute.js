@@ -1,31 +1,27 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Route, Navigate } from 'react-router-dom'; // Replaced Redirect with Navigate
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const PrivateRoute = ({ 
-    component: Component, 
-    auth: { isAuthenticated, loading },
-    ...rest
-}) => (
-    <Route 
-        {...rest} 
-        render={props => 
-            !isAuthenticated && !loading ? (
-                <Redirect to='/login' />
-            ) : (
-                <Component {...props} />
-                )
-            }
-        /> 
-    );
+const PrivateRoute = ({ element: Element, auth, ...rest }) => (
+  <Route
+    {...rest}
+    element={
+      auth.isAuthenticated ? (
+        <Element />
+      ) : (
+        <Navigate to="/login" replace /> // Replaced Redirect with Navigate
+      )
+    }
+  />
+);
 
 PrivateRoute.propTypes = {
-    
-}
+  auth: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
-    auth: state.auth
+  auth: state.auth
 });
 
-export default connect(mapStateToProps)(PrivateRoute)
+export default connect(mapStateToProps)(PrivateRoute);

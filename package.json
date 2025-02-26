@@ -1,47 +1,40 @@
 {
-  "name": "mickelsen-farms",
-  "version": "1.0.0",
-  "engines":{
-    "node": "^12.22.10"
+  "name": "mickelsen_farms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.6.7",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "express-validator": "^7.2.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "path": "^0.12.7"
   },
-  "description": "website for mickelsen farms",
-  "main": "server.js",
-  
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "client": "npm start --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omickelsen/Mickelsen-Farms.git"
+    "url": "git+https://github.com/mickelsen/Mickelsen-Farms.git"
   },
-  "author": "Tyson Romero/ Orie Mickelsen/ Braden Flory/ Michael Olsen",
+  "author": "Tyson Romero, Orie Mickelsen, Brandon Floyd, Michael Olsen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/omickelsen/Mickelsen-Farms/issues"
+    "url": "https://github.com/mickelsen/Mickelsen-Farms/issues"
   },
-  "homepage": "https://github.com/omickelsen/Mickelsen-Farms#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.6.1",
-    "config": "^3.3.7",
-    "express": "^4.17.2",
-    "express-validator": "^6.14.0",
-    "google-maps-react": "^2.0.6",
-    "gravatar": "^1.8.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.14",
-    "node": "^12.22.10",
-    "react-16-bootstrap-date-picker": "^5.1.2",
-    "react-big-calendar": "^0.17.0",
-    "react-bootstrap": "^1.6.4",
-    "request": "^2.88.2"
-  },
+  "homepage": "https://github.com/mickelsen/Mickelsen-Farms#readme",
   "devDependencies": {
-    "concurrently": "^4.1.2",
-    "nodemon": "^1.19.4"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
   }
 }

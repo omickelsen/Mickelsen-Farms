@@ -1,26 +1,17 @@
 import React from 'react';
-import Header from '../components/layout/Header';
-import { Link } from 'react-router-dom';
-import Services from '../components/Services';
-import Footer from '../components/layout/Footer';
-
-
+import { Link } from 'react-router-dom'; // Added for potential use (if needed)
+import Header from '../components/layout/Header'; // Updated path (inside src/)
+import Services from '../components/layout/Services'; // Updated path (inside src/)
+import Footer from '../components/layout/Footer'; // Updated path (inside src/)
 
 const ServicesPage = () => {
-    return (
+  return (
+    <div>
+      <Header />
+      <Services />
+      <Footer />
+    </div>
+  );
+};
 
-        <div>
-            <Link to='/' >
-            </Link>
-            <Header />
-            <Services />
-            <Footer />
-        </div>
-
-
-    )
-}
-
-
-
-export default ServicesPage
+export default ServicesPage;
